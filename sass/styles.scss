@@ -9,9 +9,7 @@ html {
 body {
   padding:50px 0;
   margin:0;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#555;
-  font-weight:300;
   background:inline-image('checker.png') fixed;
 }
 
@@ -49,7 +47,7 @@ header {
   position:relative;
   padding:15px 20px;
   border-bottom:1px solid #B2D2E1;
-  
+
   h1 {
     margin:0;
     padding:0;
@@ -58,33 +56,33 @@ header {
     color:#069;
     text-shadow:rgba(#fff, 0.9) 0 1px 0;
   }
-  
+
   &.without-description h1 {
     margin:10px 0;
   }
-  
+
   p {
     margin:0;
     color:#61778B;
     width:300px;
     font-size:13px;
-    
+
     &.view {
       display:none;
       font-weight:700;
       text-shadow:rgba(#fff, 0.9) 0 1px 0;
       -webkit-font-smoothing:antialiased;
-      
+
       a {
         color:#06c;
       }
-      
+
       small {
         font-weight:400;
       }
     }
   }
-  
+
   ul {
     margin:0;
     padding:0;
@@ -100,7 +98,7 @@ header {
     border-radius:5px;
     @include box-shadow(inset rgba(#fff, 0.45) 0 1px 0, inset rgba(#000, 0.2) 0 -1px 0);
     width:240px;
-    
+
     &:before {
       content:'';
       position:absolute;
@@ -113,24 +111,24 @@ header {
       @include border-radius(8px);
       @include box-shadow(rgba(#000, 0.2) 0 -1px 0, inset rgba(#fff, 0.7) 0 -1px 0);
     }
-    
+
     li {
       width:79px;
       float:left;
       border-right:1px solid #3A7CBE;
       height:38px;
     }
-    
+
     li + li {
       width:78px;
       border-left:1px solid #8BBEF3;
     }
-    
+
     li + li + li {
       border-right:none;
       width:79px;
     }
-    
+
     a {
       line-height:1;
       font-size:11px;
@@ -142,7 +140,7 @@ header {
       padding-top:6px;
       height:40px;
       text-shadow:rgba(#000, 0.4) 0 -1px 0;
-      
+
       strong {
         font-size:14px;
         display:block;

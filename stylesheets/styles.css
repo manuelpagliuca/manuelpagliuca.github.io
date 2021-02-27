@@ -15,7 +15,6 @@ body {
   margin: 0;
   font-size: 14px;
   font-family: Arial, Helvetica, sans-serif;
-  font;
   color: rgb(0, 0, 0);
   font-weight: 300;
   background: rgba(0, 0, 0, 0.616);
@@ -197,7 +196,7 @@ header ul a strong {
 
 section {
   padding: 15px 20px;
-  font-size: 15px;
+  font-size: 18px;
   border-top: 1px solid #fff;
   background: -webkit-gradient(linear, 50% 0%, 50% 700, color-stop(0%, #fafafa), color-stop(100%, #dedede));
   background: -webkit-linear-gradient(#fafafa, #dedede 700px);
@@ -242,11 +241,15 @@ h3 {
 }
 
 h1 {
-  font-size: 28px;
+  font-size: 35px;
 }
 
 h2 {
   color: #393939;
+}
+
+h3 {
+  font-size: 25px;
 }
 
 h3,
