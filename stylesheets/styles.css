@@ -219,7 +219,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #222;
+  color: rgb(34, 34, 34);
   padding: 0;
   margin: 0 0 20px;
   line-height: 1.2;
@@ -250,13 +250,14 @@ h2 {
 
 h3 {
   font-size: 25px;
+
 }
 
 h3,
 h4,
 h5,
 h6 {
-  color: #494949;
+  color: #124e75;
 }
 
 blockquote {
@@ -315,6 +316,14 @@ dt {
 
 th {
   color: #222;
+}
+
+p.desc{
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-justify: auto;
+  margin-right: 5%;
+  margin-left: 5%;
 }
 
 small {
