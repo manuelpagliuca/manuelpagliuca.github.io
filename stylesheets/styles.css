@@ -234,7 +234,9 @@ dl {
   margin: 0 0 20px;
 }
 
-ul.bookshelf {}
+ul.bookshelf {
+  font-family: 'Courier New', Courier, monospace;
+}
 
 h1,
 h2,
