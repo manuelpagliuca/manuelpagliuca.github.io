@@ -325,6 +325,26 @@ th {
 p.desc {
   font-size: 15px;
   font-family: Arial, Helvetica, sans-serif;
+  text-align: justify;
+  text-justify: auto;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+p.desc_title {
+  font-size: 20px;
+  text-align: justify;
+  text-justify: auto;
+
+  margin-right: 5%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+}
+
+p.desc_subtitle {
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
   text-justify: auto;
   margin-right: 5%;
   margin-left: 5%;
