@@ -16,6 +16,53 @@
 
 </head>
 
+<script>
+    // Open the Modal
+    function openModal() {
+        document.getElementById("myModal").style.display = "block";
+    }
+
+    // Close the Modal
+    function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+    }
+
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+</script>
+
 <body>
     <div class="wrapper">
         <header>
@@ -40,33 +87,111 @@
                 <p class="desc_title">Ray Tracer</p>
                 <p class="desc_subtitle">April 2019</p>
                 <p class="desc">
-                    During the second semester of the second year of university i discovered the field of Computer Graphics,
-                    that stricken me. I decided to learn more about this topic and i found the renowned Peter Shirley guide,
-                    <a href=>Ray Tracing in one weekend</a>. At first impact the guide was really intuitive, and written in a 
-                    really simple way such that even a beginner could comprehend and start to code, so i did.                    
+                    During the second semester of the second year of university i discovered the field of Computer
+                    Graphics,
+                    that stricken me. I decided to learn more about this topic and i found the renowned Peter Shirley
+                    guide,
+                    <a href=>Ray Tracing in one weekend</a>. At first impact the guide was really intuitive, and written
+                    in a
+                    really simple way such that even a beginner could comprehend and start to code, so i did.
                     <br><br>
-                    This is the <a href="https://github.com/manuelpagliuca/Raytracer">repository</a> that i did, there are some renders
-                    inside it. All the code runs on the CPU, this means that it takes lot of time for produce a render with a decent 
-                    amount of samples. For this reason, i would like to realize a GPU version of the same Ray Tracer that i did for the project 
-                    of the course <b>GPU Computing</b> (of the <i>Master's degree</i>). This time the new Ray Tracer will be written in CUDA C
-                    and the major computations will happen on the GPU, the speedup in respect of the CPU version will be a lot
+                    This is the <a href="https://github.com/manuelpagliuca/Raytracer">repository</a> that i did, there
+                    are some renders
+                    inside it. All the code runs on the CPU, this means that it takes lot of time for produce a render
+                    with a decent
+                    amount of samples. For this reason, i would like to realize a GPU version of the same Ray Tracer
+                    that i did for the project
+                    of the course <b>GPU Computing</b> (of the <i>Master's degree</i>). This time the new Ray Tracer
+                    will be written in CUDA C
+                    and the major computations will happen on the GPU, the speedup in respect of the CPU version will be
+                    a lot
                     (i will do a comparison about it with some profiling tools or libraries).
-                    
+
                     <br><br>
-                    I still love this topic, and i would like to dig deeper in the Ray Tracing world, since it's really affascinating to me. But i
-                    think i will have to wait a bit since the university workload it's a lot at the moment.                                    
+                    I still love this topic, and i would like to dig deeper in the Ray Tracing world, since it's really
+                    affascinating to me. But i
+                    think i will have to wait a bit since the university workload it's a lot at the moment.
+
+
+                    <!-- Images used to open the lightbox -->
+                    <div class="row" style="margin-left: 15%;">
+                        <div class="column">
+                            <img src="images/straciadella_6h.jpg" onclick="openModal();currentSlide(1)"
+                                class="hover-shadow">
+                        </div>
+                        <div class="column">
+                            <img src="images/face_3_hours_render.jpg" onclick="openModal();currentSlide(2)"
+                                class="hover-shadow">
+                        </div>
+                        <div class="column">
+                            <img src="images/test.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+                        </div>
+                    </div>
+
+
+
+                    <!-- The Modal/Lightbox -->
+                    <div id="myModal" class="modal">
+                        <span class="close cursor" onclick="closeModal()">&times;</span>
+                        <div class="modal-content">
+
+                            <div class="mySlides">
+                                <div class="numbertext">1 / 4</div>
+                                <img src="images/straciadella_6h.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">2 / 4</div>
+                                <img src="images/face_3_hours_render.jpg" style="width:100%">
+                            </div>
+
+                            <div class="mySlides">
+                                <div class="numbertext">3 / 4</div>
+                                <img src="images/test.jpg" style="width:100%">
+                            </div>
+
+                            <!-- Next/previous controls -->
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                            <!-- Caption text -->
+                            <div class="caption-container">
+                                <p id="caption"></p>
+                            </div>
+
+
+                            <!-- Thumbnail image controls -->
+                            <div class="column">
+                                <img class="demo" src="images/straciadella_6h.jpg" onclick="currentSlide(1)"
+                                    alt="stracciatella">
+                            </div>
+
+                            <div class="column">
+                                <img class="demo" src="images/face_3_hours_render.jpg" onclick="currentSlide(2)"
+                                    alt="Ray-Face">
+                            </div>
+
+                            <div class="column">
+                                <img class="demo" src="images/test.jpg" onclick="currentSlide(3)"
+                                    alt="Spheres and reflections">
+                            </div>
+                        </div>
+
+                    </div>
+
                 </p>
             </p>
             <hr>
-    
-        
+
+
             <center>WIP</center>
 
             <center>
                 <h3>College Projects</h3>
             </center>
 
-            <p class="desc_title">Triangulation&Tessellation</p>
+            <p class=" desc_title">Triangulation&Tessellation
+            </p>
             <p class="desc_subtitle">
                 Computational Geometry, @UNIMI
             </p>
