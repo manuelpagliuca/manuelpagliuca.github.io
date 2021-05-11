@@ -70,10 +70,10 @@ header {
   background: -moz-linear-gradient(#ddfbfc, #c6eafa);
   background: -o-linear-gradient(#ddfbfc, #c6eafa);
   background: -ms-linear-gradient(#ddfbfc, #c6eafa);
-  background: linear-gradient(#ddfbfc, #c6eafa);
+  background: linear-gradient(#ececec, #dfdfdf);
   position: relative;
   padding: 15px 20px;
-  border-bottom: 1px solid #B2D2E1;
+  border: 1px solid #000000
 }
 
 header h1 {
@@ -121,9 +121,9 @@ header ul {
   top: 20px;
   height: 38px;
   padding: 1px 0;
-  background: #5198DF;
+  background: #76818d;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #77b9fb), color-stop(100%, #3782cd));
-  background: -webkit-linear-gradient(#77b9fb, #3782cd);
+  background: -webkit-linear-gradient(#77b9fb, #97a1ac);
   background: -moz-linear-gradient(#77b9fb, #3782cd);
   background: -o-linear-gradient(#77b9fb, #3782cd);
   background: -ms-linear-gradient(#77b9fb, #3782cd);
@@ -210,6 +210,7 @@ section {
   -ms-border-radius: 0 0 8px 8px;
   -khtml-border-radius: 0 0 8px 8px;
   border-radius: 0 0 8px 8px;
+  border: 1px solid #000000;
   position: relative;
 }
 
@@ -236,7 +237,7 @@ dl {
 
 ul.bookshelf {
   font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
+  font-size: 15px;
 }
 
 h1,
@@ -327,7 +328,7 @@ th {
 ul.skills {
   display: inline-block;
   list-style-type: none;
-  float: none;
+  float: inherit;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 15px;
 
@@ -491,8 +492,7 @@ screen and (max-width:580px) {
   background-color: #fefefe;
   margin: auto;
   padding: 0;
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
 }
 
 /* The Close Button */
