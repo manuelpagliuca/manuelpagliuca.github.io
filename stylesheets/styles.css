@@ -6,7 +6,7 @@ html {
   background: #6c7989 -webkit-linear-gradient(#6c7989, #434b55) fixed;
   background: #6c7989 -moz-linear-gradient(#6c7989, #434b55) fixed;
   background: #6c7989 -o-linear-gradient(#6c7989, #434b55) fixed;
-  background: #6c7989 -ms-linear-gradient(#6c7989, #434b55) fixed;
+  background: #6c7989 -ms-linear-gradient(#14253a, #434b55) fixed;
   background: #6c7989 linear-gradient(#6c7989, #434b55) fixed;
 }
 
@@ -21,7 +21,7 @@ body {
 }
 
 .wrapper {
-  width: 850px;
+  width: 950px;
   margin: 0 auto;
   background: #DEDEDE;
   -moz-border-radius: 8px;
@@ -133,7 +133,8 @@ header ul {
   -webkit-box-shadow: inset rgba(255, 255, 255, 0.45) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 -1px 0;
   -o-box-shadow: inset rgba(255, 255, 255, 0.45) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 -1px 0;
   box-shadow: inset rgba(255, 255, 255, 0.45) 0 1px 0, inset rgba(0, 0, 0, 0.2) 0 -1px 0;
-  width: 240px;
+  width: 350px;
+  height: 60px;
 }
 
 header ul:before {
@@ -157,38 +158,48 @@ header ul:before {
   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 0, inset rgba(255, 255, 255, 0.7) 0 -1px 0;
 }
 
+li {
+  margin-bottom: 2%;
+}
+
+table.legend {
+  width: auto;
+  margin: 0 auto;
+}
+
 header ul li {
-  width: 79px;
+  width: 120px;
   float: left;
-  border-right: 1px solid #3A7CBE;
-  height: 38px;
+  border-right: 1px solid #ffffff;
+  height: 60px;
 }
 
 header ul li+li {
-  width: 78px;
-  border-left: 1px solid #8BBEF3;
+  width: 100px;
+  border-left: 1px solid #ffffff;
 }
 
 header ul li+li+li {
   border-right: none;
-  width: 79px;
+  width: 120px;
 }
 
 header ul a {
+  margin-top: 5%;
   line-height: 1;
-  font-size: 11px;
+  font-size: 16px;
   color: #fff;
   color: rgba(255, 255, 255, 0.8);
   display: block;
   text-align: center;
   font-weight: 400;
   padding-top: 6px;
-  height: 40px;
+  height: 60px;
   text-shadow: rgba(0, 0, 0, 0.4) 0 -1px 0;
 }
 
 header ul a strong {
-  font-size: 14px;
+  font-size: 18px;
   display: block;
   color: #fff;
   -webkit-font-smoothing: antialiased;
@@ -236,9 +247,12 @@ dl {
 }
 
 ul.bookshelf {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: Lato, Geneva, Tahoma, sans-serif;
   font-size: 15px;
+  list-style-type: none;
 }
+
+
 
 h1,
 h2,
@@ -329,14 +343,14 @@ ul.skills {
   display: inline-block;
   list-style-type: none;
   float: inherit;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 15px;
 
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14px;
 }
 
 p.desc {
   font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: justify;
   text-justify: auto;
   margin-right: 5%;
@@ -347,7 +361,6 @@ p.desc_title {
   font-size: 20px;
   text-align: justify;
   text-justify: auto;
-
   margin-right: 5%;
   margin-left: 5%;
   margin-bottom: 1%;
