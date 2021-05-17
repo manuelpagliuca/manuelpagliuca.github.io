@@ -348,6 +348,12 @@ ul.skills {
   font-size: 14px;
 }
 
+li.experiences {
+  text-justify: auto;
+  margin-right: 5%;
+  list-style-type: circle;
+}
+
 p.desc {
   font-size: 15px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
