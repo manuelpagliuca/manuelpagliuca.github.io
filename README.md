@@ -1,1 +1,0 @@
-# manuelpagliuca.github.io

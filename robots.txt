@@ -1,0 +1,3 @@
+User-agent: *
+
+Sitemap: https://manuelpagliuca.github.io/sitemap.xml
