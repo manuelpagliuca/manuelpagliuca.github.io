@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Misc | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/tag/misc/</link><atom:link href="https://manuelpagliuca.github.io/tag/misc/index.xml" rel="self" type="application/rss+xml"/><description>Misc</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 27 Jun 2021 00:00:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Misc</title><link>https://manuelpagliuca.github.io/tag/misc/</link></image><item><title>Deferred Renderer in Vulkan</title><link>https://manuelpagliuca.github.io/project/render/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/render/</guid><description>&lt;h2 id="real-time-graphics-programming-course-july-2021-msc-in-computer-science-unimi">Real-Time Graphics Programming Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/h2>
+&lt;p>This was a project I made for the course of Real-time Graphics Programming. The course provided extensive knowledge about real-time computer graphics (you can check the
+&lt;a href="https://manuelpagliuca.github.io/uploads/Appunti_RTGP.pdf" target="_blank">notes&lt;/a>
+I took). At the end of the course, in addition to an oral exam, there was a project related to graphic programming to be developed with OpenGL. I asked Prof. Gadia if there was the possibility of developing it with Vulkan, he granted me the possibility to take this extra-step, it was very tiring but fruitful from the point of view of learning.&lt;/p>
+&lt;p>The project consists in a deferred renderer to improve the overall efficiency of the application in the usage of lights. The scene is composed of three models of the same character, a floor and twenty lights (whose movement and color can be modified), there is the
+&lt;a href="https://manuelpagliuca.github.io/uploads/DEFERRED_RENDERING___RTGP.pdf" target="_blank">notes&lt;/a>
+containing the various metrics obtained using a different number of lights. The GitHub repository is accessible at
+&lt;a href="https://github.com/manuelpagliuca/Vulkan-Deferred-Renderer" target="_blank">this&lt;/a>
+link.&lt;/p></description></item><item><title>Fix-It, Stream processing on event-driven system for managing public disservices</title><link>https://manuelpagliuca.github.io/project/fix-it/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/fix-it/</guid><description>&lt;h2 id="bachelor-thesis-december-2019-bsc-in-computer-science-uniupo">Bachelor Thesis, December 2019, B.Sc. in Computer Science @UniUPO&lt;/h2>
+&lt;p>
+&lt;figure id="figure-how-the-flags-are-shown-on-the-map">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="How the flags are shown on the map." srcset="
+/project/fix-it/img_hu4a47e7bb555165f3249c1881edac94ca_100119_b37034bddf09116b1976a55737d309a8.webp 400w,
+/project/fix-it/img_hu4a47e7bb555165f3249c1881edac94ca_100119_f2bfcd2b8ef27eb87f80159d60305248.webp 760w,
+/project/fix-it/img_hu4a47e7bb555165f3249c1881edac94ca_100119_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://manuelpagliuca.github.io/project/fix-it/img_hu4a47e7bb555165f3249c1881edac94ca_100119_b37034bddf09116b1976a55737d309a8.webp"
+width="368"
+height="613"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+How the flags are shown on the map.
+&lt;/figcaption>&lt;/figure>
+The complete title of the thesis is &lt;em>&amp;ldquo;Fix-it : Stream processing on event-driven system for
+managing public disservices&amp;rdquo;&lt;/em>. The project itself consist in developing an &lt;strong>E.D.A.&lt;/strong> (Event-Driven Application)
+system that will work on a mobile application called &amp;ldquo;&lt;strong>Fix-it&lt;/strong>&amp;rdquo;, which is developed using Android
+Studio. The system is implemented with &lt;strong>Google Firebase&lt;/strong> and &lt;strong>Apache Kafka&lt;/strong> (stream processing).
+Different technologies involved in the implementation of this project like REST API, Stream Processing and
+Publisher-Subscribe pattern.&lt;/p>
+&lt;p>The project was developed only by just two guys, we used the concepts of the Agile Manifesto to design our workflow, everything was organized with a Kanban Board on Trello so that we could work consistently by breaking the work down into small parts.&lt;/p>
+&lt;p>The whole thesis is downloadable as PDF
+&lt;a href="https://manuelpagliuca.github.io/uploads/Manuel_Pagliuca_Tesi.pdf" target="_blank">here&lt;/a>
+, was
+written using LaTeX on Overleaf, the Abstract is downloadable
+&lt;a href="https://manuelpagliuca.github.io/uploads/Abstract.pdf" target="_blank">here&lt;/a>
+.
+I attained a presentation of my thesis on Google Meet due to COVID-19, and I talked about my
+work using these
+&lt;a href="https://manuelpagliuca.github.io/uploads/Slides.pdf" target="_blank">slides&lt;/a>
+. The project was realized under the
+supervision of the Prof. &lt;a href="https://upobook.uniupo.it/davide.cerotti">Davide Cerotti&lt;/a>.&lt;/p></description></item><item><title>L-system in Unity</title><link>https://manuelpagliuca.github.io/project/l-system/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/l-system/</guid><description>&lt;h2 id="artificial-intelligence-for-videogames-course-july-2022-msc-in-computer-science-unimi">Artificial Intelligence for Videogames course, July 2022, M.Sc. in Computer Science @UniMi&lt;/h2>
+&lt;p>This is a project for the course of A.I. for VideoGames at University of Milan, A.Y. 2021/2022. The aim of the project is to implement a Lindenmayer system for procedural generation of tree using discrete distributions (pseudo-random integers) for enhancing the believability of the project.&lt;/p>
+&lt;center>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/luaC1rPKbKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>&lt;/center>
+Check the YouTube video for check how the application works while listening to a synthetic explanation. If you want to look at the LateX report, just click
+&lt;a href="https://manuelpagliuca.github.io/uploads/L_SYSTEM_AI4V_REPORT.pdf">this link&lt;/a>
+. You are invited to send a pull request to the GitHub
+&lt;a href="https://github.com/manuelpagliuca/l-system">repository&lt;/a>
+.</description></item></channel></rss>
