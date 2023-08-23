@@ -45,4 +45,20 @@ Check the YouTube video for check how the application works while listening to a
 &lt;a href="https://manuelpagliuca.github.io/uploads/L_SYSTEM_AI4V_REPORT.pdf">this link&lt;/a>
 . You are invited to send a pull request to the GitHub
 &lt;a href="https://github.com/manuelpagliuca/l-system">repository&lt;/a>
-.</description></item></channel></rss>
+.</description></item><item><title>Pain recognition</title><link>https://manuelpagliuca.github.io/project/pain-recognition/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/pain-recognition/</guid><description>&lt;h1 id="pain-recognition-dataset-analysis-and-experimental-validation">Pain Recognition: Dataset analysis and experimental validation&lt;/h1>
+&lt;h2 id="affective-computing-and-natural-interaction-courses-jan-2023-msc-in-computer-science-unimi">Affective Computing and Natural Interaction courses, Jan 2023, M.Sc. in Computer Science @UniMi&lt;/h2>
+&lt;p>This is a unified project for the courses Affective Computing and Natural Interaction at
+&lt;a href="https://phuselab.di.unimi.it/">PhuseLab&lt;/a>
+, University of Milan, A.Y. 2021/2022.&lt;/p>
+&lt;p>The aim of this project is to test the accuracy of &lt;strong>early&lt;/strong> and &lt;strong>late fusion&lt;/strong> approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat-pain stimulus through a physical device.&lt;/p>
+&lt;p>Their &lt;em>facial expressions&lt;/em> and biophysical signals were recorded using cameras and the application of electrodes, then features were extracted. The descriptors came from two different modalities and will be combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.&lt;/p>
+&lt;p>The analysis phase involves extracting features from the video signals through &lt;strong>computer vision&lt;/strong> techniques. The features involved are Euclidean distances on particular facial landmarks and gradients on 5 regions of the face.&lt;/p>
+&lt;ul>
+&lt;li>The computer vision techniques used were for the extraction of facial distances, gradients of facial folds, and head position&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/facial_distances.gif" alt="Facial distances computed with OpenCV" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p></description></item></channel></rss>
