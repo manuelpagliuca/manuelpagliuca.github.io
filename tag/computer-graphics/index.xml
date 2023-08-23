@@ -17,7 +17,7 @@ and metrics at the end of the paper, the GitHub repository is at
 link if you want to see some
 render just download
 &lt;a href="https://manuelpagliuca.github.io/uploads/GPU_COMPUTING_RENDERS.zip">this&lt;/a>
-zip.&lt;/p></description></item><item><title>Deferred Renderer in Vulkan</title><link>https://manuelpagliuca.github.io/project/render/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/render/</guid><description>&lt;h2 id="real-time-graphics-programming-course-july-2021-msc-in-computer-science-unimi">Real-Time Graphics Programming Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/h2>
+zip.&lt;/p></description></item><item><title>Deferred renderer</title><link>https://manuelpagliuca.github.io/project/render/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/render/</guid><description>&lt;h2 id="real-time-graphics-programming-course-july-2021-msc-in-computer-science-unimi">Real-Time Graphics Programming Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/h2>
 &lt;p>This was a project I made for the course of Real-time Graphics Programming. The course provided extensive knowledge about real-time computer graphics (you can check the
 &lt;a href="https://manuelpagliuca.github.io/uploads/Appunti_RTGP.pdf" target="_blank">notes&lt;/a>
 I took). At the end of the course, in addition to an oral exam, there was a project related to graphic programming to be developed with OpenGL. I asked Prof. Gadia if there was the possibility of developing it with Vulkan, he granted me the possibility to take this extra-step, it was very tiring but fruitful from the point of view of learning.&lt;/p>
