@@ -75,23 +75,73 @@ Check the YouTube video for check how the application works while listening to a
 &lt;a href="https://manuelpagliuca.github.io/uploads/L_SYSTEM_AI4V_REPORT.pdf">this link&lt;/a>
 . You are invited to send a pull request to the GitHub
 &lt;a href="https://github.com/manuelpagliuca/l-system">repository&lt;/a>
-.</description></item><item><title>Pain Recognition - Dataset analysis and experimental validation</title><link>https://manuelpagliuca.github.io/project/pain-recognition/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/pain-recognition/</guid><description>&lt;h1 id="pain-recognition-dataset-analysis-and-experimental-validation">Pain Recognition: Dataset analysis and experimental validation&lt;/h1>
-&lt;h2 id="affective-computing-and-natural-interaction-courses-jan-2023-msc-in-computer-science-unimi">Affective Computing and Natural Interaction courses, Jan 2023, M.Sc. in Computer Science @UniMi&lt;/h2>
-&lt;p>This is a unified project for the courses Affective Computing and Natural Interaction at
-&lt;a href="https://phuselab.di.unimi.it/">PhuseLab&lt;/a>
-, University of Milan, A.Y. 2021/2022.&lt;/p>
-&lt;p>The aim of this project is to test the accuracy of &lt;strong>early&lt;/strong> and &lt;strong>late fusion&lt;/strong> approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat-pain stimulus through a physical device.&lt;/p>
-&lt;p>Their &lt;em>facial expressions&lt;/em> and biophysical signals were recorded using cameras and the application of electrodes, then features were extracted. The descriptors came from two different modalities and will be combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.&lt;/p>
-&lt;p>The analysis phase involves extracting features from the video signals through &lt;strong>computer vision&lt;/strong> techniques. The features involved are Euclidean distances on particular facial landmarks and gradients on 5 regions of the face.&lt;/p>
+.</description></item><item><title>Pain Recognition - Dataset analysis and experimental validation</title><link>https://manuelpagliuca.github.io/project/pain-recognition/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/pain-recognition/</guid><description>&lt;p>Affective Computing and Natural Interaction courses, Jan 2023, M.Sc. in Computer Science @UniMi&lt;/p>
+&lt;h2 id="about-the-project">About the project&lt;/h2>
+&lt;p>This is a unified project for the courses Affective Computing and Natural Interaction at &lt;a href="https://phuselab.di.unimi.it/" target="_blank" rel="noopener">PhuseLab&lt;/a>, University of Milan, A.Y. 2021/2022.&lt;/p>
+&lt;p>The aim of this project is to test the accuracy of early and late fusion approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat-pain stimulus through a physical device.&lt;/p>
+&lt;p>Their facial expressions and biophysical signals were recorded using cameras and the application of electrodes, then features were extracted. The descriptors came from two different modalities and will be combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.&lt;/p>
 &lt;ul>
-&lt;li>The computer vision techniques used were for the extraction of facial distances, gradients of facial folds, and head position&lt;/li>
+&lt;li>For more information about the project download the &lt;a href="https://manuelpagliuca.github.io/uploads/Pain_Detection_Manuel_Pagliuca_AC_NI_2022.pdf">report&lt;/a>.&lt;/li>
 &lt;/ul>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/facial_distances.gif" alt="Facial distances computed with OpenCV" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/diagram.jpg" alt="Diagram" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/p></description></item><item><title>SETA - SElf-driving TA-xi service</title><link>https://manuelpagliuca.github.io/project/seta/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/seta/</guid><description>&lt;h1 id="pain-recognition-dataset-analysis-and-experimental-validation">Pain Recognition: Dataset analysis and experimental validation&lt;/h1>
+&lt;/p>
+&lt;p>Pain stimulation occurs in patients through electrostimulators applied to the wrists. When this experiment is performed different bio-potential signals (GSR, EMG, &amp;hellip;) and facial expressions are recorded through (through a video camera).&lt;/p>
+&lt;p>The analysis phase involves extracting features from the video signals through computer vision techniques. The features involved are Euclidean distances on particular facial landmarks and gradients on 5 regions of the face.&lt;/p>
+&lt;p>Once the biopotential signals and video features are ready, fusion techniques are used to perform classification.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Early fusion&lt;/strong> involves fusing signals and video features a priori concerning classification. Then train the classifier on the combined inputs.&lt;/li>
+&lt;li>&lt;strong>Late fusion&lt;/strong> involves training three classifiers (of the same type) on different inputs (ECG, GSR, and video), then for each sample in the testing set its prediction is calculated with all three classifiers. The majority prediction is considered; if that prediction coincides with the &lt;em>ground truth&lt;/em>, then that prediction is considered correct.&lt;/li>
+&lt;/ul>
+&lt;p>The classifier used in this project was &lt;em>Support Vector Machines&lt;/em>.&lt;/p>
+&lt;h3 id="video-feature-extraction">Video feature extraction&lt;/h3>
+&lt;h2 id="tools">Tools&lt;/h2>
+&lt;ul>
+&lt;li>IntelliJ IDEA and Python for developing the project application.&lt;/li>
+&lt;li>Microsoft Excel for working with the &lt;code>.csv&lt;/code> files.&lt;/li>
+&lt;li>&lt;a href="https://ieeexplore.ieee.org/document/6617456" target="_blank" rel="noopener">BioVid&lt;/a> dataset.&lt;/li>
+&lt;/ul>
+&lt;h2 id="dependencies">Dependencies&lt;/h2>
+&lt;ul>
+&lt;li>OpenCV&lt;/li>
+&lt;li>MediaPipe&lt;/li>
+&lt;li>Sk-learn&lt;/li>
+&lt;li>Numpy&lt;/li>
+&lt;/ul>
+&lt;h2 id="computer-vision-techniques">Computer vision techniques&lt;/h2>
+&lt;p>The computer vision techniques used were for the extraction of facial distances, gradients of facial folds, and head position.&lt;/p>
+&lt;h3 id="facial-distances-and-head-pose-estimation">Facial distances and head pose estimation&lt;/h3>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/facial_distances.gif" alt="Facial Distances" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="gradient-for-face-folds">Gradient for face folds&lt;/h3>
+&lt;p>Gradients allow changes in regions of the face to be assessed. An arithmetic average of pixel values in these regions is calculated.
+This average is again weighted by the number of frames in the video window(which in the dataset was 5 seconds).&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/facial_gradients.gif" alt="Facial Gradients" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="switch-button">Switch button&lt;/h3>
+&lt;p>There is a debug branch called &lt;code>cv-features&lt;/code> in this repository where you can try computer vision systems directly with your computer camera. Using the tab key you can enable and disable debugging for gradients.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/switch.gif" alt="Switch" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="ideas-for-future-extensions">Ideas for future extensions&lt;/h2>
+&lt;ul>
+&lt;li>Calculate the gradient only when the pain stimulus is activated and not over the entire window.&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul></description></item><item><title>SETA - SElf-driving TA-xi service</title><link>https://manuelpagliuca.github.io/project/seta/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/seta/</guid><description>&lt;h1 id="pain-recognition-dataset-analysis-and-experimental-validation">Pain Recognition: Dataset analysis and experimental validation&lt;/h1>
 &lt;h2 id="distributed-and-pervasive-systems-courses-jun-2022-msc-in-computer-science-unimi">Distributed and Pervasive Systems courses, Jun 2022, M.Sc. in Computer Science @UniMi&lt;/h2>
 &lt;p>Project for the course of &amp;ldquo;Distributed and Pervasive Systems&amp;rdquo; A.A. 2021/2022 for M.Sc.&amp;rsquo;s in Computer Science.&lt;/p>
 &lt;p>The objective of the project is to design and develop SETA (Self-driving TAxi service), a
@@ -435,7 +485,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-523691847" class="chart">&lt;/div>
+&lt;div id="chart-928417365" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -444,7 +494,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-523691847', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-928417365', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
