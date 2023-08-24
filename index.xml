@@ -91,6 +91,169 @@ Check the YouTube video for check how the application works while listening to a
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/facial_distances.gif" alt="Facial distances computed with OpenCV" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
+&lt;/p></description></item><item><title>SETA - SElf-driving TA-xi service</title><link>https://manuelpagliuca.github.io/project/seta/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/seta/</guid><description>&lt;h1 id="pain-recognition-dataset-analysis-and-experimental-validation">Pain Recognition: Dataset analysis and experimental validation&lt;/h1>
+&lt;h2 id="distributed-and-pervasive-systems-courses-jun-2022-msc-in-computer-science-unimi">Distributed and Pervasive Systems courses, Jun 2022, M.Sc. in Computer Science @UniMi&lt;/h2>
+&lt;p>Project for the course of &amp;ldquo;Distributed and Pervasive Systems&amp;rdquo; A.A. 2021/2022 for M.Sc.&amp;rsquo;s in Computer Science.&lt;/p>
+&lt;p>The objective of the project is to design and develop SETA (Self-driving TAxi service), a
+Self-driving &lt;em>peer-to-peer&lt;/em> taxi system for citizens of a smart city. The systems run on a centralized MQTT server which manages the taxis, they are able to communicate with each other via gRPC to ensure access to the resource.&lt;/p>
+&lt;h2 id="dev-tools--languages">Dev Tools &amp;amp; Languages&lt;/h2>
+&lt;h3 id="languages">Languages&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html" target="_blank" rel="noopener">Java SDK 18.0.2&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="technologies">Technologies&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://grpc.io/" target="_blank" rel="noopener">gRPC&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://mqtt.org/" target="_blank" rel="noopener">MQTT&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank" rel="noopener">REST API&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developers.google.com/protocol-buffers" target="_blank" rel="noopener">Protocol Buffers&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="tools">Tools&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.jetbrains.com/idea/download/?section=mac" target="_blank" rel="noopener">IntelliJ IDEA&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/jgraph/drawio-desktop/releases" target="_blank" rel="noopener">draw.io&lt;/a> for drawing diagrams&lt;/li>
+&lt;li>Git &amp;amp; GitHub as versioning system&lt;/li>
+&lt;/ul>
+&lt;p>Within this README are different conceptual diagrams that broadly define the general operation of the system, distributed algorithms, and synchronization procedures.&lt;/p>
+&lt;p>These diagrams do not rigidly follow any model as they are simple and extensively commented.&lt;/p>
+&lt;h3 id="guidelines">Guidelines&lt;/h3>
+&lt;ul>
+&lt;li>Rhombuses correspond to flow controls.&lt;/li>
+&lt;li>Rectangles to of operations/procedures.&lt;/li>
+&lt;li>Green circles are collection points.&lt;/li>
+&lt;li>Rectangle colors stand for an object belonging to a certain class (so if there are multiple rectangles of the same color, they are multiple instances of the same class).&lt;/li>
+&lt;li>White circles correspond to processes (used in diagrams for distributed algorithms).&lt;/li>
+&lt;li>Gray circles correspond to threads (used in diagrams for synchronization).&lt;/li>
+&lt;/ul>
+&lt;h2 id="general-functioning-of-the-project">General functioning of the project&lt;/h2>
+&lt;p>This is an outline of general operation of the system, it corresponds to what is required in the assignment delivery &lt;a href="Project_DPS_2022___SETA.pdf">document&lt;/a>.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/general_scheme.png" alt="General scheme" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="distributed-algorithms-diagrams">Distributed algorithms diagrams&lt;/h2>
+&lt;h3 id="ricart--agrawala-algorithm-for-mutual-exclusion">Ricart &amp;amp; Agrawala algorithm for mutual exclusion&lt;/h3>
+&lt;p>The algorithm was developed for guarantee the mutual exclusion to a critical section between multiple processes in a distributed system.&lt;/p>
+&lt;p>The timestamps of the messages are sent in broadcast (in parallel) through the gRPC call &lt;code>coordinateRechargeStream()&lt;/code>. The logical clock synchronization is guaranteed through &lt;strong>Lamport&amp;rsquo;s algorithm&lt;/strong>.&lt;/p>
+&lt;p>Let&amp;rsquo;s consider the following diagram, the nodes in red want to access to the critical section, while the other nodes are doing anything else.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_1.png" alt="Ricart &amp;amp;amp; Agrawala 1" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>More in depth in the first phase (in which the requests are parallelized) the processes will build their lists of dependent nodes. These lists will contain all the nodes which got a smaller timestamp relative to their.&lt;/p>
+&lt;p>A node will be able to enter a critical section (&lt;em>i.e.&lt;/em>, in this project is the recharging operation) if it receives the ACKs from all the other nodes. If this doesn&amp;rsquo;t happens it will have to wait the residual ACKs.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_2.png" alt="Ricart &amp;amp;amp; Agrawala 2" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Once that a node has finished with the recharging operation, it will sends an ACK message to the taxi of his list/queue. The first taxis who will fill the number of attended ACKs will access the critical section, and then story repeats.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_3.png" alt="Ricart &amp;amp;amp; Agrawala 3" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="ride-election-algorithm">Ride election algorithm&lt;/h3>
+&lt;p>The SETA process generates two rides each 5 seconds on a random district, these two rides are posted on the respective topic of the district. Each taxi is subscribed only on the topic of the district in which it currently belongs.&lt;/p>
+&lt;p>For simplicity let&amp;rsquo;s assume only one ride (the ride 5) to be published from the SETA process on the first district. All the processes which are subscribed to this topic (inside the green circle) will receive the message for the ride 5.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_1.png" alt="Ride Election 1" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>An election mechanism will start through the gRPC call &lt;code>coordinateRideStream()&lt;/code>, the request will be performed in broadcast (also to taxi out from district 1) and they will be executed in parallel. The request will contain the &lt;em>Euclidean distance to the starting point&lt;/em>, the &lt;em>battery levels&lt;/em> and the &lt;em>ID&lt;/em> of taxi which is sending the request.&lt;/p>
+&lt;p>For sake of simplicity we are seeing the evolution of the algorithm only from the point of view of the process 1.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_2.png" alt="Ride Election 2" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Let&amp;rsquo;s also assume that the process 1 is the process with the smallest distance from the starting point of the ride. Essentially, this means that the taxi who receives the request will all answer with an ACK (this means that they got a worst distance, battery or grater ID respect to process 1), only in this case the process 1 will achieve the consensus.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_3.png" alt="Ride Election 3" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Now the process 1 can execute the ride 5, before it even pass to the local execution of the ride, it publish a message containing the ride 5 on the &lt;code>seta/smartcity/completed&lt;/code> topic. This will allow to stop recycling this message (we will see what is it below) and also making know to the taxi which ride ignore since it is already taken.&lt;/p>
+&lt;p>This because all the taxi will have a local list containing all the completed rides taken from the topic, in this way they know which ride to avoid.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_4.png" alt="Ride Election 4" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h4 id="ride-recycling">Ride recycling&lt;/h4>
+&lt;p>There is a system that enforces the recycling of runs, each run that is generated on the topics is embedded within the relative queue of the district. The priority of the queues is based on the order (run ID) of run generation, so older runs will be preferred.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_recycling.png" alt="Ride Recycling" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="conceptual-schemes-of-synchronizations">Conceptual schemes of synchronizations&lt;/h2>
+&lt;h3 id="user-input">User input&lt;/h3>
+&lt;p>Command entry by users is handled by two threads. One thread for reading and executing the commands entered (&lt;strong>CLI&lt;/strong>, &lt;em>Command Line Interface&lt;/em>), and one thread for controlling the &lt;em>input stream&lt;/em> (&lt;strong>Input Checker&lt;/strong>).&lt;/p>
+&lt;p>This approach is designed in such a way as to avoid &amp;ldquo;&lt;em>busy waiting&lt;/em>&amp;rdquo; phenomena. There is a shared &lt;em>dummy object&lt;/em> between the two objects; the thread for the CLI waits to receive an encoding on this object, notification will be sent by the Input Checker when the presence of user input is detected.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/busy_waiting.png" alt="Busy Waiting" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="recharge-operation">Recharge operation&lt;/h3>
+&lt;p>There is a thread that monitors cab battery levels (&lt;strong>Recharge Thread&lt;/strong>), to avoid &amp;ldquo;&lt;em>busy waiting&lt;/em>&amp;rdquo; phenomena a &lt;em>dummy object&lt;/em> is shared between this thread and the &lt;strong>MQTT module&lt;/strong>.&lt;/p>
+&lt;p>The recharge thread is initially waiting and will check the battery levels only after receiving the notification on the shared &lt;em>dummy object&lt;/em>.&lt;/p>
+&lt;p>As we know, the MQTT module receives races message for it&amp;rsquo;s own district, and its callbacks can in turn call methods (which basically function like threads). Upon completion of the function that takes care of the run we notify the &lt;em>dummy object&lt;/em> through &lt;code>notify()&lt;/code>.&lt;/p>
+&lt;p>This way a check of battery levels will be made after a run is finished. The charging procedure will only be started if the battery levels are below 30 percent.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/recharge_synchronization.png" alt="Synchronization of recharging spot" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="local-statistics">Local statistics&lt;/h3>
+&lt;p>The collection and submission of local statistics involves different agents :&lt;/p>
+&lt;ul>
+&lt;li>A &lt;strong>PM10 simulator&lt;/strong> that generates random measurements of pollution levels at a random cadence.&lt;/li>
+&lt;li>A &lt;strong>Pollution Buffer&lt;/strong> which is a data structure used for the collection and self-management (&lt;em>sliding window&lt;/em> technique) of measurements generated by the PM10 simulator.&lt;/li>
+&lt;li>A thread for reading the PM10 measurements buffered in the Pollution Buffer, with addition of the other local statistics (&lt;em>total traveled km, battery levels, accomplished runs, &amp;hellip;&lt;/em>) and subsequent sending on the administrator server via POST request (&lt;strong>Local Stats Thread&lt;/strong>).&lt;/li>
+&lt;li>A thread to ensure local statistics are sent every 15 seconds (&lt;strong>Enable Data Send Thread&lt;/strong>).&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/localstats_synchronization.png" alt="Synchronization of local statistics" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>The reading of measurements is done by the Local Stats Thread, the latter though is governed by the operation of the Pollution Buffer&amp;rsquo;s internal data structure.&lt;/p>
+&lt;p>Once the array of measurements is read, its average is calculated. Then a data structure is created that will contain both this average of measurements and the other local statistics :&lt;/p>
+&lt;ul>
+&lt;li>Total traveled kilometers&lt;/li>
+&lt;li>Battery levels&lt;/li>
+&lt;li>Total accomplished runs&lt;/li>
+&lt;/ul>
+&lt;p>Every fifteen seconds you will be able to send this data structure to the administrator server via POST, to ensure this you use a thread (Enable Data Thread) that sets a boolean (initialized to false) to true.&lt;/p>
+&lt;p>That boolean variable will be checked by the Local Stats Thread, if true, then the POST request will be executed.&lt;/p>
+&lt;p>Then the flag will be set to false again, and you will have to wait 15 seconds again for it to be reactivated.&lt;/p>
+&lt;h4 id="sliding-window">Sliding window&lt;/h4>
+&lt;p>The Pollution Buffer presents a method that is constantly called at an unknown time by the PM10 simulator. The Pollution Buffer internal structure consists of a &lt;em>sliding window&lt;/em> of 50% of size 8 (each element is a PM10 measurements).&lt;/p>
+&lt;p>Once the maximum capacity of our internal data structure is reached, then I can guarantee that it will be read by the Local Stats Thread. The read operation involves a left shift of 50% of the elements (&lt;em>i.e.,&lt;/em> 4 elements), henceforth the elements added by the PM10 simulator will be allocated starting from the fifth.
+When the last element (the eighth) is added again, then a new reading of the sliding window can be performed again.&lt;/p>
+&lt;p>In this way the various sliding windows that are read will share four elements, &lt;em>i.e.,&lt;/em> the sliding window of iteration &lt;code>t-1&lt;/code> will have the last four elements equal to the first four elements of the sliding window at time &lt;code>t&lt;/code>.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/sliding_window.png" alt="Sliding Window" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
 &lt;/p></description></item><item><title>Subdivision of surfaces</title><link>https://manuelpagliuca.github.io/project/geometry/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/geometry/</guid><description>&lt;h2 id="computational-geometry-course-march-2021-msc-in-computer-science-unimi">Computational Geometry Course, March 2021, M.Sc. in Computer Science @UniMi&lt;/h2>
 &lt;figure id="figure-icosahedron-obtained-with-the-application">
 &lt;div class="d-flex justify-content-center">
@@ -272,7 +435,7 @@ console.log('code block');
 &lt;p>Wowchemy supports the popular &lt;a href="https://plot.ly/" target="_blank" rel="noopener">Plotly&lt;/a> format for interactive charts.&lt;/p>
 &lt;p>Save your Plotly JSON in your page folder, for example &lt;code>line-chart.json&lt;/code>, and then add the &lt;code>{{&amp;lt; chart data=&amp;quot;line-chart&amp;quot; &amp;gt;}}&lt;/code> shortcode where you would like the chart to appear.&lt;/p>
 &lt;p>Demo:&lt;/p>
-&lt;div id="chart-891325746" class="chart">&lt;/div>
+&lt;div id="chart-831724695" class="chart">&lt;/div>
 &lt;script>
 (function() {
 let a = setInterval( function() {
@@ -281,7 +444,7 @@ return;
 }
 clearInterval( a );
 Plotly.d3.json("./line-chart.json", function(chart) {
-Plotly.plot('chart-891325746', chart.data, chart.layout, {responsive: true});
+Plotly.plot('chart-831724695', chart.data, chart.layout, {responsive: true});
 });
 }, 500 );
 })();
