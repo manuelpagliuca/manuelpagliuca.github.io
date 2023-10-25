@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computer Graphics | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/tag/computer-graphics/</link><atom:link href="https://manuelpagliuca.github.io/tag/computer-graphics/index.xml" rel="self" type="application/rss+xml"/><description>Computer Graphics</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 27 Jun 2021 00:00:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Computer Graphics</title><link>https://manuelpagliuca.github.io/tag/computer-graphics/</link></image><item><title>CUDA Ray Tracer</title><link>https://manuelpagliuca.github.io/project/rt/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/rt/</guid><description>&lt;p>GPU Computing Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Computer Graphics | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/tag/computer-graphics/</link><atom:link href="https://manuelpagliuca.github.io/tag/computer-graphics/index.xml" rel="self" type="application/rss+xml"/><description>Computer Graphics</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 25 Oct 2023 09:42:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Computer Graphics</title><link>https://manuelpagliuca.github.io/tag/computer-graphics/</link></image><item><title>Efficient representations of high‑resolution polygonal surfaces, adding anisotropy control to the Micro‑Mesh schema</title><link>https://manuelpagliuca.github.io/project/anisotropic-mm/</link><pubDate>Wed, 25 Oct 2023 09:42:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/anisotropic-mm/</guid><description>&lt;p>Master&amp;rsquo;s Thesis, October 2023, M.Sc. in Computer Science @UniMI&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="" srcset="
+/project/anisotropic-mm/dragon_render_huf8cfb674e3e9d5aaba137dd8763e6e91_6565607_6a9b7e8c34208890c54153e224093422.webp 400w,
+/project/anisotropic-mm/dragon_render_huf8cfb674e3e9d5aaba137dd8763e6e91_6565607_be20a4681937039f09773afed417acd7.webp 760w,
+/project/anisotropic-mm/dragon_render_huf8cfb674e3e9d5aaba137dd8763e6e91_6565607_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://manuelpagliuca.github.io/project/anisotropic-mm/dragon_render_huf8cfb674e3e9d5aaba137dd8763e6e91_6565607_6a9b7e8c34208890c54153e224093422.webp"
+width="760"
+height="530"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="abstractuploadsabstract_master_s_thesis__en_pdf">&lt;a href="https://manuelpagliuca.github.io/uploads/Abstract_Master_s_Thesis__en_.pdf">Abstract&lt;/a>&lt;/h3>
+&lt;p>This &lt;a href="https://manuelpagliuca.github.io/uploads/MANUEL_PAGLIUCA_ANISOTROPIC_MM_Master_s_Thesis__Integral_.pdf">thesis&lt;/a> aims to empirically investigate the imaginable performance for data structures suitable for effectively representing extreme-resolution 3D polygonal surfaces designed for multi-resolution rendering on GPUs.&lt;/p>
+&lt;p>To this end, supporting algorithms will be designed, implemented, and tested that transform &amp;ldquo;traditional&amp;rdquo; (i.e., indexed) high-resolution triangular meshes into the analyzed data structures, and then measure the approximation errors introduced through appropriate geometric measurements.&lt;/p>
+&lt;p>Other alternative schemes will be studied, which are considered variants of the so-called &amp;ldquo;micro-meshes&amp;rdquo; scheme offered by the latest generation of vendor-specific GPU hardware. These data structures are characterized by the use of a semi-regular subdivision of a medium-resolution &amp;ldquo;base mesh,&amp;rdquo; followed by displacement of the generated vertices. Variants introduced may include the adoption of an anisotropic subdivision step, the adoption of an irregular recursive subdivision scheme, or others.&lt;/p>
+&lt;h2 id="dependencies">Dependencies&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.qt.io/" target="_blank" rel="noopener">Qt&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://glm.g-truc.net/0.9.9/index.html" target="_blank" rel="noopener">OpenGL Mathematics&lt;/a>
+&lt;ul>
+&lt;li>The headers are placed in the directory &lt;code>Dependencies\GLM&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://pymeshlab.readthedocs.io/en/latest/installation.html" target="_blank" rel="noopener">PyMeshLab&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="sample-models">Sample models&lt;/h2>
+&lt;p>As sample models in this repository, I&amp;rsquo;ve prepared different versions of &lt;a href="https://free3d.com/3d-model/pallas-cat-v1--576987.html" target="_blank" rel="noopener">Pallas Cat&lt;/a> by &lt;em>printable_models&lt;/em>&lt;/p>
+&lt;h2 id="python-script-empirical-analysis">Python script (empirical analysis)&lt;/h2>
+&lt;p>Executing this script will generate &lt;strong>n&lt;/strong> samples for both subdivision schemes (current and variant). A table (as a text file) containing the face quality values (according to the inradius/circumradius metric) will be built for both batches of samples.&lt;/p>
+&lt;p>The table will be ordered by a factor &lt;strong>F&lt;/strong> used, this will allow the comparison of one sample of a table with a sample of the other table, the factor modulates the intensity of subdivisions.&lt;/p>
+&lt;p>In the &lt;a href="https://manuelpagliuca.github.io/uploads/MANUEL_PAGLIUCA_ANISOTROPIC_MM_Master_s_Thesis__Integral_.pdf" target="_blank" rel="noopener">thesis&lt;/a>, the comparison is also described using the face area coefficent of variation&lt;/p>
+&lt;p>The commands generate two batches of samples, and multiple executions of the commands are used for the analysis since multiple models are tested.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-batch" data-lang="batch">&lt;span class="line">&lt;span class="cl">python face-stats.py --base-mesh=base.obj --target-mesh=target.obj
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Default values if you &lt;em>omit&lt;/em> some of the options:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>--base-mesh = pallas_124.obj&lt;/code>&lt;/li>
+&lt;li>&lt;code>--target-mesh = pallas_5000.obj&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="graphical-user-interface">Graphical User Interface&lt;/h2>
+&lt;h3 id="sample-loading">Sample loading&lt;/h3>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt=""
+src="https://manuelpagliuca.github.io/project/anisotropic-mm/sample_loading.gif"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="scheme-subdivisions">Scheme subdivisions&lt;/h3>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt=""
+src="https://manuelpagliuca.github.io/project/anisotropic-mm/subdivisions.gif"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h4 id="displacement">Displacement&lt;/h4>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt=""
+src="https://manuelpagliuca.github.io/project/anisotropic-mm/displacement.gif"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="cli-commands">CLI commands&lt;/h3>
+&lt;h4 id="generate-a-single-subdivided-sample">Generate a single subdivided sample&lt;/h4>
+&lt;p>&lt;strong>Exports&lt;/strong> the given base mesh&amp;rsquo;s subdivided (not displaced) mesh.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">anisotropic-micromesh.exe --base-mesh=base.obj --microfaces=100
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>In this example the base mesh is being subdivided by the amount of micro-faces passed (&lt;code>F&lt;/code> can&amp;rsquo;t be passed, since it works in function of the target mesh) using the current scheme (&amp;ldquo;isotropic&amp;rdquo; scheme).&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="generate-sample">Generate sample&lt;/h4>
+&lt;p>&lt;strong>Exports&lt;/strong> the subdivided and displaced mesh given the inputs&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">anisotropic_micromesh.exe gen-sample --base-mesh=base.obj --target=target.obj --scheme=aniso --factor=3.5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>In this example the base mesh will be subdivided using the &lt;code>anisotropic&lt;/code> subdivision scheme, with a factor &lt;code>F=3.5&lt;/code> (subdividing x3.5 times the faces of the target mesh).&lt;/p>
+&lt;/blockquote></description></item><item><title>CUDA Ray Tracer</title><link>https://manuelpagliuca.github.io/project/rt/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/rt/</guid><description>&lt;p>GPU Computing Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/p>
 &lt;h2 id="about-the-project">About the project&lt;/h2>
 &lt;p>During the course of &lt;strong>GPU Computing&lt;/strong> I decided to implement my old version of the Ray Tracer (based on the
 &lt;em>Ray Tracing in One
