@@ -1,4 +1,8 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Memory | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/tag/memory/</link><atom:link href="https://manuelpagliuca.github.io/tag/memory/index.xml" rel="self" type="application/rss+xml"/><description>Memory</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 18 Nov 2023 13:57:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Memory</title><link>https://manuelpagliuca.github.io/tag/memory/</link></image><item><title>Continuos Learning</title><link>https://manuelpagliuca.github.io/post/continuos-learning/</link><pubDate>Sat, 18 Nov 2023 13:57:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/post/continuos-learning/</guid><description>&lt;center> 🚨 &lt;b>The whole blog post is a work in progress!&lt;/b> 🚨&lt;/center>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Memory | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/tag/memory/</link><atom:link href="https://manuelpagliuca.github.io/tag/memory/index.xml" rel="self" type="application/rss+xml"/><description>Memory</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 18 Nov 2023 13:57:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Memory</title><link>https://manuelpagliuca.github.io/tag/memory/</link></image><item><title>Continuos Learning</title><link>https://manuelpagliuca.github.io/post/continuos-learning/</link><pubDate>Sat, 18 Nov 2023 13:57:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/post/continuos-learning/</guid><description>&lt;p>&lt;em>Latest post update: 19 November 2023, 13:32 UTC +1h&lt;/em>&lt;/p>
+&lt;center> 🚨 &lt;b>The whole blog post is a work in progress!&lt;/b> 🚨&lt;/center>
+&lt;blockquote>
+&lt;p>When you see 🚨, this is a suggestion for the creator of the post (me), to update this blog post since I&amp;rsquo;m not following any structure, I&amp;rsquo;m just writing as it came out and adjusting by re-reading and rewriting the post 😊&lt;/p>
+&lt;/blockquote>
 &lt;p>Since when I was a kid I wanted to know as much as I could, I received my first computer when i was 8 years old, and since then I got hooked from internet, video games and programming.&lt;/p>
 &lt;p>I stop talking about this side of my self (I will do it in another post), the thing that I wanted to introduce is that I would like to have a way for quantify, store, and expand my knowledge.&lt;/p>
 &lt;p>🚨 Question to answer for the post:&lt;/p>
@@ -19,7 +23,7 @@
 &lt;li>Practical subject, I need to do practical exercise.&lt;/li>
 &lt;/ul>
 &lt;h2 id="mooc-courses">MOOC courses&lt;/h2>
-&lt;p>&lt;strong>Udemy courses&lt;/strong>&lt;/p>
+&lt;h3 id="udemy-courses">Udemy courses&lt;/h3>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -236,7 +240,9 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>&lt;strong>Khan Academy&lt;/strong>&lt;/p>
+&lt;h3 id="khan-academy">Khan Academy&lt;/h3>
+&lt;p>I love Khan&amp;rsquo;s courses, and I hope to be able to complete the ones I like the most, there are a lot of them and I am particularly keen on taking good notes (transcripts in the case of humanities). If you don&amp;rsquo;t know who is Salman Khan (called Sal), there is a really nice 20 minutes &lt;a href="https://www.youtube.com/watch?v=nTFEUsudhfs" target="_blank" rel="noopener">TED talk&lt;/a> about his mission.&lt;/p>
+&lt;p>At the moment I&amp;rsquo;m following only the World History course, and I stopped the other ones, since I recently changed my note taking system and consequently I have to migrate many courses data to the new one. But I&amp;rsquo;m loving it and that&amp;rsquo;s the important thing, since I was really disgusted by history during high school.&lt;/p>
 &lt;table>
 &lt;thead>
 &lt;tr>
@@ -245,7 +251,51 @@
 &lt;th style="text-align:center">Notes&lt;/th>
 &lt;/tr>
 &lt;/thead>
-&lt;/table></description></item><item><title>Why you should learn geography?</title><link>https://manuelpagliuca.github.io/post/should-learn-geography/</link><pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/post/should-learn-geography/</guid><description>
+&lt;tbody>
+&lt;tr>
+&lt;td style="text-align:center">&lt;a href="https://www.khanacademy.org/humanities/world-history" target="_blank" rel="noopener">World History&lt;/a>&lt;/td>
+&lt;td style="text-align:center">~1 of 6 units&lt;/td>
+&lt;td style="text-align:center">My plan is to study history backwards.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;a href="https://www.khanacademy.org/math/ap-calculus-bc" target="_blank" rel="noopener">AP®︎/College Calculus BC&lt;/a>&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;a href="https://www.khanacademy.org/math/linear-algebra" target="_blank" rel="noopener">Linear Algebra&lt;/a>&lt;/td>
+&lt;td style="text-align:center">~1 of 3 units&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;a href="https://www.khanacademy.org/math/ap-statistics" target="_blank" rel="noopener">AP®︎/College Statistics&lt;/a>&lt;/td>
+&lt;td style="text-align:center">14 units&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;a href="https://www.khanacademy.org/math/multivariable-calculus" target="_blank" rel="noopener">Multivariable calculus&lt;/a>&lt;/td>
+&lt;td style="text-align:center">5 units&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;a href="https://www.khanacademy.org/economics-finance-domain/ap-macroeconomics" target="_blank" rel="noopener">AP®︎/College Macroeconomics&lt;/a>&lt;/td>
+&lt;td style="text-align:center">8 units&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;a href="https://www.khanacademy.org/science/ap-college-physics-1" target="_blank" rel="noopener">AP®︎/College Physics 1&lt;/a>&lt;/td>
+&lt;td style="text-align:center">5 units&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td style="text-align:center">&lt;a href="https://www.khanacademy.org/science/ap-physics-2" target="_blank" rel="noopener">AP®︎/College Physics 2&lt;/a>&lt;/td>
+&lt;td style="text-align:center">8 units&lt;/td>
+&lt;td style="text-align:center">&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h3 id="youtube">YouTube&lt;/h3>
+&lt;p>🚨 Search the playlist of educational video that you have watched on YouTube, or really important one 🚨&lt;/p></description></item><item><title>Why you should learn geography?</title><link>https://manuelpagliuca.github.io/post/should-learn-geography/</link><pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/post/should-learn-geography/</guid><description>
 &lt;figure id="figure-world-map">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="World map." srcset="
