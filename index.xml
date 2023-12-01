@@ -376,7 +376,7 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">anisotropic_micromesh.exe gen-sample --base-mesh=base.obj --target=target.obj --scheme=aniso --factor=3.5
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
 &lt;p>In this example the base mesh will be subdivided using the &lt;code>anisotropic&lt;/code> subdivision scheme, with a factor &lt;code>F=3.5&lt;/code> (subdividing x3.5 times the faces of the target mesh).&lt;/p>
-&lt;/blockquote></description></item><item><title>Why you should learn geography?</title><link>https://manuelpagliuca.github.io/post/should-learn-geography/</link><pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/post/should-learn-geography/</guid><description>
+&lt;/blockquote></description></item><item><title>Why should you learn geography?</title><link>https://manuelpagliuca.github.io/post/should-learn-geography/</link><pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/post/should-learn-geography/</guid><description>
 &lt;figure id="figure-world-map">
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img alt="World map." srcset="
