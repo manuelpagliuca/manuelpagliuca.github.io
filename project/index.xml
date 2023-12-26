@@ -1,4 +1,134 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/project/</link><atom:link href="https://manuelpagliuca.github.io/project/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Wed, 25 Oct 2023 09:42:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Projects</title><link>https://manuelpagliuca.github.io/project/</link></image><item><title>Efficient representations of high‑resolution polygonal surfaces, adding anisotropy control to the Micro‑Mesh schema</title><link>https://manuelpagliuca.github.io/project/anisotropic-mm/</link><pubDate>Wed, 25 Oct 2023 09:42:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/anisotropic-mm/</guid><description>&lt;p>Master&amp;rsquo;s Thesis, October 2023, M.Sc. in Computer Science @UniMI&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/project/</link><atom:link href="https://manuelpagliuca.github.io/project/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 26 Dec 2023 14:17:20 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Projects</title><link>https://manuelpagliuca.github.io/project/</link></image><item><title>Design Patterns in C++</title><link>https://manuelpagliuca.github.io/project/design-patterns/</link><pubDate>Tue, 26 Dec 2023 14:17:20 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/design-patterns/</guid><description>&lt;p>Personal project, December 2023&lt;/p>
+&lt;p>Between the months of November and December I wanted to dig deeper on software engineering, so I decided to study and implement some design patterns. In particular the fundamental one from the &lt;em>Gang of Four&lt;/em> (GoF).&lt;/p>
+&lt;p>I created a &lt;a href="https://github.com/manuelpagliuca/design-patterns-cpp" target="_blank" rel="noopener">repository&lt;/a> that acts as a collection of C++ implementations of these patterns. The GoF patterns are all presents but in the future I&amp;rsquo;m planning to add also the &amp;ldquo;extra&amp;rdquo; patterns (at the moment only the &lt;em>null object&lt;/em> is present).&lt;/p>
+&lt;h2 id="creational">Creational&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Design Pattern&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Abstract Factory&lt;/td>
+&lt;td>Provides an interface for creating families of related or dependent objects without specifying their concrete classes.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Builder&lt;/td>
+&lt;td>Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Factory Method&lt;/td>
+&lt;td>Defines an interface for creating an object but leaves the choice of its type to the subclasses.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Prototype&lt;/td>
+&lt;td>Creates new objects by copying an existing object, known as the prototype.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Singleton&lt;/td>
+&lt;td>Ensures a class has only one instance and provides a global point of access to that instance.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="structural">Structural&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Design Pattern&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Adapter&lt;/td>
+&lt;td>Allows classes with incompatible interfaces to work together by wrapping its own interface around that of an already existing class.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Bridge&lt;/td>
+&lt;td>Decouples an abstraction from its implementation so that the two can vary independently.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Composite&lt;/td>
+&lt;td>Composes zero-or-more similar objects so that they can be manipulated as one object.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Decorator&lt;/td>
+&lt;td>Dynamically adds/overrides behavior in an existing method of an object.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Facade&lt;/td>
+&lt;td>Provides a simplified interface to a large body of code.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Flyweight&lt;/td>
+&lt;td>Reduces the cost of creating and manipulating a large number of similar objects.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Proxy&lt;/td>
+&lt;td>Provides a placeholder for another object to control access, reduce cost, and reduce complexity.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="behavioral">Behavioral&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Design Pattern&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Chain of Responsibility&lt;/td>
+&lt;td>Delegates commands to a chain of processing objects.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Command&lt;/td>
+&lt;td>Creates objects that encapsulate actions and parameters.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Interpreter&lt;/td>
+&lt;td>Implements a specialized language.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Iterator&lt;/td>
+&lt;td>Accesses the elements of an object sequentially without exposing its underlying representation.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Mediator&lt;/td>
+&lt;td>Allows loose coupling between classes by being the only class that has detailed knowledge of their methods.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Memento&lt;/td>
+&lt;td>Provides the ability to restore an object to its previous state (undo).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Observer&lt;/td>
+&lt;td>Is a publish/subscribe pattern, which allows some observer objects to see an event.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>State&lt;/td>
+&lt;td>Allows an object to alter its behavior when its internal state changes.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Strategy&lt;/td>
+&lt;td>Allows one of a family of algorithms to be selected on-the-fly at runtime.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Template Method&lt;/td>
+&lt;td>Defines the skeleton of an algorithm as an abstract class, allowing its subclasses to provide concrete behavior.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Visitor&lt;/td>
+&lt;td>Separates an algorithm from an object structure by moving the hierarchy of methods into one object.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>During this exploration I discovered many interesting aspects of software engineering by exploring this field, especially a concept of scope level design patterns. Some design patterns can be applied directly on the repository (code level, so in micro), like the GoF patterns or &lt;em>concurrency patterns&lt;/em> for MT paradigms.&lt;/p>
+&lt;p>Other design patterns acts on an higher level of abstraction, and these are called &lt;strong>architectural patterns&lt;/strong>. Some of them are widely known like the MVC (Model-View-Controller) or n-tier, but most of them are new to me.&lt;/p>
+&lt;p>In the future I would like to write a blog post about them with diagrams and explanations, seems a good idea for studying them in a fun way 😁&lt;/p></description></item><item><title>Efficient representations of high‑resolution polygonal surfaces, adding anisotropy control to the Micro‑Mesh schema</title><link>https://manuelpagliuca.github.io/project/anisotropic-mm/</link><pubDate>Wed, 25 Oct 2023 09:42:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/anisotropic-mm/</guid><description>&lt;p>Master&amp;rsquo;s Thesis, October 2023, M.Sc. in Computer Science @UniMI&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
