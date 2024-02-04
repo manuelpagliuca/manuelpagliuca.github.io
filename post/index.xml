@@ -107,6 +107,12 @@ Algorithm steps:&lt;/li>
 &lt;/ol>
 &lt;p>Although the conceptual idea of binary search is comparatively straightforward, the details can be tricky.&lt;/p>
 &lt;p>The real pit of binary search is not the integer overflow, but the whether to add one to or subtract one from &lt;code>mid&lt;/code>, and where to use &lt;code>&amp;lt;=&lt;/code> or &lt;code>&amp;lt;&lt;/code> in the loop condition.&lt;/p>
+&lt;h2 id="flaws-of-the-basic-algorithm">Flaws of the basic algorithm&lt;/h2>
+&lt;p>This algorithm is great and simple, but has some limitations. In some specific problems, some target number could be repeated along the array, and the problem requiremnt could be the left border or right border of this sequence.&lt;/p>
+&lt;p>&lt;strong>The current algorithm can&amp;rsquo;t handle this issue.&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Adding a &lt;strong>linear search&lt;/strong> to the found sequence will compromise the complexity in time of the binary search.&lt;/li>
+&lt;/ul>
 &lt;h2 id="generalized-framework">Generalized framework&lt;/h2>
 &lt;p>&lt;strong>Minimizing k which satisfies the &lt;code>condition(k)&lt;/code> function.&lt;/strong>&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">
@@ -239,43 +245,40 @@ is satisfied, the &lt;code>start&lt;/code> variable will contain &lt;strong>the 
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It is also possible to use as return value the &lt;code>mid&lt;/code> index if declared outside the loop cycle, the code will behave in the same way for perfect squares, while it will approximate by &lt;em>excess&lt;/em> non-square inputs (the code will approximate by &lt;em>default&lt;/em>).&lt;/p>
 &lt;h3 id="search-insert-position">Search Insert Position&lt;/h3>
-&lt;p>&lt;strong>TODO: THIS ARTICLE HAS TO BE COMPLETED, AT THE MOMENT IS JUST A BUNCH OF NOTES&lt;/strong>&lt;/p>
-&lt;p>Searching for the &lt;strong>minimal k value satisfying &lt;code>nums[k] &amp;gt;= target&lt;/code>&lt;/strong>&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl"> &lt;span class="k">def&lt;/span> &lt;span class="nf">search_insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;p>Searching for the &lt;strong>minimal k value satisfying &lt;code>nums[k] &amp;gt;= target&lt;/code>&lt;/strong>, if the element is not present we want to return the index of where the element should be placed.&lt;/p>
+&lt;p>We already have the solution for this problem, the &lt;a href="#generalized-framework">basic implementation&lt;/a> of the generalized framework.&lt;/p>
+&lt;p>The only issue is in the &lt;strong>search space&lt;/strong>, if we consider the edge case in which the element isn&amp;rsquo;t present and it is greater than the last one contained in the array, than we need an index (&lt;strong>k&lt;/strong>) pointing outside that array. This translates in increasing the &lt;strong>search space&lt;/strong> by 1, so &lt;code>end = len(nums)&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">binary_search_insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">)&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">end&lt;/span>&lt;span class="p">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mid&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">start&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">//&lt;/span> &lt;span class="mi">2&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="why--instead-of--in-the-loop-condition">Why &lt;code>&amp;lt;=&lt;/code> instead of &lt;code>&amp;lt;&lt;/code> in the loop condition?&lt;/h3>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">start&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="advanced-applications">Advanced applications&lt;/h2>
+&lt;h3 id="when-to-use-binary-search">When to use binary search?&lt;/h3>
+&lt;p>Sometimes we don&amp;rsquo;t even realize that the problem should be solved with &lt;strong>binary search&lt;/strong>, how we can understand if the &lt;strong>binary search&lt;/strong> can be used?&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;strong>If we discover some kind of &lt;a href="https://en.wikipedia.org/wiki/Monotonic_function" target="_blank" rel="noopener">monotonicity&lt;/a>, then we can consider binary search.&lt;/strong>&lt;/p>
+&lt;/blockquote>
+&lt;p>For example if &lt;code>condition(k)&lt;/code> is &lt;code>True&lt;/code> then &lt;code>condition(k+1)&lt;/code> is &lt;code>True&lt;/code>.&lt;/p>
+&lt;h3 id="other-problems">Other problems&lt;/h3>
+&lt;p>TODO: Adding Medium/Hard problem explanations from zhjijun_lao post&lt;/p>
+&lt;h2 id="why--instead-of--in-the-loop-condition">Why &lt;code>&amp;lt;&lt;/code> instead of &lt;code>&amp;lt;=&lt;/code> in the loop condition?&lt;/h2>
 &lt;p>Because the initial assignment of &lt;code>end&lt;/code> is &lt;code>len(nums) - 1&lt;/code>, which is the index of the last element, and not &lt;code>len(nums)&lt;/code> (which contains an extra &lt;em>immaginary&lt;/em> element).&lt;/p>
 &lt;ul>
-&lt;li>The first approach has a &lt;strong>search space&lt;/strong> of &lt;code>[start, end]&lt;/code>&lt;/li>
-&lt;li>The second approach has a &lt;strong>search space&lt;/strong> of &lt;code>[start, end)&lt;/code>&lt;/li>
+&lt;li>The first approach has a &lt;strong>search space&lt;/strong> of &lt;code>[start, end)&lt;/code>&lt;/li>
+&lt;li>The second approach has a &lt;strong>search space&lt;/strong> of &lt;code>[start, end]&lt;/code>&lt;/li>
 &lt;/ul>
-&lt;p>The binary search can terminate when the value is found &lt;code>nums[mid] == target&lt;/code>, but if not found &lt;strong>it should terminate when the search interval is empty&lt;/strong>, which means that if you don&amp;rsquo;t have a place for searching it, you haven&amp;rsquo;t found it.&lt;/p>
+&lt;p>TODO: explain why and how the search should terminate (imo)&lt;/p>
 &lt;p>Termination conditions:&lt;/p>
 &lt;ul>
-&lt;li>For &lt;code>start &amp;lt;= end&lt;/code> is &lt;code>start == end + 1&lt;/code>, when the &lt;code>start&lt;/code> index surpass by 1 element the &lt;code>end&lt;/code> index.&lt;/li>
 &lt;li>For &lt;code>start &amp;lt; end&lt;/code> is &lt;code>start == end&lt;/code>, when they are both on the same element.&lt;/li>
+&lt;li>For &lt;code>start &amp;lt;= end&lt;/code> is &lt;code>start == end + 1&lt;/code>, when the &lt;code>start&lt;/code> index surpass by 1 element the &lt;code>end&lt;/code> index.&lt;/li>
 &lt;/ul>
-&lt;h3 id="why-left--mid--1-and-right--mid---1">Why &lt;code>left = mid + 1&lt;/code> and &lt;code>right = mid - 1&lt;/code>?&lt;/h3>
-&lt;h3 id="flaws-of-the-basic-algorithm">Flaws of the basic algorithm&lt;/h3>
-&lt;p>This algorithm is great and simple, but has some limitations. In some specific problems, some target number could be repeated along the array, and the problem requiremnt could be the left border or right border of this sequence.&lt;/p>
-&lt;p>&lt;strong>The current algorithm can&amp;rsquo;t handle this issue.&lt;/strong>&lt;/p>
-&lt;ul>
-&lt;li>Adding a &lt;strong>linear search&lt;/strong> to the found sequence will compromise the complexity in time of the binary search.&lt;/li>
-&lt;/ul>
-&lt;h2 id="binary-search-101">Binary Search 101&lt;/h2>
-&lt;p>When it comes to implementation, it&amp;rsquo;s rather difficult to write a bug-free code in just a few minutes.&lt;/p>
-&lt;ul>
-&lt;li>Should I use &lt;code>start &amp;lt; end&lt;/code> or &lt;code>start &amp;lt;= end&lt;/code> as loop condition?&lt;/li>
-&lt;li>How to initialize the boundary variable &lt;code>start&lt;/code> and &lt;code>end&lt;/code>?&lt;/li>
-&lt;li>How to update the boundary? &lt;code>left = mid&lt;/code> or &lt;code>left = mid + 1&lt;/code>, &amp;hellip;&lt;/li>
-&lt;li>When to exit the loop?&lt;/li>
-&lt;/ul>
-&lt;p>This because in real-life problems and coding questions, it&amp;rsquo;s really hard that a classical implementation of the algorithm will be required.&lt;/p>
 &lt;h3 id="search-space-boundary">Search space boundary&lt;/h3>
 &lt;p>Normally we can see this kind of boundary initialization:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>
@@ -317,9 +320,9 @@ is satisfied, the &lt;code>start&lt;/code> variable will contain &lt;strong>the 
 &lt;p>&lt;code>mid = start + (end - start + 1) // 2&lt;/code>&lt;/p>
 &lt;/blockquote>
 &lt;h2 id="boundary-shrinking-strategy">Boundary shrinking strategy&lt;/h2>
-&lt;p>The best strategy to adopt is to always use a logic that &lt;strong>excludes&lt;/strong> &lt;code>mid&lt;/code> from the &lt;strong>search space&lt;/strong>.&lt;/p>
+&lt;p>The best strategy to adopt is to always use part of the logic that &lt;strong>excludes&lt;/strong> &lt;code>mid&lt;/code> from the &lt;strong>search space&lt;/strong>.&lt;/p>
 &lt;p>If the target is less than &lt;code>mid&lt;/code>, it can&amp;rsquo;t be &lt;code>mid&lt;/code>, so we can exclude it &lt;code>end = mid - 1&lt;/code>.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;/code>&lt;/pre>&lt;/div>&lt;p>si ma perchè?..&lt;/p>
+&lt;p>TODO: explain why&lt;/p>
 &lt;h3 id="symmetric-variant">Symmetric variant&lt;/h3>
 &lt;h2 id="loop-condition">Loop condition&lt;/h2>
 &lt;p>Using only &lt;code>&amp;lt;&lt;/code> the &lt;strong>only condition&lt;/strong> the loop exits is &lt;code>start == end&lt;/code>, this means that they are pointing to only one element.&lt;/p>
@@ -349,8 +352,9 @@ two misplaced mid will lead to infinite loop.&lt;/p>
 &lt;img src="./bs-2-elements-2.drawio.png" alt="image" width="20%" height="auto">
 &lt;img src="./bs-2-elems-2-mid.drawio.png" alt="image" width="20%" height="auto">
 &lt;h2 id="complexity">Complexity&lt;/h2>
+&lt;p>Time complexity is O(log2 n), while space complexity is O(1).&lt;/p>
 &lt;h2 id="resources">Resources&lt;/h2>
-&lt;p>These notes are heavily based on an article I found on Leetcode, rewriting and drawing the diagrams was a way for understanding the concepts better.&lt;/p>
+&lt;p>These notes are heavily based on multiple articles I found on Leetcode, rewriting and drawing the diagrams was a way for understanding the concepts better.&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://leetcode.com/problems/binary-search/solutions/423162/Binary-Search-101-The-Ultimate-Binary-Search-Handbook/" target="_blank" rel="noopener">Binary Search 101&lt;/a> - AminiCK&lt;/li>
 &lt;li>&lt;a href="https://en.wikipedia.org/wiki/Binary_search_algorithm" target="_blank" rel="noopener">Wikipedia&lt;/a>&lt;/li>
