@@ -1,33 +1,39 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/</link><atom:link href="https://manuelpagliuca.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Manuel Pagliuca</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/</link></image><item><title>Binary Search</title><link>https://manuelpagliuca.github.io/post/binary-search/</link><pubDate>Sat, 03 Feb 2024 10:02:31 +0100</pubDate><guid>https://manuelpagliuca.github.io/post/binary-search/</guid><description>&lt;p>The &lt;a href="https://en.wikipedia.org/wiki/Binary_search_algorithm" target="_blank" rel="noopener">binary search&lt;/a> it&amp;rsquo;s a &lt;strong>search algorithm&lt;/strong> which find the index of a particular value which is stored in a &lt;strong>sorted&lt;/strong> array.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/</link><atom:link href="https://manuelpagliuca.github.io/index.xml" rel="self" type="application/rss+xml"/><description>Manuel Pagliuca</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/</link></image><item><title>Binary Search</title><link>https://manuelpagliuca.github.io/post/binary-search/</link><pubDate>Sat, 03 Feb 2024 10:02:31 +0100</pubDate><guid>https://manuelpagliuca.github.io/post/binary-search/</guid><description>&lt;h2 id="basic-binary-search">Basic binary search&lt;/h2>
+&lt;p>The &lt;a href="https://en.wikipedia.org/wiki/Binary_search_algorithm" target="_blank" rel="noopener">binary search&lt;/a> it&amp;rsquo;s a &lt;strong>search algorithm&lt;/strong> which find the index of a particular value which is stored in a &lt;strong>sorted&lt;/strong> array.&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://en.wikipedia.org/wiki/Random_access" target="_blank" rel="noopener">Random access&lt;/a> is a requirement for performing this search.&lt;/li>
 &lt;/ul>
-&lt;h2 id="main-algorithm">Main algorithm&lt;/h2>
-&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">binarySearch&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">target&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">0&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="ow">or&lt;/span> &lt;span class="n">target&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;p>The binary search classical formalization is the following:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">binary_search&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">&amp;lt;=&lt;/span> &lt;span class="n">end&lt;/span>&lt;span class="p">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mid&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">start&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">//&lt;/span> &lt;span class="mi">2&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">target&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">mid&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">target&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">]:&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>
-&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">elif&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span>
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
 &lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="first-loop">First loop&lt;/h3>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It is the most intuitive way of understanding the behaviour of this algorithm, let&amp;rsquo;s walk through the iterations.&lt;/p>
+&lt;h3 id="first-loop">First loop&lt;/h3>
+&lt;p>Initial variables:&lt;/p>
 &lt;ul>
 &lt;li>&lt;code>nums = [1, 3, 4, 5, 6, 8, 9, 10, 11, 12]&lt;/code>&lt;/li>
 &lt;li>&lt;code>target = 5&lt;/code>&lt;/li>
-&lt;li>&lt;code>start = 0&lt;/code> and &lt;code>end = 9&lt;/code>&lt;/li>
+&lt;li>&lt;code>start = 0, end = 9&lt;/code>
+Algorithm steps:&lt;/li>
 &lt;/ul>
 &lt;ol>
-&lt;li>The mid index get computed as &lt;code>mid = 0 + 9 / 2 = 4&lt;/code>, this is a bad case, because the &lt;code>target&lt;/code> is one position away from the &lt;code>mid&lt;/code>.&lt;/li>
+&lt;li>The mid index get computed as &lt;code>mid = 0 + 9 / 2 = 4&lt;/code>, this is a bad case, because the &lt;code>target&lt;/code> is one position away from the &lt;code>mid&lt;/code>.
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./bs-00.drawio.png" alt="bs-0" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/li>
 &lt;li>Test &lt;code>target&lt;/code> against mid value:
 &lt;ol>
 &lt;li>Is &lt;code>target&lt;/code> equal to mid value? No (&lt;code>5 != 6&lt;/code>)&lt;/li>
@@ -38,16 +44,17 @@
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./bs-00.drawio.png" alt="bs-0" loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;/figure>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./bs-01.drawio.png" alt="bs-0" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img src="./bs-01.drawio.png" alt="bs-1" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
 &lt;h3 id="second-loop">Second loop&lt;/h3>
 &lt;ol>
-&lt;li>The mid index get computed as &lt;code>mid = 0 + 3 / 2 = 1&lt;/code>&lt;/li>
+&lt;li>The mid index get computed as &lt;code>mid = 0 + 3 / 2 = 1&lt;/code>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./bs-02.drawio.png" alt="bs-2" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/li>
 &lt;li>Test &lt;code>target&lt;/code> against mid value:
 &lt;ol>
 &lt;li>Is &lt;code>target&lt;/code> equal to mid value? No (&lt;code>5 != 3&lt;/code>)&lt;/li>
@@ -59,16 +66,17 @@
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./bs-02.drawio.png" alt="bs-0" loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;/figure>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./bs-03.drawio.png" alt="bs-0" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img src="./bs-03.drawio.png" alt="bs-3" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
 &lt;h3 id="third-loop">Third loop&lt;/h3>
 &lt;ol>
-&lt;li>The mid index get computed as &lt;code>mid = 2 + 3 / 2 = 2&lt;/code>&lt;/li>
+&lt;li>The mid index get computed as &lt;code>mid = 2 + 3 / 2 = 2&lt;/code>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./bs-04.drawio.png" alt="bs-4" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/li>
 &lt;li>Test &lt;code>target&lt;/code> against mid value:
 &lt;ol>
 &lt;li>Is &lt;code>target&lt;/code> equal to mid value? No (&lt;code>5 != 4&lt;/code>)&lt;/li>
@@ -80,28 +88,275 @@
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./bs-04.drawio.png" alt="bs-0" loading="lazy" data-zoomable />&lt;/div>
-&lt;/div>&lt;/figure>
-&lt;figure >
-&lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./bs-05.drawio.png" alt="bs-0" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img src="./bs-05.drawio.png" alt="bs-5" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
 &lt;h3 id="fourth-loop">Fourth loop&lt;/h3>
 &lt;ol>
-&lt;li>The mid index get computed as &lt;code>mid = 3 + 3 / 2 = 3&lt;/code>&lt;/li>
+&lt;li>The mid index get computed as &lt;code>mid = 3 + 3 / 2 = 3&lt;/code>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./bs-06.drawio.png" alt="bs-6" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/li>
 &lt;li>Test &lt;code>target&lt;/code> against mid value:
 &lt;ol>
 &lt;li>Is &lt;code>target&lt;/code> equal to mid value? Yes (&lt;code>5 == 5&lt;/code>), the &lt;code>mid&lt;/code> index is returned.&lt;/li>
 &lt;/ol>
 &lt;/li>
 &lt;/ol>
+&lt;p>Although the conceptual idea of binary search is comparatively straightforward, the details can be tricky.&lt;/p>
+&lt;p>The real pit of binary search is not the integer overflow, but the whether to add one to or subtract one from &lt;code>mid&lt;/code>, and where to use &lt;code>&amp;lt;=&lt;/code> or &lt;code>&amp;lt;&lt;/code> in the loop condition.&lt;/p>
+&lt;h2 id="generalized-framework">Generalized framework&lt;/h2>
+&lt;p>&lt;strong>Minimizing k which satisfies the &lt;code>condition(k)&lt;/code> function.&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">binary_search&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">array&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">def&lt;/span> &lt;span class="nf">condition&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">bool&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">pass&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">min&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">search_space&lt;/span>&lt;span class="p">),&lt;/span> &lt;span class="nb">max&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">search_space&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">end&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mid&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">start&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">//&lt;/span> &lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">condition&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">):&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="c1"># Inclusive reduction of the right boundary&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span> &lt;span class="c1"># Exclusive reduction of the left boundary&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">start&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>&lt;strong>After exiting the loop, &lt;code>start&lt;/code> is the minimal k satisfying the inner &lt;code>condition&lt;/code> function.&lt;/strong>&lt;/p>
+&lt;p>We should care about three parts of this template:&lt;/p>
+&lt;ul>
+&lt;li>Initialisation of the boundary variables &lt;code>start&lt;/code> and &lt;code>end&lt;/code> to specify the &lt;strong>search space&lt;/strong> (all the possible elements).&lt;/li>
+&lt;li>Decide return value.&lt;/li>
+&lt;li>Design the &lt;code>condition&lt;/code> function, this is the hardest part.&lt;/li>
+&lt;/ul>
+&lt;p>Let&amp;rsquo;s see the basic search with the generalized framework:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">binary_search&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">end&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mid&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">start&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">//&lt;/span> &lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">start&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This looks a bit less readable than the classical algorithm, but understanding the mechanics behind this will allow to gneeralize the binar search to many more coding problems.&lt;/p>
+&lt;p>&lt;em>Why are we using &lt;code>&amp;gt;=&lt;/code> in the &lt;strong>condition function&lt;/strong>?&lt;/em>&lt;/p>
+&lt;p>Think in this way, we are &lt;strong>searching for the minimum k for which &lt;code>nums[mid] &amp;gt;= target&lt;/code>&lt;/strong>, we are searching the value (index) that satisfies the condition. If we would use &lt;code>&amp;gt;&lt;/code> instead of &lt;code>&amp;gt;=&lt;/code> we would get the index k which is greater (and not equal) than &lt;code>target&lt;/code>.&lt;/p>
+&lt;p>Considering the following example with just two elements of an array, if we apply the &lt;strong>condition function&lt;/strong> with &lt;code>&amp;gt;&lt;/code>, it would trigger the expression in the &lt;code>else&lt;/code> branch, which will set &lt;code>start&lt;/code> to &lt;code>mid + 1&lt;/code>.&lt;/p>
+&lt;img src="./only-greater-0.drawio.png" alt="image" width="20%" height="auto">
+&lt;p>This would stop the loop (&lt;code>start == end&lt;/code>), but now &lt;code>start&lt;/code> (&lt;strong>k&lt;/strong>) is the index of an element greater than &lt;code>target&lt;/code>.&lt;/p>
+&lt;img src="./only-greater-1.drawio.png" alt="image" width="20%" height="auto">
+&lt;p>&lt;em>What return condition should I use if the element is not in the list?&lt;/em>&lt;/p>
+&lt;p>That&amp;rsquo;s a nice question, and it should be specified from the problem itself, the previous code was assuming that the element was always present. If the &lt;code>target&lt;/code> can miss, a common requirement is to return &lt;code>-1&lt;/code>, which can be easily written in the return condition:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="k">if&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">start&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">==&lt;/span> &lt;span class="n">target&lt;/span> &lt;span class="k">else&lt;/span> &lt;span class="o">-&lt;/span>&lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="1st-loop">1st loop&lt;/h3>
+&lt;p>Initial variables:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>nums = [1, 3, 4, 5, 6, 8, 9, 10, 11, 12]&lt;/code>&lt;/li>
+&lt;li>&lt;code>target = 5&lt;/code>&lt;/li>
+&lt;li>&lt;code>start = 0, end = 9&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>Algorithm steps:&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>mid = 4&lt;/code>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./bs-framework-0.drawio.png" alt="bs-fw-0" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/li>
+&lt;li>Test the &lt;strong>condition function&lt;/strong> &lt;code>nums[mid] &amp;gt;= target&lt;/code>:
+&lt;ol>
+&lt;li>Is &lt;code>nums[mid] &amp;gt;= target&lt;/code>? Yes (&lt;code>6 &amp;gt; 5&lt;/code>), reduce the &lt;strong>search space&lt;/strong> from the right (&lt;code>mid&lt;/code> excluded).&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
-&lt;div class="w-100" >&lt;img src="./bs-06.drawio.png" alt="bs-0" loading="lazy" data-zoomable />&lt;/div>
+&lt;div class="w-100" >&lt;img src="./bs-framework-1.drawio.png" alt="bs-fw-1" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/p></description></item><item><title>Design Patterns in C++</title><link>https://manuelpagliuca.github.io/project/design-patterns/</link><pubDate>Tue, 26 Dec 2023 14:17:20 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/design-patterns/</guid><description>&lt;p>Personal project, December 2023&lt;/p>
+&lt;/p>
+&lt;h3 id="2nd-loop">2nd loop&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>mid = 2&lt;/code>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./bs-framework-2.drawio.png" alt="bs-fw-2" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/li>
+&lt;li>Test the &lt;strong>condition function&lt;/strong> &lt;code>nums[mid] &amp;gt;= target&lt;/code>:
+&lt;ol>
+&lt;li>Is &lt;code>nums[mid] &amp;gt;= target&lt;/code>? No (&lt;code>4 &amp;lt; 5&lt;/code>)&lt;/li>
+&lt;li>Then &lt;code>nums[mid] &amp;lt; target&lt;/code>, reduce the &lt;strong>search space&lt;/strong> from the left (&lt;code>mid&lt;/code> included).
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./bs-framework-3.drawio.png" alt="bs-fw-3" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;h3 id="3rd-loop">3rd loop&lt;/h3>
+&lt;ol>
+&lt;li>&lt;code>mid = 3&lt;/code>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./bs-framework-4.drawio.png" alt="bs-fw-4" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/li>
+&lt;li>Test the &lt;strong>condition function&lt;/strong> &lt;code>nums[mid] &amp;gt;= target&lt;/code>:
+&lt;ol>
+&lt;li>Is &lt;code>nums[mid] &amp;gt;= target&lt;/code>? Yes (&lt;code>5 == 5&lt;/code>), reduce the &lt;strong>search space&lt;/strong> from the right (&lt;code>mid&lt;/code> excluded).
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="./bs-framework-5.drawio.png" alt="bs-fw-5" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;p>The next loop condition check will be evaluated as &lt;code>False&lt;/code> since &lt;code>start == end == 3&lt;/code>&lt;/p>
+&lt;h2 id="application-of-the-generalized-framework">Application of the generalized framework&lt;/h2>
+&lt;h3 id="sqrttarget">&lt;code>sqrt(target)&lt;/code>&lt;/h3>
+&lt;p>Searching for the minimal k satisfying &lt;code>k^2 &amp;gt; target&lt;/code> condition, then the answer is &lt;code>k - 1&lt;/code>.&lt;/p>
+&lt;ul>
+&lt;li>The loop will terminate with &lt;code>start == end&lt;/code>, in the last iteration if &lt;strong>inner condition function&lt;/strong>
+is satisfied, the &lt;code>start&lt;/code> variable will contain &lt;strong>the minimal &lt;code>k&lt;/code> for which &lt;code>mid * mid &amp;gt; target&lt;/code>&lt;/strong>, this means that the answer is &lt;code>start - 1&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">def&lt;/span> &lt;span class="nf">my_sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">x&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">x&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">end&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mid&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">start&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">//&lt;/span> &lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">*&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">x&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">else&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">return&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It is also possible to use as return value the &lt;code>mid&lt;/code> index if declared outside the loop cycle, the code will behave in the same way for perfect squares, while it will approximate by &lt;em>excess&lt;/em> non-square inputs (the code will approximate by &lt;em>default&lt;/em>).&lt;/p>
+&lt;h3 id="search-insert-position">Search Insert Position&lt;/h3>
+&lt;p>&lt;strong>TODO: THIS ARTICLE HAS TO BE COMPLETED, AT THE MOMENT IS JUST A BUNCH OF NOTES&lt;/strong>&lt;/p>
+&lt;p>Searching for the &lt;strong>minimal k value satisfying &lt;code>nums[k] &amp;gt;= target&lt;/code>&lt;/strong>&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl"> &lt;span class="k">def&lt;/span> &lt;span class="nf">search_insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="n">List&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="nb">int&lt;/span>&lt;span class="p">],&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&amp;gt;&lt;/span> &lt;span class="nb">int&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">while&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">end&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">mid&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">start&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">end&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="n">start&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">//&lt;/span> &lt;span class="mi">2&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">if&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">&amp;gt;=&lt;/span> &lt;span class="n">target&lt;/span>&lt;span class="p">:&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="why--instead-of--in-the-loop-condition">Why &lt;code>&amp;lt;=&lt;/code> instead of &lt;code>&amp;lt;&lt;/code> in the loop condition?&lt;/h3>
+&lt;p>Because the initial assignment of &lt;code>end&lt;/code> is &lt;code>len(nums) - 1&lt;/code>, which is the index of the last element, and not &lt;code>len(nums)&lt;/code> (which contains an extra &lt;em>immaginary&lt;/em> element).&lt;/p>
+&lt;ul>
+&lt;li>The first approach has a &lt;strong>search space&lt;/strong> of &lt;code>[start, end]&lt;/code>&lt;/li>
+&lt;li>The second approach has a &lt;strong>search space&lt;/strong> of &lt;code>[start, end)&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;p>The binary search can terminate when the value is found &lt;code>nums[mid] == target&lt;/code>, but if not found &lt;strong>it should terminate when the search interval is empty&lt;/strong>, which means that if you don&amp;rsquo;t have a place for searching it, you haven&amp;rsquo;t found it.&lt;/p>
+&lt;p>Termination conditions:&lt;/p>
+&lt;ul>
+&lt;li>For &lt;code>start &amp;lt;= end&lt;/code> is &lt;code>start == end + 1&lt;/code>, when the &lt;code>start&lt;/code> index surpass by 1 element the &lt;code>end&lt;/code> index.&lt;/li>
+&lt;li>For &lt;code>start &amp;lt; end&lt;/code> is &lt;code>start == end&lt;/code>, when they are both on the same element.&lt;/li>
+&lt;/ul>
+&lt;h3 id="why-left--mid--1-and-right--mid---1">Why &lt;code>left = mid + 1&lt;/code> and &lt;code>right = mid - 1&lt;/code>?&lt;/h3>
+&lt;h3 id="flaws-of-the-basic-algorithm">Flaws of the basic algorithm&lt;/h3>
+&lt;p>This algorithm is great and simple, but has some limitations. In some specific problems, some target number could be repeated along the array, and the problem requiremnt could be the left border or right border of this sequence.&lt;/p>
+&lt;p>&lt;strong>The current algorithm can&amp;rsquo;t handle this issue.&lt;/strong>&lt;/p>
+&lt;ul>
+&lt;li>Adding a &lt;strong>linear search&lt;/strong> to the found sequence will compromise the complexity in time of the binary search.&lt;/li>
+&lt;/ul>
+&lt;h2 id="binary-search-101">Binary Search 101&lt;/h2>
+&lt;p>When it comes to implementation, it&amp;rsquo;s rather difficult to write a bug-free code in just a few minutes.&lt;/p>
+&lt;ul>
+&lt;li>Should I use &lt;code>start &amp;lt; end&lt;/code> or &lt;code>start &amp;lt;= end&lt;/code> as loop condition?&lt;/li>
+&lt;li>How to initialize the boundary variable &lt;code>start&lt;/code> and &lt;code>end&lt;/code>?&lt;/li>
+&lt;li>How to update the boundary? &lt;code>left = mid&lt;/code> or &lt;code>left = mid + 1&lt;/code>, &amp;hellip;&lt;/li>
+&lt;li>When to exit the loop?&lt;/li>
+&lt;/ul>
+&lt;p>This because in real-life problems and coding questions, it&amp;rsquo;s really hard that a classical implementation of the algorithm will be required.&lt;/p>
+&lt;h3 id="search-space-boundary">Search space boundary&lt;/h3>
+&lt;p>Normally we can see this kind of boundary initialization:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">)&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>But this is not always the case.&lt;/p>
+&lt;blockquote>
+&lt;p>The boundary is the range of elements we will be searching from. The initial boudnary should include all the elmeents, meaning all the possible answers should be included.&lt;/p>
+&lt;/blockquote>
+&lt;p>For example, in &lt;a href="https://leetcode.com/problems/search-insert-position/description/" target="_blank" rel="noopener">LeetCode #35&lt;/a> if the &lt;code>target&lt;/code> isn&amp;rsquo;t found we have to return the the index of where the element could be, and this could be even after the last element.&lt;/p>
+&lt;p>This means that the search space will be bigger:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">0&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="nb">len&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">nums&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="calculating-mid">Calculating &lt;code>mid&lt;/code>&lt;/h3>
+&lt;p>When the number are extremely big it can result in an &lt;a href="https://en.wikipedia.org/wiki/Integer_overflow" target="_blank" rel="noopener">&lt;strong>integer overflow&lt;/strong>&lt;/a>.&lt;/p>
+&lt;p>There are three ways of computing the &lt;code>mid&lt;/code> index, from the worst to the best.&lt;/p>
+&lt;h4 id="first-approach">First approach&lt;/h4>
+&lt;blockquote>
+&lt;p>&lt;code>mid = (start + end) / 2&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>This is the most readable approach, but the risk of incurring in &lt;strong>integer overflow&lt;/strong> (going beyond the representation limits for integers) is high with bigger values of &lt;code>start&lt;/code> and &lt;code>end&lt;/code>.&lt;/p>
+&lt;h3 id="second-approach">Second approach&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;code>mid = start + (end - start) // 2&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>This approach is a refinement of the first, subtracting &lt;code>start&lt;/code> from &lt;code>end&lt;/code> reduces the amount of numbers involved in the sum.&lt;/p>
+&lt;h3 id="third-approach">Third approach&lt;/h3>
+&lt;blockquote>
+&lt;p>&lt;code>mid = (start + end) &amp;gt;&amp;gt; 1&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>The &lt;strong>right shift&lt;/strong> bitwise operator doesn&amp;rsquo;t introduce new bits in the representation of a number, this means that can&amp;rsquo;t cause an overflow on big numbers.&lt;/p>
+&lt;h3 id="left-and-right-mid">Left and right mid&lt;/h3>
+&lt;p>When we are dealing with an &lt;strong>even&lt;/strong> number of elements, it is our choice to pick the &lt;strong>left mid&lt;/strong> or the &lt;strong>right mid&lt;/strong>&lt;/p>
+&lt;p>Left mid (&lt;strong>integer division&lt;/strong> prefer the left side of the array):&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>mid = start + (end - start) // 2&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;p>Right mid:&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>mid = start + (end - start + 1) // 2&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="boundary-shrinking-strategy">Boundary shrinking strategy&lt;/h2>
+&lt;p>The best strategy to adopt is to always use a logic that &lt;strong>excludes&lt;/strong> &lt;code>mid&lt;/code> from the &lt;strong>search space&lt;/strong>.&lt;/p>
+&lt;p>If the target is less than &lt;code>mid&lt;/code>, it can&amp;rsquo;t be &lt;code>mid&lt;/code>, so we can exclude it &lt;code>end = mid - 1&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;/code>&lt;/pre>&lt;/div>&lt;p>si ma perchè?..&lt;/p>
+&lt;h3 id="symmetric-variant">Symmetric variant&lt;/h3>
+&lt;h2 id="loop-condition">Loop condition&lt;/h2>
+&lt;p>Using only &lt;code>&amp;lt;&lt;/code> the &lt;strong>only condition&lt;/strong> the loop exits is &lt;code>start == end&lt;/code>, this means that they are pointing to only one element.&lt;/p>
+&lt;blockquote>
+&lt;p>&lt;code>while (start &amp;lt; high):&lt;/code>&lt;/p>
+&lt;/blockquote>
+&lt;h2 id="infinity-loop">Infinity loop&lt;/h2>
+&lt;p>A bad choice of &lt;a href="#left-and-right-mid">left and right mid&lt;/a> will lead to &lt;strong>infinity loop&lt;/strong>.&lt;/p>
+&lt;p>&lt;strong>The choice of &lt;code>mid&lt;/code> and our shrinking logic has to work together in a way that every time, at least 1 element is excluded.&lt;/strong>&lt;/p>
+&lt;p>Let&amp;rsquo;s consider the base case when we have only two elements (which is like having &lt;em>even&lt;/em> number of elements in the input), and how
+two misplaced mid will lead to infinite loop.&lt;/p>
+&lt;h3 id="wrong-left-mid">Wrong left mid&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="n">target&lt;/span> &lt;span class="o">&amp;lt;&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">-&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Using this logic with the &lt;strong>left mid&lt;/strong>, in the case the execution will reach the &lt;code>else&lt;/code> (this means that the &lt;code>target&lt;/code> isn&amp;rsquo;t the element pointed from &lt;code>mid&lt;/code>), it will just keep &amp;ldquo;update&amp;rdquo; the &lt;code>mid&lt;/code> element to the same value of &lt;code>start&lt;/code>, and this will stuck the program for ever.&lt;/p>
+&lt;p>In this case we had to use the &lt;strong>right mid&lt;/strong> instead &lt;code>mid = start + (end - start + 1) // 2&lt;/code>&lt;/p>
+&lt;img src="./bs-2-elements.drawio.png" alt="image" width="20%" height="auto">
+&lt;img src="./bs-2-elements-mid.drawio.png" alt="image" width="20%" height="auto">
+&lt;h3 id="wrong-right-mid">Wrong right mid&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="k">if&lt;/span> &lt;span class="n">target&lt;/span> &lt;span class="o">&amp;gt;&lt;/span> &lt;span class="n">nums&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="n">mid&lt;/span>&lt;span class="p">]:&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">end&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span> &lt;span class="o">+&lt;/span> &lt;span class="mi">1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">else&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="n">start&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">mid&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>The same happens simmetrically with the &lt;strong>right mid&lt;/strong>, the fix will be using the &lt;strong>left mid&lt;/strong> &lt;code>mid = start + (end - start) // 2&lt;/code>&lt;/p>
+&lt;img src="./bs-2-elements-2.drawio.png" alt="image" width="20%" height="auto">
+&lt;img src="./bs-2-elems-2-mid.drawio.png" alt="image" width="20%" height="auto">
+&lt;h2 id="complexity">Complexity&lt;/h2>
+&lt;h2 id="resources">Resources&lt;/h2>
+&lt;p>These notes are heavily based on an article I found on Leetcode, rewriting and drawing the diagrams was a way for understanding the concepts better.&lt;/p>
+&lt;ul>
+&lt;li>&lt;a href="https://leetcode.com/problems/binary-search/solutions/423162/Binary-Search-101-The-Ultimate-Binary-Search-Handbook/" target="_blank" rel="noopener">Binary Search 101&lt;/a> - AminiCK&lt;/li>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Binary_search_algorithm" target="_blank" rel="noopener">Wikipedia&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://leetcode.com/discuss/general-discussion/786126/Python-Powerful-Ultimate-Binary-Search-Template.-Solved-many-problems" target="_blank" rel="noopener">[Python] Powerful Ultimate Binary Search Template. Solved many problems&lt;/a> - zhijun_liao&lt;/li>
+&lt;li>&lt;a href="https://www.youtube.com/watch?v=GU7DpgHINWQ" target="_blank" rel="noopener">Binary Search tutorial (C++ and Python)&lt;/a> - Errichto&lt;/li>
+&lt;/ul></description></item><item><title>Design Patterns in C++</title><link>https://manuelpagliuca.github.io/project/design-patterns/</link><pubDate>Tue, 26 Dec 2023 14:17:20 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/design-patterns/</guid><description>&lt;p>Personal project, December 2023&lt;/p>
 &lt;p>Between the months of November and December I wanted to dig deeper on software engineering, so I decided to study and implement some design patterns. In particular the fundamental one from the &lt;em>Gang of Four&lt;/em> (GoF).&lt;/p>
 &lt;p>I created a &lt;a href="https://github.com/manuelpagliuca/design-patterns-cpp" target="_blank" rel="noopener">repository&lt;/a> that acts as a collection of C++ implementations of these patterns. The GoF patterns are all presents but in the future I&amp;rsquo;m planning to add also the &amp;ldquo;extra&amp;rdquo; patterns (at the moment only the &lt;em>null object&lt;/em> is present).&lt;/p>
 &lt;h2 id="creational">Creational&lt;/h2>
