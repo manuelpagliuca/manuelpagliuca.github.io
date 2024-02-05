@@ -28,12 +28,15 @@
 Algorithm steps:&lt;/li>
 &lt;/ul>
 &lt;ol>
-&lt;li>The mid index get computed as &lt;code>mid = 0 + 9 / 2 = 4&lt;/code>, this is a bad case, because the &lt;code>target&lt;/code> is one position away from the &lt;code>mid&lt;/code>.
+&lt;li>The mid index get computed as &lt;code>mid = 0 + 9 / 2 = 4&lt;/code>, this is a bad case, because the &lt;code>target&lt;/code> is one position away from the &lt;code>mid&lt;/code>.&lt;/li>
+&lt;/ol>
+&lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="./bs-00.drawio.png" alt="bs-0" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/li>
+&lt;/p>
+&lt;ol start="2">
 &lt;li>Test &lt;code>target&lt;/code> against mid value:
 &lt;ol>
 &lt;li>Is &lt;code>target&lt;/code> equal to mid value? No (&lt;code>5 != 6&lt;/code>)&lt;/li>
@@ -49,12 +52,15 @@ Algorithm steps:&lt;/li>
 &lt;/p>
 &lt;h3 id="second-loop">Second loop&lt;/h3>
 &lt;ol>
-&lt;li>The mid index get computed as &lt;code>mid = 0 + 3 / 2 = 1&lt;/code>
+&lt;li>The mid index get computed as &lt;code>mid = 0 + 3 / 2 = 1&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="./bs-02.drawio.png" alt="bs-2" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/li>
+&lt;/p>
+&lt;ol start="2">
 &lt;li>Test &lt;code>target&lt;/code> against mid value:
 &lt;ol>
 &lt;li>Is &lt;code>target&lt;/code> equal to mid value? No (&lt;code>5 != 3&lt;/code>)&lt;/li>
@@ -71,12 +77,15 @@ Algorithm steps:&lt;/li>
 &lt;/p>
 &lt;h3 id="third-loop">Third loop&lt;/h3>
 &lt;ol>
-&lt;li>The mid index get computed as &lt;code>mid = 2 + 3 / 2 = 2&lt;/code>
+&lt;li>The mid index get computed as &lt;code>mid = 2 + 3 / 2 = 2&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="./bs-04.drawio.png" alt="bs-4" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/li>
+&lt;/p>
+&lt;ol>
 &lt;li>Test &lt;code>target&lt;/code> against mid value:
 &lt;ol>
 &lt;li>Is &lt;code>target&lt;/code> equal to mid value? No (&lt;code>5 != 4&lt;/code>)&lt;/li>
@@ -93,12 +102,15 @@ Algorithm steps:&lt;/li>
 &lt;/p>
 &lt;h3 id="fourth-loop">Fourth loop&lt;/h3>
 &lt;ol>
-&lt;li>The mid index get computed as &lt;code>mid = 3 + 3 / 2 = 3&lt;/code>
+&lt;li>The mid index get computed as &lt;code>mid = 3 + 3 / 2 = 3&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="./bs-06.drawio.png" alt="bs-6" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/li>
+&lt;/p>
+&lt;ol start="2">
 &lt;li>Test &lt;code>target&lt;/code> against mid value:
 &lt;ol>
 &lt;li>Is &lt;code>target&lt;/code> equal to mid value? Yes (&lt;code>5 == 5&lt;/code>), the &lt;code>mid&lt;/code> index is returned.&lt;/li>
@@ -166,12 +178,15 @@ Algorithm steps:&lt;/li>
 &lt;/ul>
 &lt;p>Algorithm steps:&lt;/p>
 &lt;ol>
-&lt;li>&lt;code>mid = 4&lt;/code>
+&lt;li>&lt;code>mid = 4&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="./bs-framework-0.drawio.png" alt="bs-fw-0" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/li>
+&lt;/p>
+&lt;ol start="2">
 &lt;li>Test the &lt;strong>condition function&lt;/strong> &lt;code>nums[mid] &amp;gt;= target&lt;/code>:
 &lt;ol>
 &lt;li>Is &lt;code>nums[mid] &amp;gt;= target&lt;/code>? Yes (&lt;code>6 &amp;gt; 5&lt;/code>), reduce the &lt;strong>search space&lt;/strong> from the right (&lt;code>mid&lt;/code> excluded).&lt;/li>
@@ -186,43 +201,51 @@ Algorithm steps:&lt;/li>
 &lt;/p>
 &lt;h3 id="2nd-loop">2nd loop&lt;/h3>
 &lt;ol>
-&lt;li>&lt;code>mid = 2&lt;/code>
+&lt;li>&lt;code>mid = 2&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="./bs-framework-2.drawio.png" alt="bs-fw-2" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/li>
+&lt;/p>
+&lt;ol start="2">
 &lt;li>Test the &lt;strong>condition function&lt;/strong> &lt;code>nums[mid] &amp;gt;= target&lt;/code>:
 &lt;ol>
 &lt;li>Is &lt;code>nums[mid] &amp;gt;= target&lt;/code>? No (&lt;code>4 &amp;lt; 5&lt;/code>)&lt;/li>
-&lt;li>Then &lt;code>nums[mid] &amp;lt; target&lt;/code>, reduce the &lt;strong>search space&lt;/strong> from the left (&lt;code>mid&lt;/code> included).
+&lt;li>Then &lt;code>nums[mid] &amp;lt; target&lt;/code>, reduce the &lt;strong>search space&lt;/strong> from the left (&lt;code>mid&lt;/code> included).&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="./bs-framework-3.drawio.png" alt="bs-fw-3" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;/ol>
+&lt;/p>
 &lt;h3 id="3rd-loop">3rd loop&lt;/h3>
 &lt;ol>
-&lt;li>&lt;code>mid = 3&lt;/code>
+&lt;li>&lt;code>mid = 3&lt;/code>&lt;/li>
+&lt;/ol>
+&lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="./bs-framework-4.drawio.png" alt="bs-fw-4" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/li>
+&lt;/p>
+&lt;ol start="2">
 &lt;li>Test the &lt;strong>condition function&lt;/strong> &lt;code>nums[mid] &amp;gt;= target&lt;/code>:
 &lt;ol>
-&lt;li>Is &lt;code>nums[mid] &amp;gt;= target&lt;/code>? Yes (&lt;code>5 == 5&lt;/code>), reduce the &lt;strong>search space&lt;/strong> from the right (&lt;code>mid&lt;/code> excluded).
+&lt;li>Is &lt;code>nums[mid] &amp;gt;= target&lt;/code>? Yes (&lt;code>5 == 5&lt;/code>), reduce the &lt;strong>search space&lt;/strong> from the right (&lt;code>mid&lt;/code> excluded).&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;/ol>
+&lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="./bs-framework-5.drawio.png" alt="bs-fw-5" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
-&lt;/li>
-&lt;/ol>
-&lt;/li>
-&lt;/ol>
+&lt;/p>
 &lt;p>The next loop condition check will be evaluated as &lt;code>False&lt;/code> since &lt;code>start == end == 3&lt;/code>&lt;/p>
 &lt;h2 id="application-of-the-generalized-framework">Application of the generalized framework&lt;/h2>
 &lt;h3 id="sqrttarget">&lt;code>sqrt(target)&lt;/code>&lt;/h3>
