@@ -1,21 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GP-GPU | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/tag/gp-gpu/</link><atom:link href="https://manuelpagliuca.github.io/tag/gp-gpu/index.xml" rel="self" type="application/rss+xml"/><description>GP-GPU</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 27 Jun 2021 00:00:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>GP-GPU</title><link>https://manuelpagliuca.github.io/tag/gp-gpu/</link></image><item><title>CUDA Ray Tracer</title><link>https://manuelpagliuca.github.io/project/rt/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/rt/</guid><description>&lt;p>GPU Computing Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/p>
-&lt;h2 id="about-the-project">About the project&lt;/h2>
-&lt;p>During the course of &lt;strong>GPU Computing&lt;/strong> I decided to implement my old version of the Ray Tracer (based on the
-&lt;em>Ray Tracing in One
-Weekend&lt;/em> from
-&lt;a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Peter Shirley&lt;/a>
-)
-on &lt;strong>CUDA&lt;/strong>. In
-&lt;a href="https://manuelpagliuca.github.io/uploads/GPU_COMPUTING___RAY_TRACER.pdf" target="_blank">this&lt;/a>
-paper I compared
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>GP-GPU | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/tag/gp-gpu/</link><atom:link href="https://manuelpagliuca.github.io/tag/gp-gpu/index.xml" rel="self" type="application/rss+xml"/><description>GP-GPU</description><generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 27 Jun 2021 00:00:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu_7cf09ba6a715517.png</url><title>GP-GPU</title><link>https://manuelpagliuca.github.io/tag/gp-gpu/</link></image><item><title>CUDA Ray Tracer</title><link>https://manuelpagliuca.github.io/project/rt/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/rt/</guid><description>&lt;p&gt;GPU Computing Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/p&gt;
+&lt;h2 id="about-the-project"&gt;About the project&lt;/h2&gt;
+&lt;p&gt;During the course of &lt;strong&gt;GPU Computing&lt;/strong&gt; I decided to implement my old version of the Ray Tracer (based on the
+&lt;em&gt;Ray Tracing in One
+Weekend&lt;/em&gt; from &lt;a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank" rel="noopener"&gt;Peter Shirley&lt;/a&gt;)
+on &lt;strong&gt;CUDA&lt;/strong&gt;. In &lt;a href="uploads/GPU_COMPUTING___RAY_TRACER.pdf" target="_blank" rel="noopener"&gt;this&lt;/a&gt; paper I compared
 the two Ray Tracers underlining the
-huge differences in rendering speed (even without achieving the best warp efficiency).&lt;br>&lt;br>
+huge differences in rendering speed (even without achieving the best warp efficiency).&lt;br&gt;&lt;br&gt;
 For the comparison I used the same scene in both the implementation composed by 8 different spheres with
 different
-materials between &lt;em>lambertian&lt;/em>, &lt;em>metal&lt;/em> and &lt;em>dielectrics&lt;/em>. I highly recommend to check the comparisons
-and metrics at the end of the paper, the GitHub repository is at
-&lt;a href="https://github.com/manuelpagliuca/Ray-Tracer-CUDA" target="_blank">this&lt;/a>
-link if you want to see some
-render just download
-&lt;a href="https://manuelpagliuca.github.io/uploads/GPU_COMPUTING_RENDERS.zip">this&lt;/a>
-zip.&lt;/p></description></item></channel></rss>
+materials between &lt;em&gt;lambertian&lt;/em&gt;, &lt;em&gt;metal&lt;/em&gt; and &lt;em&gt;dielectrics&lt;/em&gt;. I highly recommend to check the comparisons
+and metrics at the end of the paper, the GitHub repository is at &lt;a href="https://github.com/manuelpagliuca/Ray-Tracer-CUDA" target="_blank" rel="noopener"&gt;this&lt;/a&gt; link if you want to see some
+render just download &lt;a href="uploads/GPU_COMPUTING_RENDERS.zip"&gt;this&lt;/a&gt; zip.&lt;/p&gt;</description></item></channel></rss>
