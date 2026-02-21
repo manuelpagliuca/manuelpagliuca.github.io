@@ -1,525 +1,546 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/project/</link><atom:link href="https://manuelpagliuca.github.io/project/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>HugoBlox Kit (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Tue, 26 Dec 2023 14:17:20 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu_7cf09ba6a715517.png</url><title>Projects</title><link>https://manuelpagliuca.github.io/project/</link></image><item><title>Design Patterns in C++</title><link>https://manuelpagliuca.github.io/project/design-patterns/</link><pubDate>Tue, 26 Dec 2023 14:17:20 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/design-patterns/</guid><description>&lt;p&gt;Personal project, December 2023&lt;/p&gt;
-&lt;p&gt;Between the months of November and December I wanted to dig deeper on software engineering, so I decided to study and implement some design patterns. In particular the fundamental one from the &lt;em&gt;Gang of Four&lt;/em&gt; (GoF).&lt;/p&gt;
-&lt;p&gt;I created a
-that acts as a collection of C++ implementations of these patterns. The GoF patterns are all presents but in the future I&amp;rsquo;m planning to add also the &amp;ldquo;extra&amp;rdquo; patterns (at the moment only the &lt;em&gt;null object&lt;/em&gt; is present).&lt;/p&gt;
-&lt;h2 id="creational"&gt;Creational&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Design Pattern&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Abstract Factory&lt;/td&gt;
-&lt;td&gt;Provides an interface for creating families of related or dependent objects without specifying their concrete classes.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Builder&lt;/td&gt;
-&lt;td&gt;Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Factory Method&lt;/td&gt;
-&lt;td&gt;Defines an interface for creating an object but leaves the choice of its type to the subclasses.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Prototype&lt;/td&gt;
-&lt;td&gt;Creates new objects by copying an existing object, known as the prototype.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Singleton&lt;/td&gt;
-&lt;td&gt;Ensures a class has only one instance and provides a global point of access to that instance.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id="structural"&gt;Structural&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Design Pattern&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Adapter&lt;/td&gt;
-&lt;td&gt;Allows classes with incompatible interfaces to work together by wrapping its own interface around that of an already existing class.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Bridge&lt;/td&gt;
-&lt;td&gt;Decouples an abstraction from its implementation so that the two can vary independently.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Composite&lt;/td&gt;
-&lt;td&gt;Composes zero-or-more similar objects so that they can be manipulated as one object.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Decorator&lt;/td&gt;
-&lt;td&gt;Dynamically adds/overrides behavior in an existing method of an object.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Facade&lt;/td&gt;
-&lt;td&gt;Provides a simplified interface to a large body of code.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Flyweight&lt;/td&gt;
-&lt;td&gt;Reduces the cost of creating and manipulating a large number of similar objects.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Proxy&lt;/td&gt;
-&lt;td&gt;Provides a placeholder for another object to control access, reduce cost, and reduce complexity.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id="behavioral"&gt;Behavioral&lt;/h2&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;Design Pattern&lt;/th&gt;
-&lt;th&gt;Description&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;Chain of Responsibility&lt;/td&gt;
-&lt;td&gt;Delegates commands to a chain of processing objects.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Command&lt;/td&gt;
-&lt;td&gt;Creates objects that encapsulate actions and parameters.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Interpreter&lt;/td&gt;
-&lt;td&gt;Implements a specialized language.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Iterator&lt;/td&gt;
-&lt;td&gt;Accesses the elements of an object sequentially without exposing its underlying representation.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Mediator&lt;/td&gt;
-&lt;td&gt;Allows loose coupling between classes by being the only class that has detailed knowledge of their methods.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Memento&lt;/td&gt;
-&lt;td&gt;Provides the ability to restore an object to its previous state (undo).&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Observer&lt;/td&gt;
-&lt;td&gt;Is a publish/subscribe pattern, which allows some observer objects to see an event.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;State&lt;/td&gt;
-&lt;td&gt;Allows an object to alter its behavior when its internal state changes.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Strategy&lt;/td&gt;
-&lt;td&gt;Allows one of a family of algorithms to be selected on-the-fly at runtime.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Template Method&lt;/td&gt;
-&lt;td&gt;Defines the skeleton of an algorithm as an abstract class, allowing its subclasses to provide concrete behavior.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Visitor&lt;/td&gt;
-&lt;td&gt;Separates an algorithm from an object structure by moving the hierarchy of methods into one object.&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;p&gt;During this exploration I discovered many interesting aspects of software engineering by exploring this field, especially a concept of scope level design patterns. Some design patterns can be applied directly on the repository (code level, so in micro), like the GoF patterns or &lt;em&gt;concurrency patterns&lt;/em&gt; for MT paradigms.&lt;/p&gt;
-&lt;p&gt;Other design patterns acts on an higher level of abstraction, and these are called &lt;strong&gt;architectural patterns&lt;/strong&gt;. Some of them are widely known like the MVC (Model-View-Controller) or n-tier, but most of them are new to me.&lt;/p&gt;
-&lt;p&gt;In the future I would like to write a blog post about them with diagrams and explanations, seems a good idea for studying them in a fun way 😁&lt;/p&gt;</description></item><item><title>Efficient representations of high‑resolution polygonal surfaces, adding anisotropy control to the Micro‑Mesh schema</title><link>https://manuelpagliuca.github.io/project/anisotropic-mm/</link><pubDate>Wed, 25 Oct 2023 09:42:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/anisotropic-mm/</guid><description>&lt;p&gt;Master&amp;rsquo;s Thesis, October 2023, M.Sc. in Computer Science @UniMI&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;
-&lt;img alt=""
-srcset="https://manuelpagliuca.github.io/project/anisotropic-mm/dragon_render_hu_96fd40663c75a6d.webp 320w, https://manuelpagliuca.github.io/project/anisotropic-mm/dragon_render_hu_bae87c51de610d7f.webp 480w, https://manuelpagliuca.github.io/project/anisotropic-mm/dragon_render_hu_d6b3bf62110756e9.webp 760w"
-sizes="(max-width: 480px) 100vw, (max-width: 768px) 90vw, (max-width: 1024px) 80vw, 760px"
-src="https://manuelpagliuca.github.io/project/anisotropic-mm/dragon_render_hu_96fd40663c75a6d.webp"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/project/</link><atom:link href="https://manuelpagliuca.github.io/project/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 26 Dec 2023 14:17:20 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Projects</title><link>https://manuelpagliuca.github.io/project/</link></image><item><title>Design Patterns in C++</title><link>https://manuelpagliuca.github.io/project/design-patterns/</link><pubDate>Tue, 26 Dec 2023 14:17:20 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/design-patterns/</guid><description>&lt;p>Personal project, December 2023&lt;/p>
+&lt;p>Between the months of November and December I wanted to dig deeper on software engineering, so I decided to study and implement some design patterns. In particular the fundamental one from the &lt;em>Gang of Four&lt;/em> (GoF).&lt;/p>
+&lt;p>I created a &lt;a href="https://github.com/manuelpagliuca/design-patterns-cpp" target="_blank" rel="noopener">repository&lt;/a> that acts as a collection of C++ implementations of these patterns. The GoF patterns are all presents but in the future I&amp;rsquo;m planning to add also the &amp;ldquo;extra&amp;rdquo; patterns (at the moment only the &lt;em>null object&lt;/em> is present).&lt;/p>
+&lt;h2 id="creational">Creational&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Design Pattern&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Abstract Factory&lt;/td>
+&lt;td>Provides an interface for creating families of related or dependent objects without specifying their concrete classes.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Builder&lt;/td>
+&lt;td>Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Factory Method&lt;/td>
+&lt;td>Defines an interface for creating an object but leaves the choice of its type to the subclasses.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Prototype&lt;/td>
+&lt;td>Creates new objects by copying an existing object, known as the prototype.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Singleton&lt;/td>
+&lt;td>Ensures a class has only one instance and provides a global point of access to that instance.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="structural">Structural&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Design Pattern&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Adapter&lt;/td>
+&lt;td>Allows classes with incompatible interfaces to work together by wrapping its own interface around that of an already existing class.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Bridge&lt;/td>
+&lt;td>Decouples an abstraction from its implementation so that the two can vary independently.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Composite&lt;/td>
+&lt;td>Composes zero-or-more similar objects so that they can be manipulated as one object.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Decorator&lt;/td>
+&lt;td>Dynamically adds/overrides behavior in an existing method of an object.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Facade&lt;/td>
+&lt;td>Provides a simplified interface to a large body of code.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Flyweight&lt;/td>
+&lt;td>Reduces the cost of creating and manipulating a large number of similar objects.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Proxy&lt;/td>
+&lt;td>Provides a placeholder for another object to control access, reduce cost, and reduce complexity.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="behavioral">Behavioral&lt;/h2>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Design Pattern&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Chain of Responsibility&lt;/td>
+&lt;td>Delegates commands to a chain of processing objects.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Command&lt;/td>
+&lt;td>Creates objects that encapsulate actions and parameters.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Interpreter&lt;/td>
+&lt;td>Implements a specialized language.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Iterator&lt;/td>
+&lt;td>Accesses the elements of an object sequentially without exposing its underlying representation.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Mediator&lt;/td>
+&lt;td>Allows loose coupling between classes by being the only class that has detailed knowledge of their methods.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Memento&lt;/td>
+&lt;td>Provides the ability to restore an object to its previous state (undo).&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Observer&lt;/td>
+&lt;td>Is a publish/subscribe pattern, which allows some observer objects to see an event.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>State&lt;/td>
+&lt;td>Allows an object to alter its behavior when its internal state changes.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Strategy&lt;/td>
+&lt;td>Allows one of a family of algorithms to be selected on-the-fly at runtime.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Template Method&lt;/td>
+&lt;td>Defines the skeleton of an algorithm as an abstract class, allowing its subclasses to provide concrete behavior.&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Visitor&lt;/td>
+&lt;td>Separates an algorithm from an object structure by moving the hierarchy of methods into one object.&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>During this exploration I discovered many interesting aspects of software engineering by exploring this field, especially a concept of scope level design patterns. Some design patterns can be applied directly on the repository (code level, so in micro), like the GoF patterns or &lt;em>concurrency patterns&lt;/em> for MT paradigms.&lt;/p>
+&lt;p>Other design patterns acts on an higher level of abstraction, and these are called &lt;strong>architectural patterns&lt;/strong>. Some of them are widely known like the MVC (Model-View-Controller) or n-tier, but most of them are new to me.&lt;/p>
+&lt;p>In the future I would like to write a blog post about them with diagrams and explanations, seems a good idea for studying them in a fun way 😁&lt;/p></description></item><item><title>Efficient representations of high‑resolution polygonal surfaces, adding anisotropy control to the Micro‑Mesh schema</title><link>https://manuelpagliuca.github.io/project/anisotropic-mm/</link><pubDate>Wed, 25 Oct 2023 09:42:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/anisotropic-mm/</guid><description>&lt;p>Master&amp;rsquo;s Thesis, October 2023, M.Sc. in Computer Science @UniMI&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="" srcset="
+/project/anisotropic-mm/dragon_render_huf8cfb674e3e9d5aaba137dd8763e6e91_6565607_6a9b7e8c34208890c54153e224093422.webp 400w,
+/project/anisotropic-mm/dragon_render_huf8cfb674e3e9d5aaba137dd8763e6e91_6565607_be20a4681937039f09773afed417acd7.webp 760w,
+/project/anisotropic-mm/dragon_render_huf8cfb674e3e9d5aaba137dd8763e6e91_6565607_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://manuelpagliuca.github.io/project/anisotropic-mm/dragon_render_huf8cfb674e3e9d5aaba137dd8763e6e91_6565607_6a9b7e8c34208890c54153e224093422.webp"
 width="760"
 height="530"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id="abstract"&gt;
-&lt;/h3&gt;
-&lt;p&gt;This
-aims to empirically investigate the imaginable performance for data structures suitable for effectively representing extreme-resolution 3D polygonal surfaces designed for multi-resolution rendering on GPUs.&lt;/p&gt;
-&lt;p&gt;To this end, supporting algorithms will be designed, implemented, and tested that transform &amp;ldquo;traditional&amp;rdquo; (i.e., indexed) high-resolution triangular meshes into the analyzed data structures, and then measure the approximation errors introduced through appropriate geometric measurements.&lt;/p&gt;
-&lt;p&gt;Other alternative schemes will be studied, which are considered variants of the so-called &amp;ldquo;micro-meshes&amp;rdquo; scheme offered by the latest generation of vendor-specific GPU hardware. These data structures are characterized by the use of a semi-regular subdivision of a medium-resolution &amp;ldquo;base mesh,&amp;rdquo; followed by displacement of the generated vertices. Variants introduced may include the adoption of an anisotropic subdivision step, the adoption of an irregular recursive subdivision scheme, or others.&lt;/p&gt;
-&lt;h2 id="dependencies"&gt;Dependencies&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;ul&gt;
-&lt;li&gt;The headers are placed in the directory &lt;code&gt;Dependencies\GLM&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="sample-models"&gt;Sample models&lt;/h2&gt;
-&lt;p&gt;As sample models in this repository, I&amp;rsquo;ve prepared different versions of
-by &lt;em&gt;printable_models&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id="python-script-empirical-analysis"&gt;Python script (empirical analysis)&lt;/h2&gt;
-&lt;p&gt;Executing this script will generate &lt;strong&gt;n&lt;/strong&gt; samples for both subdivision schemes (current and variant). A table (as a text file) containing the face quality values (according to the inradius/circumradius metric) will be built for both batches of samples.&lt;/p&gt;
-&lt;p&gt;The table will be ordered by a factor &lt;strong&gt;F&lt;/strong&gt; used, this will allow the comparison of one sample of a table with a sample of the other table, the factor modulates the intensity of subdivisions.&lt;/p&gt;
-&lt;p&gt;In the
-, the comparison is also described using the face area coefficent of variation&lt;/p&gt;
-&lt;p&gt;The commands generate two batches of samples, and multiple executions of the commands are used for the analysis since multiple models are tested.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-batch" data-lang="batch"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;python face-stats.py --base-mesh=base.obj --target-mesh=target.obj
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Default values if you &lt;em&gt;omit&lt;/em&gt; some of the options:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;--base-mesh = pallas_124.obj&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;--target-mesh = pallas_5000.obj&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="graphical-user-interface"&gt;Graphical User Interface&lt;/h2&gt;
-&lt;h3 id="sample-loading"&gt;Sample loading&lt;/h3&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img alt=""
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="abstractuploadsabstract_master_s_thesis__en_pdf">&lt;a href="https://manuelpagliuca.github.io/uploads/Abstract_Master_s_Thesis__en_.pdf">Abstract&lt;/a>&lt;/h3>
+&lt;p>This &lt;a href="https://manuelpagliuca.github.io/uploads/MANUEL_PAGLIUCA_ANISOTROPIC_MM_Master_s_Thesis__Integral_.pdf">thesis&lt;/a> aims to empirically investigate the imaginable performance for data structures suitable for effectively representing extreme-resolution 3D polygonal surfaces designed for multi-resolution rendering on GPUs.&lt;/p>
+&lt;p>To this end, supporting algorithms will be designed, implemented, and tested that transform &amp;ldquo;traditional&amp;rdquo; (i.e., indexed) high-resolution triangular meshes into the analyzed data structures, and then measure the approximation errors introduced through appropriate geometric measurements.&lt;/p>
+&lt;p>Other alternative schemes will be studied, which are considered variants of the so-called &amp;ldquo;micro-meshes&amp;rdquo; scheme offered by the latest generation of vendor-specific GPU hardware. These data structures are characterized by the use of a semi-regular subdivision of a medium-resolution &amp;ldquo;base mesh,&amp;rdquo; followed by displacement of the generated vertices. Variants introduced may include the adoption of an anisotropic subdivision step, the adoption of an irregular recursive subdivision scheme, or others.&lt;/p>
+&lt;h2 id="dependencies">Dependencies&lt;/h2>
+&lt;ul>
+&lt;li>&lt;a href="https://www.qt.io/" target="_blank" rel="noopener">Qt&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://glm.g-truc.net/0.9.9/index.html" target="_blank" rel="noopener">OpenGL Mathematics&lt;/a>
+&lt;ul>
+&lt;li>The headers are placed in the directory &lt;code>Dependencies\GLM&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;a href="https://pymeshlab.readthedocs.io/en/latest/installation.html" target="_blank" rel="noopener">PyMeshLab&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h2 id="sample-models">Sample models&lt;/h2>
+&lt;p>As sample models in this repository, I&amp;rsquo;ve prepared different versions of &lt;a href="https://free3d.com/3d-model/pallas-cat-v1--576987.html" target="_blank" rel="noopener">Pallas Cat&lt;/a> by &lt;em>printable_models&lt;/em>&lt;/p>
+&lt;h2 id="python-script-empirical-analysis">Python script (empirical analysis)&lt;/h2>
+&lt;p>Executing this script will generate &lt;strong>n&lt;/strong> samples for both subdivision schemes (current and variant). A table (as a text file) containing the face quality values (according to the inradius/circumradius metric) will be built for both batches of samples.&lt;/p>
+&lt;p>The table will be ordered by a factor &lt;strong>F&lt;/strong> used, this will allow the comparison of one sample of a table with a sample of the other table, the factor modulates the intensity of subdivisions.&lt;/p>
+&lt;p>In the &lt;a href="https://manuelpagliuca.github.io/uploads/MANUEL_PAGLIUCA_ANISOTROPIC_MM_Master_s_Thesis__Integral_.pdf" target="_blank" rel="noopener">thesis&lt;/a>, the comparison is also described using the face area coefficent of variation&lt;/p>
+&lt;p>The commands generate two batches of samples, and multiple executions of the commands are used for the analysis since multiple models are tested.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-batch" data-lang="batch">&lt;span class="line">&lt;span class="cl">python face-stats.py --base-mesh=base.obj --target-mesh=target.obj
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Default values if you &lt;em>omit&lt;/em> some of the options:&lt;/p>
+&lt;ul>
+&lt;li>&lt;code>--base-mesh = pallas_124.obj&lt;/code>&lt;/li>
+&lt;li>&lt;code>--target-mesh = pallas_5000.obj&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;h2 id="graphical-user-interface">Graphical User Interface&lt;/h2>
+&lt;h3 id="sample-loading">Sample loading&lt;/h3>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt=""
 src="https://manuelpagliuca.github.io/project/anisotropic-mm/sample_loading.gif"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id="scheme-subdivisions"&gt;Scheme subdivisions&lt;/h3&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img alt=""
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="scheme-subdivisions">Scheme subdivisions&lt;/h3>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt=""
 src="https://manuelpagliuca.github.io/project/anisotropic-mm/subdivisions.gif"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h4 id="displacement"&gt;Displacement&lt;/h4&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img alt=""
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h4 id="displacement">Displacement&lt;/h4>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt=""
 src="https://manuelpagliuca.github.io/project/anisotropic-mm/displacement.gif"
-loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id="cli-commands"&gt;CLI commands&lt;/h3&gt;
-&lt;h4 id="generate-a-single-subdivided-sample"&gt;Generate a single subdivided sample&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Exports&lt;/strong&gt; the given base mesh&amp;rsquo;s subdivided (not displaced) mesh.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cmd" data-lang="cmd"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;anisotropic-micromesh.exe --base-mesh=base.obj --microfaces=100
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
-&lt;p&gt;In this example the base mesh is being subdivided by the amount of micro-faces passed (&lt;code&gt;F&lt;/code&gt; can&amp;rsquo;t be passed, since it works in function of the target mesh) using the current scheme (&amp;ldquo;isotropic&amp;rdquo; scheme).&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h4 id="generate-sample"&gt;Generate sample&lt;/h4&gt;
-&lt;p&gt;&lt;strong&gt;Exports&lt;/strong&gt; the subdivided and displaced mesh given the inputs&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cmd" data-lang="cmd"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;anisotropic_micromesh.exe gen-sample --base-mesh=base.obj --target=target.obj --scheme=aniso --factor=3.5
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;blockquote class="border-l-4 border-neutral-300 dark:border-neutral-600 pl-4 italic text-neutral-600 dark:text-neutral-400 my-6"&gt;
-&lt;p&gt;In this example the base mesh will be subdivided using the &lt;code&gt;anisotropic&lt;/code&gt; subdivision scheme, with a factor &lt;code&gt;F=3.5&lt;/code&gt; (subdividing x3.5 times the faces of the target mesh).&lt;/p&gt;
-&lt;/blockquote&gt;</description></item><item><title>CUDA Ray Tracer</title><link>https://manuelpagliuca.github.io/project/rt/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/rt/</guid><description>&lt;p&gt;GPU Computing Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/p&gt;
-&lt;h2 id="about-the-project"&gt;About the project&lt;/h2&gt;
-&lt;p&gt;During the course of &lt;strong&gt;GPU Computing&lt;/strong&gt; I decided to implement my old version of the Ray Tracer (based on the
-&lt;em&gt;Ray Tracing in One
-Weekend&lt;/em&gt; from &lt;a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank" rel="noopener"&gt;Peter Shirley&lt;/a&gt;)
-on &lt;strong&gt;CUDA&lt;/strong&gt;. In &lt;a href="uploads/GPU_COMPUTING___RAY_TRACER.pdf" target="_blank" rel="noopener"&gt;this&lt;/a&gt; paper I compared
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="cli-commands">CLI commands&lt;/h3>
+&lt;h4 id="generate-a-single-subdivided-sample">Generate a single subdivided sample&lt;/h4>
+&lt;p>&lt;strong>Exports&lt;/strong> the given base mesh&amp;rsquo;s subdivided (not displaced) mesh.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">anisotropic-micromesh.exe --base-mesh=base.obj --microfaces=100
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>In this example the base mesh is being subdivided by the amount of micro-faces passed (&lt;code>F&lt;/code> can&amp;rsquo;t be passed, since it works in function of the target mesh) using the current scheme (&amp;ldquo;isotropic&amp;rdquo; scheme).&lt;/p>
+&lt;/blockquote>
+&lt;h4 id="generate-sample">Generate sample&lt;/h4>
+&lt;p>&lt;strong>Exports&lt;/strong> the subdivided and displaced mesh given the inputs&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-cmd" data-lang="cmd">&lt;span class="line">&lt;span class="cl">anisotropic_micromesh.exe gen-sample --base-mesh=base.obj --target=target.obj --scheme=aniso --factor=3.5
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;blockquote>
+&lt;p>In this example the base mesh will be subdivided using the &lt;code>anisotropic&lt;/code> subdivision scheme, with a factor &lt;code>F=3.5&lt;/code> (subdividing x3.5 times the faces of the target mesh).&lt;/p>
+&lt;/blockquote></description></item><item><title>CUDA Ray Tracer</title><link>https://manuelpagliuca.github.io/project/rt/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/rt/</guid><description>&lt;p>GPU Computing Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/p>
+&lt;h2 id="about-the-project">About the project&lt;/h2>
+&lt;p>During the course of &lt;strong>GPU Computing&lt;/strong> I decided to implement my old version of the Ray Tracer (based on the
+&lt;em>Ray Tracing in One
+Weekend&lt;/em> from
+&lt;a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Peter Shirley&lt;/a>
+)
+on &lt;strong>CUDA&lt;/strong>. In
+&lt;a href="https://manuelpagliuca.github.io/uploads/GPU_COMPUTING___RAY_TRACER.pdf" target="_blank">this&lt;/a>
+paper I compared
 the two Ray Tracers underlining the
-huge differences in rendering speed (even without achieving the best warp efficiency).&lt;br&gt;&lt;br&gt;
+huge differences in rendering speed (even without achieving the best warp efficiency).&lt;br>&lt;br>
 For the comparison I used the same scene in both the implementation composed by 8 different spheres with
 different
-materials between &lt;em&gt;lambertian&lt;/em&gt;, &lt;em&gt;metal&lt;/em&gt; and &lt;em&gt;dielectrics&lt;/em&gt;. I highly recommend to check the comparisons
-and metrics at the end of the paper, the GitHub repository is at &lt;a href="https://github.com/manuelpagliuca/Ray-Tracer-CUDA" target="_blank" rel="noopener"&gt;this&lt;/a&gt; link if you want to see some
-render just download &lt;a href="uploads/GPU_COMPUTING_RENDERS.zip"&gt;this&lt;/a&gt; zip.&lt;/p&gt;</description></item><item><title>Deferred renderer</title><link>https://manuelpagliuca.github.io/project/render/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/render/</guid><description>&lt;p&gt;Real-Time Graphics Programming Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/p&gt;
-&lt;h2 id="about-the-project"&gt;About the project&lt;/h2&gt;
-&lt;p&gt;This was a project I made for the course of Real-time Graphics Programming. The course provided extensive knowledge about real-time computer graphics (you can check the &lt;a href="uploads/Appunti_RTGP.pdf" target="_blank" rel="noopener"&gt;notes&lt;/a&gt; I took). At the end of the course, in addition to an oral exam, there was a project related to graphic programming to be developed with OpenGL. I asked Prof. Gadia if there was the possibility of developing it with Vulkan, he granted me the possibility to take this extra-step, it was very tiring but fruitful from the point of view of learning.&lt;/p&gt;
-&lt;p&gt;The project consists in a deferred renderer to improve the overall efficiency of the application in the usage of lights. The scene is composed of three models of the same character, a floor and twenty lights (whose movement and color can be modified), there is the &lt;a href="uploads/DEFERRED_RENDERING___RTGP.pdf" target="_blank" rel="noopener"&gt;notes&lt;/a&gt; containing the various metrics obtained using a different number of lights. The GitHub repository is accessible at &lt;a href="https://github.com/manuelpagliuca/Vulkan-Deferred-Renderer" target="_blank" rel="noopener"&gt;this&lt;/a&gt; link.&lt;/p&gt;</description></item><item><title>Fix-It, Stream processing on event-driven system for managing public disservices</title><link>https://manuelpagliuca.github.io/project/fix-it/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/fix-it/</guid><description>&lt;p&gt;Bachelor&amp;rsquo;s Thesis, December 2019, B.Sc. in Computer Science @UniUPO&lt;/p&gt;
-&lt;h2 id="about-the-thesis"&gt;About the thesis&lt;/h2&gt;
-&lt;p&gt;&lt;figure&gt;&lt;img src="https://manuelpagliuca.github.io/project/fix-it/img.png"
-alt="How the flags are shown on the map."&gt;&lt;figcaption&gt;
-&lt;p&gt;How the flags are shown on the map.&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-The complete title of the thesis is &lt;em&gt;&amp;ldquo;Fix-it : Stream processing on event-driven system for
-managing public disservices&amp;rdquo;&lt;/em&gt;. The project itself consist in developing an &lt;strong&gt;E.D.A.&lt;/strong&gt; (Event-Driven Application)
-system that will work on a mobile application called &amp;ldquo;&lt;strong&gt;Fix-it&lt;/strong&gt;&amp;rdquo;, which is developed using Android
-Studio. The system is implemented with &lt;strong&gt;Google Firebase&lt;/strong&gt; and &lt;strong&gt;Apache Kafka&lt;/strong&gt; (stream processing).
+materials between &lt;em>lambertian&lt;/em>, &lt;em>metal&lt;/em> and &lt;em>dielectrics&lt;/em>. I highly recommend to check the comparisons
+and metrics at the end of the paper, the GitHub repository is at
+&lt;a href="https://github.com/manuelpagliuca/Ray-Tracer-CUDA" target="_blank">this&lt;/a>
+link if you want to see some
+render just download
+&lt;a href="https://manuelpagliuca.github.io/uploads/GPU_COMPUTING_RENDERS.zip">this&lt;/a>
+zip.&lt;/p></description></item><item><title>Deferred renderer</title><link>https://manuelpagliuca.github.io/project/render/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/render/</guid><description>&lt;p>Real-Time Graphics Programming Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/p>
+&lt;h2 id="about-the-project">About the project&lt;/h2>
+&lt;p>This was a project I made for the course of Real-time Graphics Programming. The course provided extensive knowledge about real-time computer graphics (you can check the
+&lt;a href="https://manuelpagliuca.github.io/uploads/Appunti_RTGP.pdf" target="_blank">notes&lt;/a>
+I took). At the end of the course, in addition to an oral exam, there was a project related to graphic programming to be developed with OpenGL. I asked Prof. Gadia if there was the possibility of developing it with Vulkan, he granted me the possibility to take this extra-step, it was very tiring but fruitful from the point of view of learning.&lt;/p>
+&lt;p>The project consists in a deferred renderer to improve the overall efficiency of the application in the usage of lights. The scene is composed of three models of the same character, a floor and twenty lights (whose movement and color can be modified), there is the
+&lt;a href="https://manuelpagliuca.github.io/uploads/DEFERRED_RENDERING___RTGP.pdf" target="_blank">notes&lt;/a>
+containing the various metrics obtained using a different number of lights. The GitHub repository is accessible at
+&lt;a href="https://github.com/manuelpagliuca/Vulkan-Deferred-Renderer" target="_blank">this&lt;/a>
+link.&lt;/p></description></item><item><title>Fix-It, Stream processing on event-driven system for managing public disservices</title><link>https://manuelpagliuca.github.io/project/fix-it/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/fix-it/</guid><description>&lt;p>Bachelor&amp;rsquo;s Thesis, December 2019, B.Sc. in Computer Science @UniUPO&lt;/p>
+&lt;h2 id="about-the-thesis">About the thesis&lt;/h2>
+&lt;p>
+&lt;figure id="figure-how-the-flags-are-shown-on-the-map">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="How the flags are shown on the map." srcset="
+/project/fix-it/img_hu4a47e7bb555165f3249c1881edac94ca_100119_b37034bddf09116b1976a55737d309a8.webp 400w,
+/project/fix-it/img_hu4a47e7bb555165f3249c1881edac94ca_100119_f2bfcd2b8ef27eb87f80159d60305248.webp 760w,
+/project/fix-it/img_hu4a47e7bb555165f3249c1881edac94ca_100119_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://manuelpagliuca.github.io/project/fix-it/img_hu4a47e7bb555165f3249c1881edac94ca_100119_b37034bddf09116b1976a55737d309a8.webp"
+width="368"
+height="613"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+How the flags are shown on the map.
+&lt;/figcaption>&lt;/figure>
+The complete title of the thesis is &lt;em>&amp;ldquo;Fix-it : Stream processing on event-driven system for
+managing public disservices&amp;rdquo;&lt;/em>. The project itself consist in developing an &lt;strong>E.D.A.&lt;/strong> (Event-Driven Application)
+system that will work on a mobile application called &amp;ldquo;&lt;strong>Fix-it&lt;/strong>&amp;rdquo;, which is developed using Android
+Studio. The system is implemented with &lt;strong>Google Firebase&lt;/strong> and &lt;strong>Apache Kafka&lt;/strong> (stream processing).
 Different technologies involved in the implementation of this project like REST API, Stream Processing and
-Publisher-Subscribe pattern.&lt;/p&gt;
-&lt;p&gt;The project was developed only by just two guys, we used the concepts of the Agile Manifesto to design our workflow, everything was organized with a Kanban Board on Trello so that we could work consistently by breaking the work down into small parts.&lt;/p&gt;
-&lt;p&gt;The whole thesis is downloadable as PDF &lt;a href="uploads/Manuel_Pagliuca_Tesi.pdf" target="_blank" rel="noopener"&gt;here&lt;/a&gt;, was
-written using LaTeX on Overleaf, the Abstract is downloadable &lt;a href="uploads/Abstract.pdf" target="_blank" rel="noopener"&gt;here&lt;/a&gt;.
+Publisher-Subscribe pattern.&lt;/p>
+&lt;p>The project was developed only by just two guys, we used the concepts of the Agile Manifesto to design our workflow, everything was organized with a Kanban Board on Trello so that we could work consistently by breaking the work down into small parts.&lt;/p>
+&lt;p>The whole thesis is downloadable as PDF
+&lt;a href="https://manuelpagliuca.github.io/uploads/Manuel_Pagliuca_Tesi.pdf" target="_blank">here&lt;/a>
+, was
+written using LaTeX on Overleaf, the Abstract is downloadable
+&lt;a href="https://manuelpagliuca.github.io/uploads/Abstract.pdf" target="_blank">here&lt;/a>
+.
 I attained a presentation of my thesis on Google Meet due to COVID-19, and I talked about my
-work using these &lt;a href="uploads/Slides.pdf" target="_blank" rel="noopener"&gt;slides&lt;/a&gt;. The project was realized under the
-supervision of the Prof. &lt;a href="https://upobook.uniupo.it/davide.cerotti"&gt;Davide Cerotti&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>L-system in Unity</title><link>https://manuelpagliuca.github.io/project/l-system/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/l-system/</guid><description>&lt;p&gt;Artificial Intelligence for Videogames course, July 2022, M.Sc. in Computer Science @UniMi&lt;/p&gt;
-&lt;h2 id="about-the-project"&gt;About the project&lt;/h2&gt;
-&lt;p&gt;This is a project for the course of A.I. for VideoGames at University of Milan, A.Y. 2021/2022. The aim of the project is to implement a Lindenmayer system for procedural generation of tree using discrete distributions (pseudo-random integers) for enhancing the believability of the project.&lt;/p&gt;
-&lt;center&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/luaC1rPKbKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;
-Check the YouTube video for check how the application works while listening to a synthetic explanation. If you want to look at the LateX report, just click &lt;a href="uploads/L_SYSTEM_AI4V_REPORT.pdf"&gt;this link&lt;/a&gt;. You are invited to send a pull request to the GitHub &lt;a href="https://github.com/manuelpagliuca/l-system"&gt;repository&lt;/a&gt;.</description></item><item><title>Pain Recognition - Dataset analysis and experimental validation</title><link>https://manuelpagliuca.github.io/project/pain-recognition/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/pain-recognition/</guid><description>&lt;p&gt;Affective Computing and Natural Interaction courses, Jan 2023, M.Sc. in Computer Science @UniMi&lt;/p&gt;
-&lt;h2 id="about-the-project"&gt;About the project&lt;/h2&gt;
-&lt;p&gt;This is a unified project for the courses Affective Computing and Natural Interaction at
-, University of Milan, A.Y. 2021/2022.&lt;/p&gt;
-&lt;p&gt;The aim of this project is to test the accuracy of early and late fusion approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat-pain stimulus through a physical device.&lt;/p&gt;
-&lt;p&gt;Their facial expressions and biophysical signals were recorded using cameras and the application of electrodes, then features were extracted. The descriptors came from two different modalities and will be combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;For more information about the project download the
-.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/diagram.jpg" alt="Diagram" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Pain stimulation occurs in patients through electrostimulators applied to the wrists. When this experiment is performed different bio-potential signals (GSR, EMG, &amp;hellip;) and facial expressions are recorded through (through a video camera).&lt;/p&gt;
-&lt;p&gt;The analysis phase involves extracting features from the video signals through computer vision techniques. The features involved are Euclidean distances on particular facial landmarks and gradients on 5 regions of the face.&lt;/p&gt;
-&lt;p&gt;Once the biopotential signals and video features are ready, fusion techniques are used to perform classification.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Early fusion&lt;/strong&gt; involves fusing signals and video features a priori concerning classification. Then train the classifier on the combined inputs.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Late fusion&lt;/strong&gt; involves training three classifiers (of the same type) on different inputs (ECG, GSR, and video), then for each sample in the testing set its prediction is calculated with all three classifiers. The majority prediction is considered; if that prediction coincides with the &lt;em&gt;ground truth&lt;/em&gt;, then that prediction is considered correct.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The classifier used in this project was &lt;em&gt;Support Vector Machines&lt;/em&gt;.&lt;/p&gt;
-&lt;h3 id="video-feature-extraction"&gt;Video feature extraction&lt;/h3&gt;
-&lt;h2 id="tools"&gt;Tools&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;IntelliJ IDEA and Python for developing the project application.&lt;/li&gt;
-&lt;li&gt;Microsoft Excel for working with the &lt;code&gt;.csv&lt;/code&gt; files.&lt;/li&gt;
-&lt;li&gt;
-dataset.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="dependencies"&gt;Dependencies&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;OpenCV&lt;/li&gt;
-&lt;li&gt;MediaPipe&lt;/li&gt;
-&lt;li&gt;Sk-learn&lt;/li&gt;
-&lt;li&gt;Numpy&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="computer-vision-techniques"&gt;Computer vision techniques&lt;/h2&gt;
-&lt;p&gt;The computer vision techniques used were for the extraction of facial distances, gradients of facial folds, and head position.&lt;/p&gt;
-&lt;h3 id="facial-distances-and-head-pose-estimation"&gt;Facial distances and head pose estimation&lt;/h3&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/facial_distances.gif" alt="Facial Distances" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id="gradient-for-face-folds"&gt;Gradient for face folds&lt;/h3&gt;
-&lt;p&gt;Gradients allow changes in regions of the face to be assessed. An arithmetic average of pixel values in these regions is calculated.
-This average is again weighted by the number of frames in the video window(which in the dataset was 5 seconds).&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/facial_gradients.gif" alt="Facial Gradients" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id="switch-button"&gt;Switch button&lt;/h3&gt;
-&lt;p&gt;There is a debug branch called &lt;code&gt;cv-features&lt;/code&gt; in this repository where you can try computer vision systems directly with your computer camera. Using the tab key you can enable and disable debugging for gradients.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/switch.gif" alt="Switch" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id="ideas-for-future-extensions"&gt;Ideas for future extensions&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Calculate the gradient only when the pain stimulus is activated and not over the entire window.&lt;/li&gt;
-&lt;li&gt;&amp;hellip;&lt;/li&gt;
-&lt;/ul&gt;</description></item><item><title>SETA - SElf-driving TA-xi service</title><link>https://manuelpagliuca.github.io/project/seta/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/seta/</guid><description>&lt;p&gt;Distributed and Pervasive Systems courses, Jun 2022, M.Sc. in Computer Science @UniMi&lt;/p&gt;
-&lt;h2 id="about-the-project"&gt;About the project&lt;/h2&gt;
-&lt;p&gt;Project for the course of &amp;ldquo;Distributed and Pervasive Systems&amp;rdquo; A.A. 2021/2022 for M.Sc.&amp;rsquo;s in Computer Science.&lt;/p&gt;
-&lt;p&gt;The objective of the project is to design and develop SETA (Self-driving TAxi service), a
-Self-driving &lt;em&gt;peer-to-peer&lt;/em&gt; taxi system for citizens of a smart city. The systems run on a centralized MQTT server which manages the taxis, they are able to communicate with each other via gRPC to ensure access to the resource.&lt;/p&gt;
-&lt;h2 id="dev-tools--languages"&gt;Dev Tools &amp;amp; Languages&lt;/h2&gt;
-&lt;h3 id="languages"&gt;Languages&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="technologies"&gt;Technologies&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="tools"&gt;Tools&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;/li&gt;
-&lt;li&gt;
-for drawing diagrams&lt;/li&gt;
-&lt;li&gt;Git &amp;amp; GitHub as versioning system&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Within this README are different conceptual diagrams that broadly define the general operation of the system, distributed algorithms, and synchronization procedures.&lt;/p&gt;
-&lt;p&gt;These diagrams do not rigidly follow any model as they are simple and extensively commented.&lt;/p&gt;
-&lt;h3 id="guidelines"&gt;Guidelines&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Rhombuses correspond to flow controls.&lt;/li&gt;
-&lt;li&gt;Rectangles to of operations/procedures.&lt;/li&gt;
-&lt;li&gt;Green circles are collection points.&lt;/li&gt;
-&lt;li&gt;Rectangle colors stand for an object belonging to a certain class (so if there are multiple rectangles of the same color, they are multiple instances of the same class).&lt;/li&gt;
-&lt;li&gt;White circles correspond to processes (used in diagrams for distributed algorithms).&lt;/li&gt;
-&lt;li&gt;Gray circles correspond to threads (used in diagrams for synchronization).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="general-functioning-of-the-project"&gt;General functioning of the project&lt;/h2&gt;
-&lt;p&gt;This is an outline of general operation of the system, it corresponds to what is required in the assignment delivery
-.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/general_scheme.png" alt="General scheme" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id="distributed-algorithms-diagrams"&gt;Distributed algorithms diagrams&lt;/h2&gt;
-&lt;h3 id="ricart--agrawala-algorithm-for-mutual-exclusion"&gt;Ricart &amp;amp; Agrawala algorithm for mutual exclusion&lt;/h3&gt;
-&lt;p&gt;The algorithm was developed for guarantee the mutual exclusion to a critical section between multiple processes in a distributed system.&lt;/p&gt;
-&lt;p&gt;The timestamps of the messages are sent in broadcast (in parallel) through the gRPC call &lt;code&gt;coordinateRechargeStream()&lt;/code&gt;. The logical clock synchronization is guaranteed through &lt;strong&gt;Lamport&amp;rsquo;s algorithm&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s consider the following diagram, the nodes in red want to access to the critical section, while the other nodes are doing anything else.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_1.png" alt="Ricart &amp;amp; Agrawala 1" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;More in depth in the first phase (in which the requests are parallelized) the processes will build their lists of dependent nodes. These lists will contain all the nodes which got a smaller timestamp relative to their.&lt;/p&gt;
-&lt;p&gt;A node will be able to enter a critical section (&lt;em&gt;i.e.&lt;/em&gt;, in this project is the recharging operation) if it receives the ACKs from all the other nodes. If this doesn&amp;rsquo;t happens it will have to wait the residual ACKs.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_2.png" alt="Ricart &amp;amp; Agrawala 2" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Once that a node has finished with the recharging operation, it will sends an ACK message to the taxi of his list/queue. The first taxis who will fill the number of attended ACKs will access the critical section, and then story repeats.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_3.png" alt="Ricart &amp;amp; Agrawala 3" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id="ride-election-algorithm"&gt;Ride election algorithm&lt;/h3&gt;
-&lt;p&gt;The SETA process generates two rides each 5 seconds on a random district, these two rides are posted on the respective topic of the district. Each taxi is subscribed only on the topic of the district in which it currently belongs.&lt;/p&gt;
-&lt;p&gt;For simplicity let&amp;rsquo;s assume only one ride (the ride 5) to be published from the SETA process on the first district. All the processes which are subscribed to this topic (inside the green circle) will receive the message for the ride 5.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_1.png" alt="Ride Election 1" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;An election mechanism will start through the gRPC call &lt;code&gt;coordinateRideStream()&lt;/code&gt;, the request will be performed in broadcast (also to taxi out from district 1) and they will be executed in parallel. The request will contain the &lt;em&gt;Euclidean distance to the starting point&lt;/em&gt;, the &lt;em&gt;battery levels&lt;/em&gt; and the &lt;em&gt;ID&lt;/em&gt; of taxi which is sending the request.&lt;/p&gt;
-&lt;p&gt;For sake of simplicity we are seeing the evolution of the algorithm only from the point of view of the process 1.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_2.png" alt="Ride Election 2" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s also assume that the process 1 is the process with the smallest distance from the starting point of the ride. Essentially, this means that the taxi who receives the request will all answer with an ACK (this means that they got a worst distance, battery or grater ID respect to process 1), only in this case the process 1 will achieve the consensus.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_3.png" alt="Ride Election 3" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;Now the process 1 can execute the ride 5, before it even pass to the local execution of the ride, it publish a message containing the ride 5 on the &lt;code&gt;seta/smartcity/completed&lt;/code&gt; topic. This will allow to stop recycling this message (we will see what is it below) and also making know to the taxi which ride ignore since it is already taken.&lt;/p&gt;
-&lt;p&gt;This because all the taxi will have a local list containing all the completed rides taken from the topic, in this way they know which ride to avoid.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_4.png" alt="Ride Election 4" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h4 id="ride-recycling"&gt;Ride recycling&lt;/h4&gt;
-&lt;p&gt;There is a system that enforces the recycling of runs, each run that is generated on the topics is embedded within the relative queue of the district. The priority of the queues is based on the order (run ID) of run generation, so older runs will be preferred.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/ride_recycling.png" alt="Ride Recycling" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h2 id="conceptual-schemes-of-synchronizations"&gt;Conceptual schemes of synchronizations&lt;/h2&gt;
-&lt;h3 id="user-input"&gt;User input&lt;/h3&gt;
-&lt;p&gt;Command entry by users is handled by two threads. One thread for reading and executing the commands entered (&lt;strong&gt;CLI&lt;/strong&gt;, &lt;em&gt;Command Line Interface&lt;/em&gt;), and one thread for controlling the &lt;em&gt;input stream&lt;/em&gt; (&lt;strong&gt;Input Checker&lt;/strong&gt;).&lt;/p&gt;
-&lt;p&gt;This approach is designed in such a way as to avoid &amp;ldquo;&lt;em&gt;busy waiting&lt;/em&gt;&amp;rdquo; phenomena. There is a shared &lt;em&gt;dummy object&lt;/em&gt; between the two objects; the thread for the CLI waits to receive an encoding on this object, notification will be sent by the Input Checker when the presence of user input is detected.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/busy_waiting.png" alt="Busy Waiting" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id="recharge-operation"&gt;Recharge operation&lt;/h3&gt;
-&lt;p&gt;There is a thread that monitors cab battery levels (&lt;strong&gt;Recharge Thread&lt;/strong&gt;), to avoid &amp;ldquo;&lt;em&gt;busy waiting&lt;/em&gt;&amp;rdquo; phenomena a &lt;em&gt;dummy object&lt;/em&gt; is shared between this thread and the &lt;strong&gt;MQTT module&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;The recharge thread is initially waiting and will check the battery levels only after receiving the notification on the shared &lt;em&gt;dummy object&lt;/em&gt;.&lt;/p&gt;
-&lt;p&gt;As we know, the MQTT module receives races message for it&amp;rsquo;s own district, and its callbacks can in turn call methods (which basically function like threads). Upon completion of the function that takes care of the run we notify the &lt;em&gt;dummy object&lt;/em&gt; through &lt;code&gt;notify()&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;This way a check of battery levels will be made after a run is finished. The charging procedure will only be started if the battery levels are below 30 percent.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/recharge_synchronization.png" alt="Synchronization of recharging spot" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;h3 id="local-statistics"&gt;Local statistics&lt;/h3&gt;
-&lt;p&gt;The collection and submission of local statistics involves different agents :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;A &lt;strong&gt;PM10 simulator&lt;/strong&gt; that generates random measurements of pollution levels at a random cadence.&lt;/li&gt;
-&lt;li&gt;A &lt;strong&gt;Pollution Buffer&lt;/strong&gt; which is a data structure used for the collection and self-management (&lt;em&gt;sliding window&lt;/em&gt; technique) of measurements generated by the PM10 simulator.&lt;/li&gt;
-&lt;li&gt;A thread for reading the PM10 measurements buffered in the Pollution Buffer, with addition of the other local statistics (&lt;em&gt;total traveled km, battery levels, accomplished runs, &amp;hellip;&lt;/em&gt;) and subsequent sending on the administrator server via POST request (&lt;strong&gt;Local Stats Thread&lt;/strong&gt;).&lt;/li&gt;
-&lt;li&gt;A thread to ensure local statistics are sent every 15 seconds (&lt;strong&gt;Enable Data Send Thread&lt;/strong&gt;).&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/localstats_synchronization.png" alt="Synchronization of local statistics" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;
-&lt;p&gt;The reading of measurements is done by the Local Stats Thread, the latter though is governed by the operation of the Pollution Buffer&amp;rsquo;s internal data structure.&lt;/p&gt;
-&lt;p&gt;Once the array of measurements is read, its average is calculated. Then a data structure is created that will contain both this average of measurements and the other local statistics :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Total traveled kilometers&lt;/li&gt;
-&lt;li&gt;Battery levels&lt;/li&gt;
-&lt;li&gt;Total accomplished runs&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Every fifteen seconds you will be able to send this data structure to the administrator server via POST, to ensure this you use a thread (Enable Data Thread) that sets a boolean (initialized to false) to true.&lt;/p&gt;
-&lt;p&gt;That boolean variable will be checked by the Local Stats Thread, if true, then the POST request will be executed.&lt;/p&gt;
-&lt;p&gt;Then the flag will be set to false again, and you will have to wait 15 seconds again for it to be reactivated.&lt;/p&gt;
-&lt;h4 id="sliding-window"&gt;Sliding window&lt;/h4&gt;
-&lt;p&gt;The Pollution Buffer presents a method that is constantly called at an unknown time by the PM10 simulator. The Pollution Buffer internal structure consists of a &lt;em&gt;sliding window&lt;/em&gt; of 50% of size 8 (each element is a PM10 measurements).&lt;/p&gt;
-&lt;p&gt;Once the maximum capacity of our internal data structure is reached, then I can guarantee that it will be read by the Local Stats Thread. The read operation involves a left shift of 50% of the elements (&lt;em&gt;i.e.,&lt;/em&gt; 4 elements), henceforth the elements added by the PM10 simulator will be allocated starting from the fifth.
-When the last element (the eighth) is added again, then a new reading of the sliding window can be performed again.&lt;/p&gt;
-&lt;p&gt;In this way the various sliding windows that are read will share four elements, &lt;em&gt;i.e.,&lt;/em&gt; the sliding window of iteration &lt;code&gt;t-1&lt;/code&gt; will have the last four elements equal to the first four elements of the sliding window at time &lt;code&gt;t&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;
-&lt;figure &gt;
-&lt;div class="flex justify-center "&gt;
-&lt;div class="w-full" &gt;&lt;img src="https://manuelpagliuca.github.io/uploads/sliding_window.png" alt="Sliding Window" loading="lazy" data-zoomable /&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/figure&gt;
-&lt;/p&gt;</description></item><item><title>Subdivision of surfaces</title><link>https://manuelpagliuca.github.io/project/geometry/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/geometry/</guid><description>&lt;p&gt;Computational Geometry Course, March 2021, M.Sc. in Computer Science @UniMi&lt;/p&gt;
-&lt;h2 id="about-the-project"&gt;About the project&lt;/h2&gt;
-&lt;figure&gt;&lt;img src="https://manuelpagliuca.github.io/project/geometry/img.png"
-alt="Icosahedron obtained with the application."&gt;&lt;figcaption&gt;
-&lt;p&gt;Icosahedron obtained with the application.&lt;/p&gt;
-&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;The aims of this project was to study how the tessellation works with simple domains and to
+work using these
+&lt;a href="https://manuelpagliuca.github.io/uploads/Slides.pdf" target="_blank">slides&lt;/a>
+. The project was realized under the
+supervision of the Prof. &lt;a href="https://upobook.uniupo.it/davide.cerotti">Davide Cerotti&lt;/a>.&lt;/p></description></item><item><title>L-system in Unity</title><link>https://manuelpagliuca.github.io/project/l-system/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/l-system/</guid><description>&lt;p>Artificial Intelligence for Videogames course, July 2022, M.Sc. in Computer Science @UniMi&lt;/p>
+&lt;h2 id="about-the-project">About the project&lt;/h2>
+&lt;p>This is a project for the course of A.I. for VideoGames at University of Milan, A.Y. 2021/2022. The aim of the project is to implement a Lindenmayer system for procedural generation of tree using discrete distributions (pseudo-random integers) for enhancing the believability of the project.&lt;/p>
+&lt;center>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/luaC1rPKbKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>&lt;/center>
+Check the YouTube video for check how the application works while listening to a synthetic explanation. If you want to look at the LateX report, just click
+&lt;a href="https://manuelpagliuca.github.io/uploads/L_SYSTEM_AI4V_REPORT.pdf">this link&lt;/a>
+. You are invited to send a pull request to the GitHub
+&lt;a href="https://github.com/manuelpagliuca/l-system">repository&lt;/a>
+.</description></item><item><title>Pain Recognition - Dataset analysis and experimental validation</title><link>https://manuelpagliuca.github.io/project/pain-recognition/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/pain-recognition/</guid><description>&lt;p>Affective Computing and Natural Interaction courses, Jan 2023, M.Sc. in Computer Science @UniMi&lt;/p>
+&lt;h2 id="about-the-project">About the project&lt;/h2>
+&lt;p>This is a unified project for the courses Affective Computing and Natural Interaction at &lt;a href="https://phuselab.di.unimi.it/" target="_blank" rel="noopener">PhuseLab&lt;/a>, University of Milan, A.Y. 2021/2022.&lt;/p>
+&lt;p>The aim of this project is to test the accuracy of early and late fusion approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat-pain stimulus through a physical device.&lt;/p>
+&lt;p>Their facial expressions and biophysical signals were recorded using cameras and the application of electrodes, then features were extracted. The descriptors came from two different modalities and will be combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.&lt;/p>
+&lt;ul>
+&lt;li>For more information about the project download the &lt;a href="https://manuelpagliuca.github.io/uploads/Pain_Detection_Manuel_Pagliuca_AC_NI_2022.pdf">report&lt;/a>.&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/diagram.jpg" alt="Diagram" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Pain stimulation occurs in patients through electrostimulators applied to the wrists. When this experiment is performed different bio-potential signals (GSR, EMG, &amp;hellip;) and facial expressions are recorded through (through a video camera).&lt;/p>
+&lt;p>The analysis phase involves extracting features from the video signals through computer vision techniques. The features involved are Euclidean distances on particular facial landmarks and gradients on 5 regions of the face.&lt;/p>
+&lt;p>Once the biopotential signals and video features are ready, fusion techniques are used to perform classification.&lt;/p>
+&lt;ul>
+&lt;li>&lt;strong>Early fusion&lt;/strong> involves fusing signals and video features a priori concerning classification. Then train the classifier on the combined inputs.&lt;/li>
+&lt;li>&lt;strong>Late fusion&lt;/strong> involves training three classifiers (of the same type) on different inputs (ECG, GSR, and video), then for each sample in the testing set its prediction is calculated with all three classifiers. The majority prediction is considered; if that prediction coincides with the &lt;em>ground truth&lt;/em>, then that prediction is considered correct.&lt;/li>
+&lt;/ul>
+&lt;p>The classifier used in this project was &lt;em>Support Vector Machines&lt;/em>.&lt;/p>
+&lt;h3 id="video-feature-extraction">Video feature extraction&lt;/h3>
+&lt;h2 id="tools">Tools&lt;/h2>
+&lt;ul>
+&lt;li>IntelliJ IDEA and Python for developing the project application.&lt;/li>
+&lt;li>Microsoft Excel for working with the &lt;code>.csv&lt;/code> files.&lt;/li>
+&lt;li>&lt;a href="https://ieeexplore.ieee.org/document/6617456" target="_blank" rel="noopener">BioVid&lt;/a> dataset.&lt;/li>
+&lt;/ul>
+&lt;h2 id="dependencies">Dependencies&lt;/h2>
+&lt;ul>
+&lt;li>OpenCV&lt;/li>
+&lt;li>MediaPipe&lt;/li>
+&lt;li>Sk-learn&lt;/li>
+&lt;li>Numpy&lt;/li>
+&lt;/ul>
+&lt;h2 id="computer-vision-techniques">Computer vision techniques&lt;/h2>
+&lt;p>The computer vision techniques used were for the extraction of facial distances, gradients of facial folds, and head position.&lt;/p>
+&lt;h3 id="facial-distances-and-head-pose-estimation">Facial distances and head pose estimation&lt;/h3>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/facial_distances.gif" alt="Facial Distances" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="gradient-for-face-folds">Gradient for face folds&lt;/h3>
+&lt;p>Gradients allow changes in regions of the face to be assessed. An arithmetic average of pixel values in these regions is calculated.
+This average is again weighted by the number of frames in the video window(which in the dataset was 5 seconds).&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/facial_gradients.gif" alt="Facial Gradients" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="switch-button">Switch button&lt;/h3>
+&lt;p>There is a debug branch called &lt;code>cv-features&lt;/code> in this repository where you can try computer vision systems directly with your computer camera. Using the tab key you can enable and disable debugging for gradients.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/switch.gif" alt="Switch" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="ideas-for-future-extensions">Ideas for future extensions&lt;/h2>
+&lt;ul>
+&lt;li>Calculate the gradient only when the pain stimulus is activated and not over the entire window.&lt;/li>
+&lt;li>&amp;hellip;&lt;/li>
+&lt;/ul></description></item><item><title>SETA - SElf-driving TA-xi service</title><link>https://manuelpagliuca.github.io/project/seta/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/seta/</guid><description>&lt;p>Distributed and Pervasive Systems courses, Jun 2022, M.Sc. in Computer Science @UniMi&lt;/p>
+&lt;h2 id="about-the-project">About the project&lt;/h2>
+&lt;p>Project for the course of &amp;ldquo;Distributed and Pervasive Systems&amp;rdquo; A.A. 2021/2022 for M.Sc.&amp;rsquo;s in Computer Science.&lt;/p>
+&lt;p>The objective of the project is to design and develop SETA (Self-driving TAxi service), a
+Self-driving &lt;em>peer-to-peer&lt;/em> taxi system for citizens of a smart city. The systems run on a centralized MQTT server which manages the taxis, they are able to communicate with each other via gRPC to ensure access to the resource.&lt;/p>
+&lt;h2 id="dev-tools--languages">Dev Tools &amp;amp; Languages&lt;/h2>
+&lt;h3 id="languages">Languages&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.oracle.com/java/technologies/javase/jdk18-archive-downloads.html" target="_blank" rel="noopener">Java SDK 18.0.2&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="technologies">Technologies&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://grpc.io/" target="_blank" rel="noopener">gRPC&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://mqtt.org/" target="_blank" rel="noopener">MQTT&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank" rel="noopener">REST API&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://developers.google.com/protocol-buffers" target="_blank" rel="noopener">Protocol Buffers&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;h3 id="tools">Tools&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.jetbrains.com/idea/download/?section=mac" target="_blank" rel="noopener">IntelliJ IDEA&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/jgraph/drawio-desktop/releases" target="_blank" rel="noopener">draw.io&lt;/a> for drawing diagrams&lt;/li>
+&lt;li>Git &amp;amp; GitHub as versioning system&lt;/li>
+&lt;/ul>
+&lt;p>Within this README are different conceptual diagrams that broadly define the general operation of the system, distributed algorithms, and synchronization procedures.&lt;/p>
+&lt;p>These diagrams do not rigidly follow any model as they are simple and extensively commented.&lt;/p>
+&lt;h3 id="guidelines">Guidelines&lt;/h3>
+&lt;ul>
+&lt;li>Rhombuses correspond to flow controls.&lt;/li>
+&lt;li>Rectangles to of operations/procedures.&lt;/li>
+&lt;li>Green circles are collection points.&lt;/li>
+&lt;li>Rectangle colors stand for an object belonging to a certain class (so if there are multiple rectangles of the same color, they are multiple instances of the same class).&lt;/li>
+&lt;li>White circles correspond to processes (used in diagrams for distributed algorithms).&lt;/li>
+&lt;li>Gray circles correspond to threads (used in diagrams for synchronization).&lt;/li>
+&lt;/ul>
+&lt;h2 id="general-functioning-of-the-project">General functioning of the project&lt;/h2>
+&lt;p>This is an outline of general operation of the system, it corresponds to what is required in the assignment delivery &lt;a href="Project_DPS_2022___SETA.pdf">document&lt;/a>.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/general_scheme.png" alt="General scheme" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="distributed-algorithms-diagrams">Distributed algorithms diagrams&lt;/h2>
+&lt;h3 id="ricart--agrawala-algorithm-for-mutual-exclusion">Ricart &amp;amp; Agrawala algorithm for mutual exclusion&lt;/h3>
+&lt;p>The algorithm was developed for guarantee the mutual exclusion to a critical section between multiple processes in a distributed system.&lt;/p>
+&lt;p>The timestamps of the messages are sent in broadcast (in parallel) through the gRPC call &lt;code>coordinateRechargeStream()&lt;/code>. The logical clock synchronization is guaranteed through &lt;strong>Lamport&amp;rsquo;s algorithm&lt;/strong>.&lt;/p>
+&lt;p>Let&amp;rsquo;s consider the following diagram, the nodes in red want to access to the critical section, while the other nodes are doing anything else.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_1.png" alt="Ricart &amp;amp;amp; Agrawala 1" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>More in depth in the first phase (in which the requests are parallelized) the processes will build their lists of dependent nodes. These lists will contain all the nodes which got a smaller timestamp relative to their.&lt;/p>
+&lt;p>A node will be able to enter a critical section (&lt;em>i.e.&lt;/em>, in this project is the recharging operation) if it receives the ACKs from all the other nodes. If this doesn&amp;rsquo;t happens it will have to wait the residual ACKs.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_2.png" alt="Ricart &amp;amp;amp; Agrawala 2" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Once that a node has finished with the recharging operation, it will sends an ACK message to the taxi of his list/queue. The first taxis who will fill the number of attended ACKs will access the critical section, and then story repeats.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_3.png" alt="Ricart &amp;amp;amp; Agrawala 3" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="ride-election-algorithm">Ride election algorithm&lt;/h3>
+&lt;p>The SETA process generates two rides each 5 seconds on a random district, these two rides are posted on the respective topic of the district. Each taxi is subscribed only on the topic of the district in which it currently belongs.&lt;/p>
+&lt;p>For simplicity let&amp;rsquo;s assume only one ride (the ride 5) to be published from the SETA process on the first district. All the processes which are subscribed to this topic (inside the green circle) will receive the message for the ride 5.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_1.png" alt="Ride Election 1" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>An election mechanism will start through the gRPC call &lt;code>coordinateRideStream()&lt;/code>, the request will be performed in broadcast (also to taxi out from district 1) and they will be executed in parallel. The request will contain the &lt;em>Euclidean distance to the starting point&lt;/em>, the &lt;em>battery levels&lt;/em> and the &lt;em>ID&lt;/em> of taxi which is sending the request.&lt;/p>
+&lt;p>For sake of simplicity we are seeing the evolution of the algorithm only from the point of view of the process 1.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_2.png" alt="Ride Election 2" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Let&amp;rsquo;s also assume that the process 1 is the process with the smallest distance from the starting point of the ride. Essentially, this means that the taxi who receives the request will all answer with an ACK (this means that they got a worst distance, battery or grater ID respect to process 1), only in this case the process 1 will achieve the consensus.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_3.png" alt="Ride Election 3" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Now the process 1 can execute the ride 5, before it even pass to the local execution of the ride, it publish a message containing the ride 5 on the &lt;code>seta/smartcity/completed&lt;/code> topic. This will allow to stop recycling this message (we will see what is it below) and also making know to the taxi which ride ignore since it is already taken.&lt;/p>
+&lt;p>This because all the taxi will have a local list containing all the completed rides taken from the topic, in this way they know which ride to avoid.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_4.png" alt="Ride Election 4" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h4 id="ride-recycling">Ride recycling&lt;/h4>
+&lt;p>There is a system that enforces the recycling of runs, each run that is generated on the topics is embedded within the relative queue of the district. The priority of the queues is based on the order (run ID) of run generation, so older runs will be preferred.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_recycling.png" alt="Ride Recycling" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h2 id="conceptual-schemes-of-synchronizations">Conceptual schemes of synchronizations&lt;/h2>
+&lt;h3 id="user-input">User input&lt;/h3>
+&lt;p>Command entry by users is handled by two threads. One thread for reading and executing the commands entered (&lt;strong>CLI&lt;/strong>, &lt;em>Command Line Interface&lt;/em>), and one thread for controlling the &lt;em>input stream&lt;/em> (&lt;strong>Input Checker&lt;/strong>).&lt;/p>
+&lt;p>This approach is designed in such a way as to avoid &amp;ldquo;&lt;em>busy waiting&lt;/em>&amp;rdquo; phenomena. There is a shared &lt;em>dummy object&lt;/em> between the two objects; the thread for the CLI waits to receive an encoding on this object, notification will be sent by the Input Checker when the presence of user input is detected.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/busy_waiting.png" alt="Busy Waiting" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="recharge-operation">Recharge operation&lt;/h3>
+&lt;p>There is a thread that monitors cab battery levels (&lt;strong>Recharge Thread&lt;/strong>), to avoid &amp;ldquo;&lt;em>busy waiting&lt;/em>&amp;rdquo; phenomena a &lt;em>dummy object&lt;/em> is shared between this thread and the &lt;strong>MQTT module&lt;/strong>.&lt;/p>
+&lt;p>The recharge thread is initially waiting and will check the battery levels only after receiving the notification on the shared &lt;em>dummy object&lt;/em>.&lt;/p>
+&lt;p>As we know, the MQTT module receives races message for it&amp;rsquo;s own district, and its callbacks can in turn call methods (which basically function like threads). Upon completion of the function that takes care of the run we notify the &lt;em>dummy object&lt;/em> through &lt;code>notify()&lt;/code>.&lt;/p>
+&lt;p>This way a check of battery levels will be made after a run is finished. The charging procedure will only be started if the battery levels are below 30 percent.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/recharge_synchronization.png" alt="Synchronization of recharging spot" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="local-statistics">Local statistics&lt;/h3>
+&lt;p>The collection and submission of local statistics involves different agents :&lt;/p>
+&lt;ul>
+&lt;li>A &lt;strong>PM10 simulator&lt;/strong> that generates random measurements of pollution levels at a random cadence.&lt;/li>
+&lt;li>A &lt;strong>Pollution Buffer&lt;/strong> which is a data structure used for the collection and self-management (&lt;em>sliding window&lt;/em> technique) of measurements generated by the PM10 simulator.&lt;/li>
+&lt;li>A thread for reading the PM10 measurements buffered in the Pollution Buffer, with addition of the other local statistics (&lt;em>total traveled km, battery levels, accomplished runs, &amp;hellip;&lt;/em>) and subsequent sending on the administrator server via POST request (&lt;strong>Local Stats Thread&lt;/strong>).&lt;/li>
+&lt;li>A thread to ensure local statistics are sent every 15 seconds (&lt;strong>Enable Data Send Thread&lt;/strong>).&lt;/li>
+&lt;/ul>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/localstats_synchronization.png" alt="Synchronization of local statistics" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>The reading of measurements is done by the Local Stats Thread, the latter though is governed by the operation of the Pollution Buffer&amp;rsquo;s internal data structure.&lt;/p>
+&lt;p>Once the array of measurements is read, its average is calculated. Then a data structure is created that will contain both this average of measurements and the other local statistics :&lt;/p>
+&lt;ul>
+&lt;li>Total traveled kilometers&lt;/li>
+&lt;li>Battery levels&lt;/li>
+&lt;li>Total accomplished runs&lt;/li>
+&lt;/ul>
+&lt;p>Every fifteen seconds you will be able to send this data structure to the administrator server via POST, to ensure this you use a thread (Enable Data Thread) that sets a boolean (initialized to false) to true.&lt;/p>
+&lt;p>That boolean variable will be checked by the Local Stats Thread, if true, then the POST request will be executed.&lt;/p>
+&lt;p>Then the flag will be set to false again, and you will have to wait 15 seconds again for it to be reactivated.&lt;/p>
+&lt;h4 id="sliding-window">Sliding window&lt;/h4>
+&lt;p>The Pollution Buffer presents a method that is constantly called at an unknown time by the PM10 simulator. The Pollution Buffer internal structure consists of a &lt;em>sliding window&lt;/em> of 50% of size 8 (each element is a PM10 measurements).&lt;/p>
+&lt;p>Once the maximum capacity of our internal data structure is reached, then I can guarantee that it will be read by the Local Stats Thread. The read operation involves a left shift of 50% of the elements (&lt;em>i.e.,&lt;/em> 4 elements), henceforth the elements added by the PM10 simulator will be allocated starting from the fifth.
+When the last element (the eighth) is added again, then a new reading of the sliding window can be performed again.&lt;/p>
+&lt;p>In this way the various sliding windows that are read will share four elements, &lt;em>i.e.,&lt;/em> the sliding window of iteration &lt;code>t-1&lt;/code> will have the last four elements equal to the first four elements of the sliding window at time &lt;code>t&lt;/code>.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/sliding_window.png" alt="Sliding Window" loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p></description></item><item><title>Subdivision of surfaces</title><link>https://manuelpagliuca.github.io/project/geometry/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/geometry/</guid><description>&lt;p>Computational Geometry Course, March 2021, M.Sc. in Computer Science @UniMi&lt;/p>
+&lt;h2 id="about-the-project">About the project&lt;/h2>
+&lt;figure id="figure-icosahedron-obtained-with-the-application">
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Icosahedron obtained with the application." srcset="
+/project/geometry/img_hu92825ff421db5b452c03fb61016d2789_175632_61a89ba5ff0edc125b01e8b25e2f98da.webp 400w,
+/project/geometry/img_hu92825ff421db5b452c03fb61016d2789_175632_5e4e12b5ba32a7e3a372e59919161a64.webp 760w,
+/project/geometry/img_hu92825ff421db5b452c03fb61016d2789_175632_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://manuelpagliuca.github.io/project/geometry/img_hu92825ff421db5b452c03fb61016d2789_175632_61a89ba5ff0edc125b01e8b25e2f98da.webp"
+width="760"
+height="681"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
+Icosahedron obtained with the application.
+&lt;/figcaption>&lt;/figure>
+&lt;p>The aims of this project was to study how the tessellation works with simple domains and to
 implement the basic logic for triangulate the vertices of simple
-objects like cubes and then with more complex like torus, sphere and cylinder.&lt;/p&gt;
-&lt;center&gt;&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/tK8yzO6Btho"
+objects like cubes and then with more complex like torus, sphere and cylinder.&lt;/p>
+&lt;center>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/tK8yzO6Btho"
 title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;
+allowfullscreen>&lt;/iframe>&lt;/center>
 For the course project there was also a need to produce a report in the form of &lt;a
-href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/trietas/index.html"&gt;website&lt;/a&gt;
-(fully in &lt;i&gt;italian&lt;/i&gt;) which is hosted from the university's mathematics department &lt;i&gt;Federigo Enriques&lt;/i&gt;. It contains
+href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/trietas/index.html">website&lt;/a>
+(fully in &lt;i>italian&lt;/i>) which is hosted from the university's mathematics department &lt;i>Federigo Enriques&lt;/i>. It contains
 the theory behind the software, the technique involved, user manual of the application and lot of example videos about the application.
-&lt;p&gt;Is possible to download the source code of the project from the &lt;a
-href="https://github.com/manuelpagliuca/Computational_Geometry_2021"&gt;GitHub Repository&lt;/a&gt; by
+&lt;p>Is possible to download the source code of the project from the &lt;a
+href="https://github.com/manuelpagliuca/Computational_Geometry_2021">GitHub Repository&lt;/a> by
 following this link. The course was a complete math course and the project was developed using the
-&lt;strong&gt;OpenGL&lt;/strong&gt; specification.&lt;/p&gt;
-&lt;p&gt;By accessing the &lt;a
-href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/corso/autori.html"&gt;authors
-section&lt;/a&gt; of the course website, is possible to read under my
-name a note from the course teacher saying: &lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;&amp;ldquo;has developed the project related to the triangulation and tessellation of the lateral
-surface of some geometric solids obtaining truly amazing visual effects.&amp;rdquo;&lt;/em&gt; - Prof. Alzati&lt;/p&gt;</description></item></channel></rss>
+&lt;strong>OpenGL&lt;/strong> specification.&lt;/p>
+&lt;p>By accessing the &lt;a
+href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/corso/autori.html">authors
+section&lt;/a> of the course website, is possible to read under my
+name a note from the course teacher saying: &lt;br>&lt;br>&lt;/p>
+&lt;p>&lt;em>&amp;ldquo;has developed the project related to the triangulation and tessellation of the lateral
+surface of some geometric solids obtaining truly amazing visual effects.&amp;rdquo;&lt;/em> - Prof. Alzati&lt;/p></description></item></channel></rss>
