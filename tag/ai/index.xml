@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AI | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/tag/ai/</link><atom:link href="https://manuelpagliuca.github.io/tag/ai/index.xml" rel="self" type="application/rss+xml"/><description>AI</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 27 Jun 2021 00:00:00 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>AI</title><link>https://manuelpagliuca.github.io/tag/ai/</link></image><item><title>Pain Recognition - Dataset analysis and experimental validation</title><link>https://manuelpagliuca.github.io/project/pain-recognition/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/pain-recognition/</guid><description>&lt;p>Affective Computing and Natural Interaction courses, Jan 2023, M.Sc. in Computer Science @UniMi&lt;/p>
 &lt;h2 id="about-the-project">About the project&lt;/h2>
 &lt;p>This is a unified project for the courses Affective Computing and Natural Interaction at &lt;a href="https://phuselab.di.unimi.it/" target="_blank" rel="noopener">PhuseLab&lt;/a>, University of Milan, A.Y. 2021/2022.&lt;/p>
-&lt;p>The aim of this project is to test the accuracy of early and late fusion approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat-pain stimulus through a physical device.&lt;/p>
-&lt;p>Their facial expressions and biophysical signals were recorded using cameras and the application of electrodes, then features were extracted. The descriptors came from two different modalities and will be combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.&lt;/p>
+&lt;p>The aim of this project is to test the accuracy of early and late fusion approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat pain stimulus using a physical device.&lt;/p>
+&lt;p>Facial expressions and biophysical signals were recorded using cameras and electrodes, after which features were extracted. The descriptors from two different modalities were combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.&lt;/p>
 &lt;ul>
 &lt;li>For more information about the project download the &lt;a href="https://manuelpagliuca.github.io/uploads/Pain_Detection_Manuel_Pagliuca_AC_NI_2022.pdf">report&lt;/a>.&lt;/li>
 &lt;/ul>
@@ -12,12 +12,12 @@
 &lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/diagram.jpg" alt="Diagram" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
-&lt;p>Pain stimulation occurs in patients through electrostimulators applied to the wrists. When this experiment is performed different bio-potential signals (GSR, EMG, &amp;hellip;) and facial expressions are recorded through (through a video camera).&lt;/p>
-&lt;p>The analysis phase involves extracting features from the video signals through computer vision techniques. The features involved are Euclidean distances on particular facial landmarks and gradients on 5 regions of the face.&lt;/p>
-&lt;p>Once the biopotential signals and video features are ready, fusion techniques are used to perform classification.&lt;/p>
+&lt;p>Pain stimulation occurs in patients through electrostimulators applied to the wrists. During this experiment, different biophysical signals (GSR, EMG, &amp;hellip;) and facial expressions are recorded using a video camera.&lt;/p>
+&lt;p>The analysis phase involves extracting features from the video signals using computer vision techniques. The features are Euclidean distances between specific facial landmarks and gradients in five regions of the face.&lt;/p>
+&lt;p>Once the biophysical signals and video features are ready, fusion techniques are used for classification.&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>Early fusion&lt;/strong> involves fusing signals and video features a priori concerning classification. Then train the classifier on the combined inputs.&lt;/li>
-&lt;li>&lt;strong>Late fusion&lt;/strong> involves training three classifiers (of the same type) on different inputs (ECG, GSR, and video), then for each sample in the testing set its prediction is calculated with all three classifiers. The majority prediction is considered; if that prediction coincides with the &lt;em>ground truth&lt;/em>, then that prediction is considered correct.&lt;/li>
+&lt;li>&lt;strong>Early fusion&lt;/strong> involves combining signals and video features before classification, then training the classifier on the combined inputs.&lt;/li>
+&lt;li>&lt;strong>Late fusion&lt;/strong> involves training three classifiers (of the same type) on different inputs (ECG, GSR, and video). For each sample in the testing set, the prediction is calculated with all three classifiers. The majority prediction is considered correct if it matches the &lt;em>ground truth&lt;/em>.&lt;/li>
 &lt;/ul>
 &lt;p>The classifier used in this project was &lt;em>Support Vector Machines&lt;/em>.&lt;/p>
 &lt;h3 id="video-feature-extraction">Video feature extraction&lt;/h3>
@@ -45,7 +45,7 @@
 &lt;/p>
 &lt;h3 id="gradient-for-face-folds">Gradient for face folds&lt;/h3>
 &lt;p>Gradients allow changes in regions of the face to be assessed. An arithmetic average of pixel values in these regions is calculated.
-This average is again weighted by the number of frames in the video window(which in the dataset was 5 seconds).&lt;/p>
+This average is then weighted by the number of frames in the video window (5 seconds in this dataset).&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
@@ -53,7 +53,7 @@ This average is again weighted by the number of frames in the video window(which
 &lt;/div>&lt;/figure>
 &lt;/p>
 &lt;h3 id="switch-button">Switch button&lt;/h3>
-&lt;p>There is a debug branch called &lt;code>cv-features&lt;/code> in this repository where you can try computer vision systems directly with your computer camera. Using the tab key you can enable and disable debugging for gradients.&lt;/p>
+&lt;p>A debug branch called &lt;code>cv-features&lt;/code> in this repository allows you to test computer vision systems directly with your computer&amp;rsquo;s camera. Using the tab key you can enable and disable debugging for gradients.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">

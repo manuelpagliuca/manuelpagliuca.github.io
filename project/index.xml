@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Projects | Manuel Pagliuca</title><link>https://manuelpagliuca.github.io/project/</link><atom:link href="https://manuelpagliuca.github.io/project/index.xml" rel="self" type="application/rss+xml"/><description>Projects</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Tue, 26 Dec 2023 14:17:20 +0000</lastBuildDate><image><url>https://manuelpagliuca.github.io/media/icon_hu4a5b1b591c5ae08b60d2e1d27385e465_426_512x512_fill_lanczos_center_3.png</url><title>Projects</title><link>https://manuelpagliuca.github.io/project/</link></image><item><title>Design Patterns in C++</title><link>https://manuelpagliuca.github.io/project/design-patterns/</link><pubDate>Tue, 26 Dec 2023 14:17:20 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/design-patterns/</guid><description>&lt;p>Personal project, December 2023&lt;/p>
-&lt;p>Between the months of November and December I wanted to dig deeper on software engineering, so I decided to study and implement some design patterns. In particular the fundamental one from the &lt;em>Gang of Four&lt;/em> (GoF).&lt;/p>
-&lt;p>I created a &lt;a href="https://github.com/manuelpagliuca/design-patterns-cpp" target="_blank" rel="noopener">repository&lt;/a> that acts as a collection of C++ implementations of these patterns. The GoF patterns are all presents but in the future I&amp;rsquo;m planning to add also the &amp;ldquo;extra&amp;rdquo; patterns (at the moment only the &lt;em>null object&lt;/em> is present).&lt;/p>
+&lt;p>Between November and December, I wanted to dive deeper into software engineering, so I decided to study and implement some design patterns. In particular the fundamental ones from the &lt;em>Gang of Four&lt;/em> (GoF).&lt;/p>
+&lt;p>I created a &lt;a href="https://github.com/manuelpagliuca/design-patterns-cpp" target="_blank" rel="noopener">repository&lt;/a> that serves as a collection of C++ implementations of these patterns. All the GoF patterns are present, but in the future I plan to add the &amp;ldquo;extra&amp;rdquo; patterns as well (currently only the &lt;em>null object&lt;/em> is included).&lt;/p>
 &lt;h2 id="creational">Creational&lt;/h2>
 &lt;table>
 &lt;thead>
@@ -126,9 +126,9 @@
 &lt;/tr>
 &lt;/tbody>
 &lt;/table>
-&lt;p>During this exploration I discovered many interesting aspects of software engineering by exploring this field, especially a concept of scope level design patterns. Some design patterns can be applied directly on the repository (code level, so in micro), like the GoF patterns or &lt;em>concurrency patterns&lt;/em> for MT paradigms.&lt;/p>
-&lt;p>Other design patterns acts on an higher level of abstraction, and these are called &lt;strong>architectural patterns&lt;/strong>. Some of them are widely known like the MVC (Model-View-Controller) or n-tier, but most of them are new to me.&lt;/p>
-&lt;p>In the future I would like to write a blog post about them with diagrams and explanations, seems a good idea for studying them in a fun way 😁&lt;/p></description></item><item><title>Efficient representations of high‑resolution polygonal surfaces, adding anisotropy control to the Micro‑Mesh schema</title><link>https://manuelpagliuca.github.io/project/anisotropic-mm/</link><pubDate>Wed, 25 Oct 2023 09:42:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/anisotropic-mm/</guid><description>&lt;p>Master&amp;rsquo;s Thesis, October 2023, M.Sc. in Computer Science @UniMI&lt;/p>
+&lt;p>During this exploration, I discovered many interesting aspects of software engineering, especially the concept of scope-level design patterns. Some design patterns can be applied directly to the codebase (code level, or micro), such as the GoF patterns or &lt;em>concurrency patterns&lt;/em> for multi-threaded paradigms.&lt;/p>
+&lt;p>Other design patterns act on a higher level of abstraction, and these are called &lt;strong>architectural patterns&lt;/strong>. Some of them are widely known, such as MVC (Model-View-Controller) or n-tier architecture, but most are new to me.&lt;/p>
+&lt;p>In the future, I would like to write a blog post about them with diagrams and explanations. It seems like a good idea for studying them in a fun way 😁&lt;/p></description></item><item><title>Efficient representations of high‑resolution polygonal surfaces, adding anisotropy control to the Micro‑Mesh schema</title><link>https://manuelpagliuca.github.io/project/anisotropic-mm/</link><pubDate>Wed, 25 Oct 2023 09:42:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/anisotropic-mm/</guid><description>&lt;p>Master&amp;rsquo;s Thesis, October 2023, M.Sc. in Computer Science @UniMI&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
@@ -211,12 +211,12 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;p>In this example the base mesh will be subdivided using the &lt;code>anisotropic&lt;/code> subdivision scheme, with a factor &lt;code>F=3.5&lt;/code> (subdividing x3.5 times the faces of the target mesh).&lt;/p>
 &lt;/blockquote></description></item><item><title>CUDA Ray Tracer</title><link>https://manuelpagliuca.github.io/project/rt/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/rt/</guid><description>&lt;p>GPU Computing Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/p>
 &lt;h2 id="about-the-project">About the project&lt;/h2>
-&lt;p>During the course of &lt;strong>GPU Computing&lt;/strong> I decided to implement my old version of the Ray Tracer (based on the
+&lt;p>During the &lt;strong>GPU Computing&lt;/strong> course, I decided to implement my old version of the Ray Tracer (based on
 &lt;em>Ray Tracing in One
-Weekend&lt;/em> from
+Weekend&lt;/em> by
 &lt;a href="https://raytracing.github.io/books/RayTracingInOneWeekend.html" target="_blank">Peter Shirley&lt;/a>
 )
-on &lt;strong>CUDA&lt;/strong>. In
+in &lt;strong>CUDA&lt;/strong>. In
 &lt;a href="https://manuelpagliuca.github.io/uploads/GPU_COMPUTING___RAY_TRACER.pdf" target="_blank">this&lt;/a>
 paper I compared
 the two Ray Tracers underlining the
@@ -231,9 +231,9 @@ render just download
 &lt;a href="https://manuelpagliuca.github.io/uploads/GPU_COMPUTING_RENDERS.zip">this&lt;/a>
 zip.&lt;/p></description></item><item><title>Deferred renderer</title><link>https://manuelpagliuca.github.io/project/render/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/render/</guid><description>&lt;p>Real-Time Graphics Programming Course, July 2021, M.Sc. in Computer Science @UniMi&lt;/p>
 &lt;h2 id="about-the-project">About the project&lt;/h2>
-&lt;p>This was a project I made for the course of Real-time Graphics Programming. The course provided extensive knowledge about real-time computer graphics (you can check the
+&lt;p>This was a project I made for the course of Real-time Graphics Programming. The course provided extensive knowledge about real-time computer graphics. (You can check the
 &lt;a href="https://manuelpagliuca.github.io/uploads/Appunti_RTGP.pdf" target="_blank">notes&lt;/a>
-I took). At the end of the course, in addition to an oral exam, there was a project related to graphic programming to be developed with OpenGL. I asked Prof. Gadia if there was the possibility of developing it with Vulkan, he granted me the possibility to take this extra-step, it was very tiring but fruitful from the point of view of learning.&lt;/p>
+I took.) At the end of the course, in addition to an oral exam, there was a project related to graphic programming to be developed with OpenGL. I asked Prof. Gadia if there was the possibility of developing it with Vulkan, he granted me the possibility to take this extra-step, it was very tiring but fruitful from the point of view of learning.&lt;/p>
 &lt;p>The project consists in a deferred renderer to improve the overall efficiency of the application in the usage of lights. The scene is composed of three models of the same character, a floor and twenty lights (whose movement and color can be modified), there is the
 &lt;a href="https://manuelpagliuca.github.io/uploads/DEFERRED_RENDERING___RTGP.pdf" target="_blank">notes&lt;/a>
 containing the various metrics obtained using a different number of lights. The GitHub repository is accessible at
@@ -255,19 +255,19 @@ loading="lazy" data-zoomable />&lt;/div>
 How the flags are shown on the map.
 &lt;/figcaption>&lt;/figure>
 The complete title of the thesis is &lt;em>&amp;ldquo;Fix-it : Stream processing on event-driven system for
-managing public disservices&amp;rdquo;&lt;/em>. The project itself consist in developing an &lt;strong>E.D.A.&lt;/strong> (Event-Driven Application)
-system that will work on a mobile application called &amp;ldquo;&lt;strong>Fix-it&lt;/strong>&amp;rdquo;, which is developed using Android
+managing public disservices&amp;rdquo;&lt;/em>. The project itself consists of developing an &lt;strong>E.D.A.&lt;/strong> (Event-Driven Application)
+system that will work with a mobile application called &amp;ldquo;&lt;strong>Fix-it&lt;/strong>&amp;rdquo;, which is developed using Android
 Studio. The system is implemented with &lt;strong>Google Firebase&lt;/strong> and &lt;strong>Apache Kafka&lt;/strong> (stream processing).
-Different technologies involved in the implementation of this project like REST API, Stream Processing and
-Publisher-Subscribe pattern.&lt;/p>
-&lt;p>The project was developed only by just two guys, we used the concepts of the Agile Manifesto to design our workflow, everything was organized with a Kanban Board on Trello so that we could work consistently by breaking the work down into small parts.&lt;/p>
-&lt;p>The whole thesis is downloadable as PDF
+Different technologies were involved in the implementation of this project, such as REST API, Stream Processing and
+the Publisher-Subscribe pattern.&lt;/p>
+&lt;p>The project was developed by just two people. We used the concepts of the Agile Manifesto to design our workflow, and everything was organized with a Kanban Board on Trello so that we could work consistently by breaking the work down into small parts.&lt;/p>
+&lt;p>The whole thesis is available as a PDF
 &lt;a href="https://manuelpagliuca.github.io/uploads/Manuel_Pagliuca_Tesi.pdf" target="_blank">here&lt;/a>
-, was
-written using LaTeX on Overleaf, the Abstract is downloadable
+and was
+written using LaTeX on Overleaf. The Abstract is downloadable
 &lt;a href="https://manuelpagliuca.github.io/uploads/Abstract.pdf" target="_blank">here&lt;/a>
 .
-I attained a presentation of my thesis on Google Meet due to COVID-19, and I talked about my
+I gave a presentation of my thesis on Google Meet due to COVID-19, and I talked about my
 work using these
 &lt;a href="https://manuelpagliuca.github.io/uploads/Slides.pdf" target="_blank">slides&lt;/a>
 . The project was realized under the
@@ -275,15 +275,15 @@ supervision of the Prof. &lt;a href="https://upobook.uniupo.it/davide.cerotti">D
 &lt;h2 id="about-the-project">About the project&lt;/h2>
 &lt;p>This is a project for the course of A.I. for VideoGames at University of Milan, A.Y. 2021/2022. The aim of the project is to implement a Lindenmayer system for procedural generation of tree using discrete distributions (pseudo-random integers) for enhancing the believability of the project.&lt;/p>
 &lt;center>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/luaC1rPKbKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>&lt;/center>
-Check the YouTube video for check how the application works while listening to a synthetic explanation. If you want to look at the LateX report, just click
+Check the YouTube video to see how the application works while listening to a synthetic explanation. If you want to look at the LateX report, just click
 &lt;a href="https://manuelpagliuca.github.io/uploads/L_SYSTEM_AI4V_REPORT.pdf">this link&lt;/a>
 . You are invited to send a pull request to the GitHub
 &lt;a href="https://github.com/manuelpagliuca/l-system">repository&lt;/a>
 .</description></item><item><title>Pain Recognition - Dataset analysis and experimental validation</title><link>https://manuelpagliuca.github.io/project/pain-recognition/</link><pubDate>Sun, 27 Jun 2021 00:00:00 +0000</pubDate><guid>https://manuelpagliuca.github.io/project/pain-recognition/</guid><description>&lt;p>Affective Computing and Natural Interaction courses, Jan 2023, M.Sc. in Computer Science @UniMi&lt;/p>
 &lt;h2 id="about-the-project">About the project&lt;/h2>
 &lt;p>This is a unified project for the courses Affective Computing and Natural Interaction at &lt;a href="https://phuselab.di.unimi.it/" target="_blank" rel="noopener">PhuseLab&lt;/a>, University of Milan, A.Y. 2021/2022.&lt;/p>
-&lt;p>The aim of this project is to test the accuracy of early and late fusion approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat-pain stimulus through a physical device.&lt;/p>
-&lt;p>Their facial expressions and biophysical signals were recorded using cameras and the application of electrodes, then features were extracted. The descriptors came from two different modalities and will be combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.&lt;/p>
+&lt;p>The aim of this project is to test the accuracy of early and late fusion approaches on a multi-modal dataset to classify the presence of pain in patients. Participants were subjected to an external heat pain stimulus using a physical device.&lt;/p>
+&lt;p>Facial expressions and biophysical signals were recorded using cameras and electrodes, after which features were extracted. The descriptors from two different modalities were combined by testing both fusion approaches. Finally, classifications and accuracy estimates were made, based on which it was possible to determine that early fusion is the most accurate approach for the dataset considered.&lt;/p>
 &lt;ul>
 &lt;li>For more information about the project download the &lt;a href="https://manuelpagliuca.github.io/uploads/Pain_Detection_Manuel_Pagliuca_AC_NI_2022.pdf">report&lt;/a>.&lt;/li>
 &lt;/ul>
@@ -293,12 +293,12 @@ Check the YouTube video for check how the application works while listening to a
 &lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/diagram.jpg" alt="Diagram" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
-&lt;p>Pain stimulation occurs in patients through electrostimulators applied to the wrists. When this experiment is performed different bio-potential signals (GSR, EMG, &amp;hellip;) and facial expressions are recorded through (through a video camera).&lt;/p>
-&lt;p>The analysis phase involves extracting features from the video signals through computer vision techniques. The features involved are Euclidean distances on particular facial landmarks and gradients on 5 regions of the face.&lt;/p>
-&lt;p>Once the biopotential signals and video features are ready, fusion techniques are used to perform classification.&lt;/p>
+&lt;p>Pain stimulation occurs in patients through electrostimulators applied to the wrists. During this experiment, different biophysical signals (GSR, EMG, &amp;hellip;) and facial expressions are recorded using a video camera.&lt;/p>
+&lt;p>The analysis phase involves extracting features from the video signals using computer vision techniques. The features are Euclidean distances between specific facial landmarks and gradients in five regions of the face.&lt;/p>
+&lt;p>Once the biophysical signals and video features are ready, fusion techniques are used for classification.&lt;/p>
 &lt;ul>
-&lt;li>&lt;strong>Early fusion&lt;/strong> involves fusing signals and video features a priori concerning classification. Then train the classifier on the combined inputs.&lt;/li>
-&lt;li>&lt;strong>Late fusion&lt;/strong> involves training three classifiers (of the same type) on different inputs (ECG, GSR, and video), then for each sample in the testing set its prediction is calculated with all three classifiers. The majority prediction is considered; if that prediction coincides with the &lt;em>ground truth&lt;/em>, then that prediction is considered correct.&lt;/li>
+&lt;li>&lt;strong>Early fusion&lt;/strong> involves combining signals and video features before classification, then training the classifier on the combined inputs.&lt;/li>
+&lt;li>&lt;strong>Late fusion&lt;/strong> involves training three classifiers (of the same type) on different inputs (ECG, GSR, and video). For each sample in the testing set, the prediction is calculated with all three classifiers. The majority prediction is considered correct if it matches the &lt;em>ground truth&lt;/em>.&lt;/li>
 &lt;/ul>
 &lt;p>The classifier used in this project was &lt;em>Support Vector Machines&lt;/em>.&lt;/p>
 &lt;h3 id="video-feature-extraction">Video feature extraction&lt;/h3>
@@ -326,7 +326,7 @@ Check the YouTube video for check how the application works while listening to a
 &lt;/p>
 &lt;h3 id="gradient-for-face-folds">Gradient for face folds&lt;/h3>
 &lt;p>Gradients allow changes in regions of the face to be assessed. An arithmetic average of pixel values in these regions is calculated.
-This average is again weighted by the number of frames in the video window(which in the dataset was 5 seconds).&lt;/p>
+This average is then weighted by the number of frames in the video window (5 seconds in this dataset).&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
@@ -334,7 +334,7 @@ This average is again weighted by the number of frames in the video window(which
 &lt;/div>&lt;/figure>
 &lt;/p>
 &lt;h3 id="switch-button">Switch button&lt;/h3>
-&lt;p>There is a debug branch called &lt;code>cv-features&lt;/code> in this repository where you can try computer vision systems directly with your computer camera. Using the tab key you can enable and disable debugging for gradients.&lt;/p>
+&lt;p>A debug branch called &lt;code>cv-features&lt;/code> in this repository allows you to test computer vision systems directly with your computer&amp;rsquo;s camera. Using the tab key you can enable and disable debugging for gradients.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
@@ -391,22 +391,22 @@ Self-driving &lt;em>peer-to-peer&lt;/em> taxi system for citizens of a smart cit
 &lt;h3 id="ricart--agrawala-algorithm-for-mutual-exclusion">Ricart &amp;amp; Agrawala algorithm for mutual exclusion&lt;/h3>
 &lt;p>The algorithm was developed for guarantee the mutual exclusion to a critical section between multiple processes in a distributed system.&lt;/p>
 &lt;p>The timestamps of the messages are sent in broadcast (in parallel) through the gRPC call &lt;code>coordinateRechargeStream()&lt;/code>. The logical clock synchronization is guaranteed through &lt;strong>Lamport&amp;rsquo;s algorithm&lt;/strong>.&lt;/p>
-&lt;p>Let&amp;rsquo;s consider the following diagram, the nodes in red want to access to the critical section, while the other nodes are doing anything else.&lt;/p>
+&lt;p>Consider the following diagram: the nodes in red want to access the critical section, while the other nodes are doing something else.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_1.png" alt="Ricart &amp;amp;amp; Agrawala 1" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
-&lt;p>More in depth in the first phase (in which the requests are parallelized) the processes will build their lists of dependent nodes. These lists will contain all the nodes which got a smaller timestamp relative to their.&lt;/p>
-&lt;p>A node will be able to enter a critical section (&lt;em>i.e.&lt;/em>, in this project is the recharging operation) if it receives the ACKs from all the other nodes. If this doesn&amp;rsquo;t happens it will have to wait the residual ACKs.&lt;/p>
+&lt;p>In more depth, in the first phase (in which the requests are parallelized), the processes will build their lists of dependent nodes. These lists will contain all the nodes which got a smaller timestamp relative to theirs.&lt;/p>
+&lt;p>A node will be able to enter a critical section (i.e., the recharging operation in this project) if it receives acknowledgments from all other nodes. If this doesn&amp;rsquo;t happen, it will have to wait for the remaining acknowledgments.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ricart_agrawala_2.png" alt="Ricart &amp;amp;amp; Agrawala 2" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
-&lt;p>Once that a node has finished with the recharging operation, it will sends an ACK message to the taxi of his list/queue. The first taxis who will fill the number of attended ACKs will access the critical section, and then story repeats.&lt;/p>
+&lt;p>Once a node has finished the recharging operation, it sends an ACK message to the taxis in its list/queue. The first taxi to receive the required number of acknowledgments will access the critical section, and then the process repeats.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
@@ -415,30 +415,30 @@ Self-driving &lt;em>peer-to-peer&lt;/em> taxi system for citizens of a smart cit
 &lt;/p>
 &lt;h3 id="ride-election-algorithm">Ride election algorithm&lt;/h3>
 &lt;p>The SETA process generates two rides each 5 seconds on a random district, these two rides are posted on the respective topic of the district. Each taxi is subscribed only on the topic of the district in which it currently belongs.&lt;/p>
-&lt;p>For simplicity let&amp;rsquo;s assume only one ride (the ride 5) to be published from the SETA process on the first district. All the processes which are subscribed to this topic (inside the green circle) will receive the message for the ride 5.&lt;/p>
+&lt;p>For simplicity, let&amp;rsquo;s assume only one ride (ride 5) is published by the SETA process on the first district. All processes subscribed to this topic (inside the green circle) will receive the message for ride 5.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_1.png" alt="Ride Election 1" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
-&lt;p>An election mechanism will start through the gRPC call &lt;code>coordinateRideStream()&lt;/code>, the request will be performed in broadcast (also to taxi out from district 1) and they will be executed in parallel. The request will contain the &lt;em>Euclidean distance to the starting point&lt;/em>, the &lt;em>battery levels&lt;/em> and the &lt;em>ID&lt;/em> of taxi which is sending the request.&lt;/p>
-&lt;p>For sake of simplicity we are seeing the evolution of the algorithm only from the point of view of the process 1.&lt;/p>
+&lt;p>An election mechanism will start through the gRPC call &lt;code>coordinateRideStream()&lt;/code>. The request will be broadcast (including to taxis outside district 1) and executed in parallel. The request will contain the &lt;em>Euclidean distance to the starting point&lt;/em>, the &lt;em>battery levels&lt;/em> and the &lt;em>ID&lt;/em> of taxi which is sending the request.&lt;/p>
+&lt;p>For simplicity, we are examining the evolution of the algorithm from the perspective of process 1.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_2.png" alt="Ride Election 2" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
-&lt;p>Let&amp;rsquo;s also assume that the process 1 is the process with the smallest distance from the starting point of the ride. Essentially, this means that the taxi who receives the request will all answer with an ACK (this means that they got a worst distance, battery or grater ID respect to process 1), only in this case the process 1 will achieve the consensus.&lt;/p>
+&lt;p>Let&amp;rsquo;s also assume that process 1 has the smallest distance from the ride&amp;rsquo;s starting point. Essentially, this means that the taxis receiving the request will all answer with an ACK (meaning they have a worse distance, battery level, or greater ID than process 1). Only then will process 1 achieve consensus.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
 &lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/ride_election_3.png" alt="Ride Election 3" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
-&lt;p>Now the process 1 can execute the ride 5, before it even pass to the local execution of the ride, it publish a message containing the ride 5 on the &lt;code>seta/smartcity/completed&lt;/code> topic. This will allow to stop recycling this message (we will see what is it below) and also making know to the taxi which ride ignore since it is already taken.&lt;/p>
-&lt;p>This because all the taxi will have a local list containing all the completed rides taken from the topic, in this way they know which ride to avoid.&lt;/p>
+&lt;p>Now process 1 can execute ride 5. Before it passes to local execution of the ride, it publishes a message containing ride 5 on the &lt;code>seta/smartcity/completed&lt;/code> topic. This allows stopping the recycling of this message (we will see what this is below) and informs taxis which rides to ignore since they are already taken.&lt;/p>
+&lt;p>This is because all taxis will have a local list containing all the completed rides from the topic, so they know which rides to avoid.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
@@ -446,7 +446,7 @@ Self-driving &lt;em>peer-to-peer&lt;/em> taxi system for citizens of a smart cit
 &lt;/div>&lt;/figure>
 &lt;/p>
 &lt;h4 id="ride-recycling">Ride recycling&lt;/h4>
-&lt;p>There is a system that enforces the recycling of runs, each run that is generated on the topics is embedded within the relative queue of the district. The priority of the queues is based on the order (run ID) of run generation, so older runs will be preferred.&lt;/p>
+&lt;p>A system enforces ride recycling. Each ride generated on the topics is embedded within the respective district queue. The queue priority is based on ride generation order (ride ID), so older rides are preferred.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
@@ -464,10 +464,10 @@ Self-driving &lt;em>peer-to-peer&lt;/em> taxi system for citizens of a smart cit
 &lt;/div>&lt;/figure>
 &lt;/p>
 &lt;h3 id="recharge-operation">Recharge operation&lt;/h3>
-&lt;p>There is a thread that monitors cab battery levels (&lt;strong>Recharge Thread&lt;/strong>), to avoid &amp;ldquo;&lt;em>busy waiting&lt;/em>&amp;rdquo; phenomena a &lt;em>dummy object&lt;/em> is shared between this thread and the &lt;strong>MQTT module&lt;/strong>.&lt;/p>
+&lt;p>A thread monitors cab battery levels (&lt;strong>Recharge Thread&lt;/strong>). To avoid &amp;ldquo;&lt;em>busy waiting&lt;/em>&amp;rdquo; phenomena, a &lt;em>dummy object&lt;/em> is shared between this thread and the &lt;strong>MQTT module&lt;/strong>.&lt;/p>
 &lt;p>The recharge thread is initially waiting and will check the battery levels only after receiving the notification on the shared &lt;em>dummy object&lt;/em>.&lt;/p>
-&lt;p>As we know, the MQTT module receives races message for it&amp;rsquo;s own district, and its callbacks can in turn call methods (which basically function like threads). Upon completion of the function that takes care of the run we notify the &lt;em>dummy object&lt;/em> through &lt;code>notify()&lt;/code>.&lt;/p>
-&lt;p>This way a check of battery levels will be made after a run is finished. The charging procedure will only be started if the battery levels are below 30 percent.&lt;/p>
+&lt;p>The MQTT module receives ride messages for its own district, and its callbacks can call methods (which function like threads). Upon completion of the function that handles the ride, we notify the &lt;em>dummy object&lt;/em> through &lt;code>notify()&lt;/code>.&lt;/p>
+&lt;p>This way, a battery level check is made after a ride is finished. The charging procedure will only be started if the battery levels are below 30 percent.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
@@ -488,21 +488,21 @@ Self-driving &lt;em>peer-to-peer&lt;/em> taxi system for citizens of a smart cit
 &lt;div class="w-100" >&lt;img src="https://manuelpagliuca.github.io/uploads/localstats_synchronization.png" alt="Synchronization of local statistics" loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;/figure>
 &lt;/p>
-&lt;p>The reading of measurements is done by the Local Stats Thread, the latter though is governed by the operation of the Pollution Buffer&amp;rsquo;s internal data structure.&lt;/p>
-&lt;p>Once the array of measurements is read, its average is calculated. Then a data structure is created that will contain both this average of measurements and the other local statistics :&lt;/p>
+&lt;p>The Local Stats Thread reads the measurements, but its operation is governed by the Pollution Buffer&amp;rsquo;s internal data structure.&lt;/p>
+&lt;p>Once the array of measurements is read, its average is calculated. Then a data structure is created that contains both this average and the other local statistics:&lt;/p>
 &lt;ul>
 &lt;li>Total traveled kilometers&lt;/li>
 &lt;li>Battery levels&lt;/li>
 &lt;li>Total accomplished runs&lt;/li>
 &lt;/ul>
-&lt;p>Every fifteen seconds you will be able to send this data structure to the administrator server via POST, to ensure this you use a thread (Enable Data Thread) that sets a boolean (initialized to false) to true.&lt;/p>
-&lt;p>That boolean variable will be checked by the Local Stats Thread, if true, then the POST request will be executed.&lt;/p>
-&lt;p>Then the flag will be set to false again, and you will have to wait 15 seconds again for it to be reactivated.&lt;/p>
+&lt;p>Every fifteen seconds, a POST request sends this data structure to the administrator server. To ensure this, a thread (Enable Data Thread) sets a boolean (initialized to false) to true.&lt;/p>
+&lt;p>The Local Stats Thread checks this boolean. If it is true, the POST request is executed.&lt;/p>
+&lt;p>Then the flag will be set to false again, and it will wait 15 seconds to be reactivated.&lt;/p>
 &lt;h4 id="sliding-window">Sliding window&lt;/h4>
 &lt;p>The Pollution Buffer presents a method that is constantly called at an unknown time by the PM10 simulator. The Pollution Buffer internal structure consists of a &lt;em>sliding window&lt;/em> of 50% of size 8 (each element is a PM10 measurements).&lt;/p>
-&lt;p>Once the maximum capacity of our internal data structure is reached, then I can guarantee that it will be read by the Local Stats Thread. The read operation involves a left shift of 50% of the elements (&lt;em>i.e.,&lt;/em> 4 elements), henceforth the elements added by the PM10 simulator will be allocated starting from the fifth.
-When the last element (the eighth) is added again, then a new reading of the sliding window can be performed again.&lt;/p>
-&lt;p>In this way the various sliding windows that are read will share four elements, &lt;em>i.e.,&lt;/em> the sliding window of iteration &lt;code>t-1&lt;/code> will have the last four elements equal to the first four elements of the sliding window at time &lt;code>t&lt;/code>.&lt;/p>
+&lt;p>Once the internal data structure reaches maximum capacity, the Local Stats Thread will read it. The read operation involves a left shift of 50% of the elements (&lt;em>i.e.,&lt;/em> 4 elements), after which the elements added by the PM10 simulator will be allocated starting from the fifth.
+When the eighth element is added again, a new reading of the sliding window can be performed.&lt;/p>
+&lt;p>In this way, the various sliding windows that are read will share four elements. That is, the sliding window of iteration &lt;code>t-1&lt;/code> will have the same last four elements as the first four elements of the sliding window at time &lt;code>t&lt;/code>.&lt;/p>
 &lt;p>
 &lt;figure >
 &lt;div class="d-flex justify-content-center">
@@ -523,24 +523,23 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
 Icosahedron obtained with the application.
 &lt;/figcaption>&lt;/figure>
-&lt;p>The aims of this project was to study how the tessellation works with simple domains and to
-implement the basic logic for triangulate the vertices of simple
-objects like cubes and then with more complex like torus, sphere and cylinder.&lt;/p>
+&lt;p>The aims of this project were to study how tessellation works with simple domains and to
+implement the basic logic for triangulating the vertices of simple
+objects like cubes and then more complex ones like tori, spheres, and cylinders.&lt;/p>
 &lt;center>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/tK8yzO6Btho"
 title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>&lt;/iframe>&lt;/center>
-For the course project there was also a need to produce a report in the form of &lt;a
+For the course project, a report was also produced in the form of a &lt;a
 href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/trietas/index.html">website&lt;/a>
-(fully in &lt;i>italian&lt;/i>) which is hosted from the university's mathematics department &lt;i>Federigo Enriques&lt;/i>. It contains
-the theory behind the software, the technique involved, user manual of the application and lot of example videos about the application.
-&lt;p>Is possible to download the source code of the project from the &lt;a
+(fully in &lt;i>Italian&lt;/i>), hosted by the university's mathematics department &lt;i>Federigo Enriques&lt;/i>. It contains
+the theory behind the software, the techniques involved, a user manual for the application, and many example videos.
+&lt;p>It is possible to download the source code of the project from the &lt;a
 href="https://github.com/manuelpagliuca/Computational_Geometry_2021">GitHub Repository&lt;/a> by
 following this link. The course was a complete math course and the project was developed using the
 &lt;strong>OpenGL&lt;/strong> specification.&lt;/p>
 &lt;p>By accessing the &lt;a
 href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/corso/autori.html">authors
-section&lt;/a> of the course website, is possible to read under my
-name a note from the course teacher saying: &lt;br>&lt;br>&lt;/p>
+section&lt;/a> of the course website, you can read a note from the course teacher under my name: &lt;br>&lt;br>&lt;/p>
 &lt;p>&lt;em>&amp;ldquo;has developed the project related to the triangulation and tessellation of the lateral
 surface of some geometric solids obtaining truly amazing visual effects.&amp;rdquo;&lt;/em> - Prof. Alzati&lt;/p></description></item></channel></rss>

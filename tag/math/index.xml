@@ -83,7 +83,7 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;h2 id="about-the-project">About the project&lt;/h2>
 &lt;p>This is a project for the course of A.I. for VideoGames at University of Milan, A.Y. 2021/2022. The aim of the project is to implement a Lindenmayer system for procedural generation of tree using discrete distributions (pseudo-random integers) for enhancing the believability of the project.&lt;/p>
 &lt;center>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/luaC1rPKbKg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>&lt;/iframe>&lt;/center>
-Check the YouTube video for check how the application works while listening to a synthetic explanation. If you want to look at the LateX report, just click
+Check the YouTube video to see how the application works while listening to a synthetic explanation. If you want to look at the LateX report, just click
 &lt;a href="https://manuelpagliuca.github.io/uploads/L_SYSTEM_AI4V_REPORT.pdf">this link&lt;/a>
 . You are invited to send a pull request to the GitHub
 &lt;a href="https://github.com/manuelpagliuca/l-system">repository&lt;/a>
@@ -102,24 +102,23 @@ loading="lazy" data-zoomable />&lt;/div>
 &lt;/div>&lt;figcaption data-pre="Figure&amp;nbsp;" data-post=":&amp;nbsp;" class="numbered">
 Icosahedron obtained with the application.
 &lt;/figcaption>&lt;/figure>
-&lt;p>The aims of this project was to study how the tessellation works with simple domains and to
-implement the basic logic for triangulate the vertices of simple
-objects like cubes and then with more complex like torus, sphere and cylinder.&lt;/p>
+&lt;p>The aims of this project were to study how tessellation works with simple domains and to
+implement the basic logic for triangulating the vertices of simple
+objects like cubes and then more complex ones like tori, spheres, and cylinders.&lt;/p>
 &lt;center>&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/tK8yzO6Btho"
 title="YouTube video player" frameborder="0"
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen>&lt;/iframe>&lt;/center>
-For the course project there was also a need to produce a report in the form of &lt;a
+For the course project, a report was also produced in the form of a &lt;a
 href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/apps/trietas/index.html">website&lt;/a>
-(fully in &lt;i>italian&lt;/i>) which is hosted from the university's mathematics department &lt;i>Federigo Enriques&lt;/i>. It contains
-the theory behind the software, the technique involved, user manual of the application and lot of example videos about the application.
-&lt;p>Is possible to download the source code of the project from the &lt;a
+(fully in &lt;i>Italian&lt;/i>), hosted by the university's mathematics department &lt;i>Federigo Enriques&lt;/i>. It contains
+the theory behind the software, the techniques involved, a user manual for the application, and many example videos.
+&lt;p>It is possible to download the source code of the project from the &lt;a
 href="https://github.com/manuelpagliuca/Computational_Geometry_2021">GitHub Repository&lt;/a> by
 following this link. The course was a complete math course and the project was developed using the
 &lt;strong>OpenGL&lt;/strong> specification.&lt;/p>
 &lt;p>By accessing the &lt;a
 href="http://www.mat.unimi.it/users/alzati/Geometria_Computazionale_98-99/corso/autori.html">authors
-section&lt;/a> of the course website, is possible to read under my
-name a note from the course teacher saying: &lt;br>&lt;br>&lt;/p>
+section&lt;/a> of the course website, you can read a note from the course teacher under my name: &lt;br>&lt;br>&lt;/p>
 &lt;p>&lt;em>&amp;ldquo;has developed the project related to the triangulation and tessellation of the lateral
 surface of some geometric solids obtaining truly amazing visual effects.&amp;rdquo;&lt;/em> - Prof. Alzati&lt;/p></description></item></channel></rss>
